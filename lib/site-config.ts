@@ -5,6 +5,8 @@ export const siteConfig = {
   name: "訪問看護ステーション りたの輪",
   nameShort: "りたの輪",
   nameKana: "りたのわ",
+  /** ヘッダーロゴ横の表記（ファビコンと並べる） */
+  headerBrandTitle: "訪問看護ステーションりたの輪",
   concept:
     "想いが巡り、心が整う。利他の心が循環する、新しい訪問看護。",
   /** 優先の連絡先（携帯） */

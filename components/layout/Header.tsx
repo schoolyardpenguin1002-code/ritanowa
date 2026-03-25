@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,13 +18,20 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-8">
         <Link
           href="/"
-          className="group flex min-w-0 flex-col rounded-3xl px-1 py-1 text-left transition-colors"
+          className="group flex min-w-0 max-w-[min(100%,22rem)] items-center gap-3 rounded-3xl py-1 pl-0.5 pr-2 text-left transition-colors hover:bg-secondary/50 sm:max-w-md md:max-w-xl md:gap-3.5"
+          aria-label={`${siteConfig.headerBrandTitle} トップへ`}
         >
-          <span className="text-xs font-medium text-muted-foreground">
-            {siteConfig.nameKana}
-          </span>
-          <span className="truncate text-lg font-bold tracking-tight text-foreground md:text-xl">
-            {siteConfig.nameShort}
+          <Image
+            src="/apple-icon.png"
+            alt=""
+            width={180}
+            height={180}
+            className="size-11 shrink-0 rounded-2xl object-cover shadow-sm sm:size-12 md:size-14"
+            sizes="(max-width: 640px) 44px, (max-width: 768px) 48px, 56px"
+            priority
+          />
+          <span className="min-w-0 flex-1 text-pretty text-sm font-bold leading-snug tracking-tight text-foreground sm:text-base md:text-lg">
+            {siteConfig.headerBrandTitle}
           </span>
         </Link>
 
