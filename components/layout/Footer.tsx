@@ -89,11 +89,6 @@ export function Footer() {
               </dt>
               <dd className="mt-1 pt-0.5">
                 <SocialLinks instanceId="footer" />
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  URLは後から
-                  <code className="rounded bg-muted px-1 text-[0.7rem]">lib/site-config.ts</code>
-                  の lineUrl / instagramUrl に設定してください。
-                </p>
               </dd>
             </div>
             <div>
