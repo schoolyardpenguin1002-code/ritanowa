@@ -2,18 +2,16 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
-
+import { Analytics } from "@vercel/analytics/react";
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
   : new URL("http://localhost:4000");
-
 export const metadata: Metadata = {
   metadataBase: baseUrl,
   title: {
@@ -50,7 +48,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,6 +57,7 @@ export default function RootLayout({
     <html lang="ja" className={`${notoSansJP.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
