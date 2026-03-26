@@ -147,7 +147,7 @@ export default function RecruitPage() {
               },
               {
                 title: "精神科特化と医師のバックアップ",
-                body: "精神医学の知見を背景に、現場の判断を支える体制を整えています（詳細は面談時にご説明します）。",
+                body: "医療的な視点を背景に、現場の判断を支える体制を整えています（詳細は面談時にご説明します）。",
                 icon: HeartHandshake,
               },
               {
@@ -273,12 +273,9 @@ export default function RecruitPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold md:text-2xl">
-                医療責任者（精神科医師）・代表メッセージ
-              </h2>
+              <h2 className="text-xl font-bold md:text-2xl">代表メッセージ</h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                代表・医療責任者は<strong className="font-semibold text-foreground">狩野 遊太（かのう ゆうた）</strong>
-                です。精神医学の知見を背景に、現場の看護師と二人三脚で、ご本人とご家族のペースを大切にするケアを目指しています。写真は準備が整い次第、掲載いたします。
+                代表は医師として、現場の看護師と二人三脚で、ご本人とご家族のペースを大切にするケアを目指しています。写真は準備が整い次第、掲載いたします。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 ご本人のメッセージ全文は

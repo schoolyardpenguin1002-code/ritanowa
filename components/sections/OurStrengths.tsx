@@ -6,7 +6,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 const items = [
   {
-    title: "精神科医師によるバックアップ",
+    title: "医師によるバックアップ",
     body: "医療的なエビデンスに基づいた的確なアセスメントと迅速な判断。",
     icon: HeartHandshake,
   },
