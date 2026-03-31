@@ -14,6 +14,10 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   : new URL("http://localhost:4000");
 export const metadata: Metadata = {
   metadataBase: baseUrl,
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "750x750" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "750x750" }],
+  },
   title: {
     default: `${siteConfig.nameShort} | 高崎市の精神科特化型訪問看護`,
     template: `%s | ${siteConfig.nameShort}`,
