@@ -8,6 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const legalLinks = [
   { href: "/privacy", label: "プライバシーポリシー" },
+  { href: "/important-disclosure", label: "重要事項説明書" },
 ] as const;
 
 export function Footer() {
