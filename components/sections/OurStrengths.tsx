@@ -26,31 +26,31 @@ export function OurStrengths() {
   return (
     <RevealSection
       id="strengths"
-      className="relative overflow-hidden bg-[color-mix(in_srgb,var(--ritanowa-sand)_42%,var(--background))] py-24 md:py-32"
+      className="relative overflow-x-clip overflow-y-visible bg-[color-mix(in_srgb,var(--ritanowa-sand)_42%,var(--background))] py-16 md:py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
         <SectionTitle
           eyebrow="Our Strengths"
-          title="「りたの輪」3つの約束"
+          title="「りたのわ」3つの約束"
           lead="ケアは一方通行ではなく、想いと時間が巡る「輪」として設計しています。"
         />
 
-        <RevealRingList className="mt-16 grid gap-8 md:grid-cols-3 md:gap-10">
+        <RevealRingList className="mt-10 grid gap-6 sm:mt-16 md:grid-cols-3 md:gap-8 lg:gap-10">
           {items.map((item) => {
             const Icon = item.icon;
             return (
               <article
                 key={item.title}
-                className="flex h-full flex-col gap-4 rounded-3xl border border-border/70 bg-card p-8 shadow-sm"
+                className="flex h-full min-w-0 flex-col gap-3 rounded-3xl border border-border/70 bg-card p-5 shadow-sm sm:gap-4 sm:p-8"
               >
                 <div
-                  className="flex size-14 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--ritanowa-gold)_22%,transparent)] text-[var(--ritanowa-terracotta)]"
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--ritanowa-gold)_22%,transparent)] text-[var(--ritanowa-terracotta)] sm:size-14"
                   aria-hidden
                 >
-                  <Icon className="size-7" strokeWidth={1.75} />
+                  <Icon className="size-6 sm:size-7" strokeWidth={1.75} />
                 </div>
-                <h3 className="text-xl font-semibold leading-snug">{item.title}</h3>
-                <p className="text-lg leading-relaxed text-muted-foreground">{item.body}</p>
+                <h3 className="text-lg font-semibold leading-snug sm:text-xl">{item.title}</h3>
+                <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">{item.body}</p>
               </article>
             );
           })}

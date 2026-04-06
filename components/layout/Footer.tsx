@@ -17,8 +17,8 @@ export function Footer() {
       id="contact"
       className="border-t border-border/70 bg-[color-mix(in_srgb,var(--ritanowa-sand)_35%,var(--background))] py-16 md:py-24"
     >
-      <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.95fr)] md:gap-12 md:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.9fr)] lg:gap-14">
-        <div className="max-w-xl space-y-5 md:max-w-none">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 sm:px-5 md:grid-cols-[minmax(0,1fr)_minmax(260px,0.95fr)] md:gap-12 md:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.9fr)] lg:gap-14">
+        <div className="min-w-0 max-w-xl space-y-5 md:max-w-none">
           <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
             会社概要・お問い合わせ
           </h2>
@@ -42,6 +42,24 @@ export function Footer() {
                     {line}
                   </span>
                 ))}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                主な担当エリア
+              </dt>
+              <dd className="mt-1 text-foreground">
+                <p className="break-words">{siteConfig.serviceAreaMunicipalities.join("、")}</p>
+                <p className="mt-2 break-words text-muted-foreground">{siteConfig.serviceAreaNote}</p>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                営業時間（事務・お電話）
+              </dt>
+              <dd className="mt-1 text-foreground">
+                <p className="font-medium">{siteConfig.officeHoursLine}</p>
+                <p className="mt-2 text-muted-foreground">{siteConfig.officeHoursNote}</p>
               </dd>
             </div>
             <div>

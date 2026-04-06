@@ -32,14 +32,14 @@ export default async function BlogDetailPage({ params }: Props) {
   return (
     <SiteLayout>
       <SubpageHeader title={post.frontmatter.title} />
-      <RevealSection className="mx-auto max-w-3xl px-4 py-10 md:px-8 md:py-14">
-        <p className="mb-2 text-lg font-medium text-[var(--ritanowa-gold)]">
+      <RevealSection className="mx-auto max-w-3xl px-4 py-10 sm:px-5 md:px-8 md:py-14">
+        <p className="mb-2 text-base font-medium text-[var(--ritanowa-gold)] sm:text-lg">
           {post.frontmatter.category}
         </p>
-        <p className="mb-8 text-lg text-muted-foreground">
+        <p className="mb-8 flex flex-wrap gap-x-3 gap-y-1 text-base text-muted-foreground sm:text-lg">
           <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
           {post.frontmatter.author ? (
-            <span className="ml-3">／ {post.frontmatter.author}</span>
+            <span>／ {post.frontmatter.author}</span>
           ) : null}
         </p>
         <MarkdownBody content={post.content} />

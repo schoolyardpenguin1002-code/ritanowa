@@ -62,14 +62,14 @@ function CtaBlock({ className }: { className?: string }) {
 export default function RecruitPage() {
   return (
     <SiteLayout>
-      <header className="relative overflow-hidden border-b border-[var(--ritanowa-gold)]/35 bg-gradient-to-b from-[color-mix(in_srgb,var(--ritanowa-gold)_22%,var(--background))] via-[color-mix(in_srgb,var(--ritanowa-sand)_45%,var(--background))] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_8%,var(--background))] px-4 pb-16 pt-10 md:px-8 md:pb-24 md:pt-14">
+      <header className="relative overflow-x-clip overflow-y-visible border-b border-[var(--ritanowa-gold)]/35 bg-gradient-to-b from-[color-mix(in_srgb,var(--ritanowa-gold)_22%,var(--background))] via-[color-mix(in_srgb,var(--ritanowa-sand)_45%,var(--background))] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_8%,var(--background))] px-4 pb-16 pt-10 sm:px-5 md:px-8 md:pb-24 md:pt-14">
         <div className="pointer-events-none absolute -right-20 top-10 size-80 rounded-full bg-[color-mix(in_srgb,var(--ritanowa-gold)_25%,transparent)] blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-0 size-72 rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_18%,transparent)] blur-3xl" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-lg font-semibold tracking-wide text-[var(--ritanowa-gold)] md:text-xl">
             採用情報（求職者向け）
           </p>
-          <h1 className="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-5xl md:leading-tight">
+          <h1 className="mt-4 text-balance text-2xl font-bold leading-tight tracking-tight text-foreground min-[400px]:text-3xl md:text-5xl md:leading-tight">
             地域と長く、
             <br className="md:hidden" />
             看護の本質に向き合うチームへ
@@ -119,7 +119,7 @@ export default function RecruitPage() {
                 ビジョン
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                「りたの輪」は、利用者様とご家族、主治医・ケアマネジャーがつながる<strong className="font-semibold text-foreground">“輪”</strong>
+                「りたのわ」は、利用者様とご家族、主治医・ケアマネジャーがつながる<strong className="font-semibold text-foreground">“輪”</strong>
                 を大切にする精神科特化型の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -225,22 +225,22 @@ export default function RecruitPage() {
         <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
           詳細の条件は変更になる場合があります。最新の募集状況はお問い合わせください。
         </p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border/80 bg-card shadow-sm">
-          <table className="w-full text-left text-base md:text-lg">
+        <div className="-mx-1 overflow-x-auto rounded-3xl border border-border/80 bg-card shadow-sm sm:mx-0">
+          <table className="w-full min-w-[280px] text-left text-sm sm:text-base md:text-lg">
             <tbody className="divide-y divide-border/70">
               <tr>
-                <th className="w-[38%] bg-secondary/50 px-5 py-4 font-semibold text-foreground md:w-[32%]">
+                <th className="w-[34%] min-w-[5.5rem] bg-secondary/50 px-3 py-3 font-semibold text-foreground sm:w-[32%] sm:px-5 sm:py-4 md:w-[32%]">
                   職種
                 </th>
-                <td className="px-5 py-4 text-muted-foreground">
+                <td className="min-w-0 break-words px-3 py-3 text-muted-foreground sm:px-5 sm:py-4">
                   訪問看護師（正社員・パートはご相談）
                 </td>
               </tr>
               <tr>
-                <th className="bg-secondary/50 px-5 py-4 font-semibold text-foreground">
+                <th className="bg-secondary/50 px-3 py-3 font-semibold text-foreground sm:px-5 sm:py-4">
                   勤務地
                 </th>
-                <td className="px-5 py-4 text-muted-foreground">
+                <td className="min-w-0 break-words px-3 py-3 text-muted-foreground sm:px-5 sm:py-4">
                   {siteConfig.addressLines[0]}
                   <span className="mt-1 block text-base">
                     （訪問エリアは主に高崎市周辺。詳細は面談時にご案内します）
@@ -248,10 +248,10 @@ export default function RecruitPage() {
                 </td>
               </tr>
               <tr>
-                <th className="bg-secondary/50 px-5 py-4 font-semibold text-foreground">
+                <th className="bg-secondary/50 px-3 py-3 font-semibold text-foreground sm:px-5 sm:py-4">
                   応募資格
                 </th>
-                <td className="px-5 py-4 text-muted-foreground">
+                <td className="min-w-0 break-words px-3 py-3 text-muted-foreground sm:px-5 sm:py-4">
                   看護師免許をお持ちの方。訪問看護の経験は不問です。精神科領域にご関心のある方を歓迎します。
                 </td>
               </tr>

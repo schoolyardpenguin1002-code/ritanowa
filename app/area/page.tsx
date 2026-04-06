@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "対応地域・アクセス",
-  description: `群馬県高崎市浜尻町を拠点とする${siteConfig.name}の訪問エリアについて。`,
+  description: `${siteConfig.name}の訪問エリア（高崎・前橋・安中・富岡・藤岡・甘楽郡ほか）とアクセスについて。`,
 };
 
 export default function AreaPage() {
@@ -24,9 +24,6 @@ export default function AreaPage() {
         <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">
           <h2 className="text-2xl font-bold">拠点</h2>
           <p className="text-muted-foreground">{siteConfig.addressLine}</p>
-          <p className="text-muted-foreground">
-            高崎市を中心に、訪問可能な範囲についてはお問い合わせのうえご案内します。
-          </p>
           <a
             href={siteConfig.mapSearchUrl}
             target="_blank"
@@ -38,6 +35,22 @@ export default function AreaPage() {
           >
             Googleマップで開く
           </a>
+        </section>
+
+        <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">
+          <h2 className="text-2xl font-bold">主な担当エリア</h2>
+          <ul className="list-inside list-disc space-y-2 text-muted-foreground">
+            {siteConfig.serviceAreaMunicipalities.map((m) => (
+              <li key={m}>{m}</li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground">{siteConfig.serviceAreaNote}</p>
+        </section>
+
+        <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">
+          <h2 className="text-2xl font-bold">営業時間（事務・お電話）</h2>
+          <p className="font-semibold text-foreground">{siteConfig.officeHoursLine}</p>
+          <p className="text-muted-foreground">{siteConfig.officeHoursNote}</p>
         </section>
 
         <section className="space-y-4">

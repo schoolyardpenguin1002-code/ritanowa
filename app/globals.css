@@ -129,10 +129,10 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground text-lg leading-relaxed antialiased;
-  }
   html {
-    @apply scroll-smooth font-sans;
+    @apply scroll-smooth font-sans overflow-x-clip;
+  }
+  body {
+    @apply min-w-0 overflow-x-clip bg-background text-base leading-relaxed text-foreground antialiased sm:text-lg;
   }
 }

@@ -108,7 +108,10 @@ export function MainNav({
   }
 
   return (
-    <nav className="flex flex-col gap-3 px-4 py-4 lg:hidden" aria-label="メインナビゲーション">
+    <nav
+      className="flex flex-col gap-3 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:hidden"
+      aria-label="メインナビゲーション"
+    >
       <Accordion multiple className="rounded-2xl border border-border/60 bg-card/50">
         {navGroups.map((g) => (
           <AccordionItem key={g.id} value={g.id} className="border-border/60 px-2">

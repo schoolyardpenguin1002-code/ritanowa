@@ -26,7 +26,7 @@ export function ContactForm({
   }, [state]);
 
   return (
-    <form action={formAction} className="mx-auto max-w-2xl space-y-8">
+    <form action={formAction} className="mx-auto min-w-0 max-w-2xl space-y-6 sm:space-y-8">
       {state && !state.ok ? (
         <p className="rounded-3xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-lg text-destructive">
           {state.error}
@@ -34,7 +34,7 @@ export function ContactForm({
       ) : null}
 
       <div className="space-y-2">
-        <label htmlFor="name" className="text-lg font-semibold">
+        <label htmlFor="name" className="text-base font-semibold sm:text-lg">
           お名前 <span className="text-[var(--ritanowa-terracotta)]">*</span>
         </label>
         <input
@@ -42,12 +42,12 @@ export function ContactForm({
           name="name"
           required
           autoComplete="name"
-          className="w-full rounded-3xl border border-input bg-card px-4 py-3 text-lg outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full min-w-0 rounded-3xl border border-input bg-card px-4 py-3 text-base outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="phone" className="text-lg font-semibold">
+        <label htmlFor="phone" className="text-base font-semibold sm:text-lg">
           電話番号
         </label>
         <input
@@ -57,12 +57,12 @@ export function ContactForm({
           inputMode="tel"
           autoComplete="tel"
           placeholder={`例: ${siteConfig.phoneDisplay}（優先）`}
-          className="w-full rounded-3xl border border-input bg-card px-4 py-3 text-lg outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full min-w-0 rounded-3xl border border-input bg-card px-4 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="email" className="text-lg font-semibold">
+        <label htmlFor="email" className="text-base font-semibold sm:text-lg">
           メールアドレス
         </label>
         <input
@@ -70,18 +70,18 @@ export function ContactForm({
           name="email"
           type="email"
           autoComplete="email"
-          className="w-full rounded-3xl border border-input bg-card px-4 py-3 text-lg outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full min-w-0 rounded-3xl border border-input bg-card px-4 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="type" className="text-lg font-semibold">
+        <label htmlFor="type" className="text-base font-semibold sm:text-lg">
           お問い合わせ種別
         </label>
         <select
           id="type"
           name="type"
-          className="w-full rounded-3xl border border-input bg-card px-4 py-3 text-lg outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full min-w-0 rounded-3xl border border-input bg-card px-4 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
           defaultValue={defaultInquiryType ?? ""}
         >
           <option value="" disabled>
@@ -94,7 +94,7 @@ export function ContactForm({
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-lg font-semibold">
+        <label htmlFor="message" className="text-base font-semibold sm:text-lg">
           お問い合わせ内容 <span className="text-[var(--ritanowa-terracotta)]">*</span>
         </label>
         <textarea
@@ -102,7 +102,7 @@ export function ContactForm({
           name="message"
           required
           rows={6}
-          className="w-full resize-y rounded-3xl border border-input bg-card px-4 py-3 text-lg outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full min-w-0 resize-y rounded-3xl border border-input bg-card px-4 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
         />
       </div>
 

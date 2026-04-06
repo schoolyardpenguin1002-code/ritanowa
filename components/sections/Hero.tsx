@@ -28,46 +28,48 @@ export function Hero() {
         />
       </div>
 
-      <div className="pointer-events-none absolute -left-16 top-24 text-[var(--ritanowa-gold)] opacity-40 md:top-32">
+      <div className="pointer-events-none absolute -left-16 top-24 hidden text-[var(--ritanowa-gold)] opacity-40 sm:block md:top-32">
         <CircleRing size={180} strokeWidth={3} />
       </div>
-      <div className="pointer-events-none absolute -right-10 bottom-16 text-[var(--ritanowa-terracotta)] opacity-30">
+      <div className="pointer-events-none absolute -right-10 bottom-16 hidden text-[var(--ritanowa-terracotta)] opacity-30 sm:block">
         <CircleRing size={140} strokeWidth={2} />
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-24 md:gap-14 md:px-8 md:py-36">
-        <div className="max-w-3xl space-y-6">
-          <p className="text-lg font-semibold tracking-wide text-[var(--ritanowa-gold)] md:text-xl">
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-36">
+        <div className="max-w-3xl min-w-0 space-y-4 sm:space-y-6">
+          <p className="text-base font-semibold tracking-wide text-[var(--ritanowa-gold)] sm:text-lg md:text-xl">
             {siteConfig.concept}
           </p>
-          <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          <h1 className="text-balance text-[1.65rem] font-bold leading-[1.2] tracking-tight text-foreground min-[400px]:text-[1.85rem] sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block">「利他の輪」を</span>
             <span className="block">あなたの日常の隣に。</span>
           </h1>
-          <p className="text-pretty text-xl leading-relaxed text-foreground/90 md:text-2xl md:leading-relaxed">
+          <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
             高崎市の精神科特化型訪問看護。医師がバックアップする専門性と、ICTが生み出す「ゆとりの時間」で、あなたの心に深く寄り添います。
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+        <div className="flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-4">
           <Link
             href="/contact"
             className={cn(
               buttonVariants({ variant: "default" }),
-              "min-h-[3.25rem] justify-center rounded-3xl px-8 py-6 text-lg shadow-md"
+              "flex min-h-[3.25rem] w-full items-center justify-center rounded-3xl px-6 py-5 text-base shadow-md sm:w-auto sm:px-8 sm:py-6 sm:text-lg"
             )}
           >
             相談してみる（無料）
           </Link>
-          <div className="flex flex-col gap-2 sm:min-h-[3.25rem] sm:justify-center">
+          <div className="flex w-full min-w-0 flex-col gap-2 sm:w-auto sm:min-h-[3.25rem] sm:justify-center">
             <Link
               href={`tel:${siteConfig.phone}`}
               className={cn(
                 buttonVariants({ variant: "secondary" }),
-                "inline-flex min-h-[3.25rem] items-center justify-center rounded-3xl border border-border/80 px-8 py-6 text-lg"
+                "flex min-h-[3.25rem] w-full items-center justify-center rounded-3xl border border-border/80 px-4 py-5 text-center text-base sm:inline-flex sm:w-auto sm:px-8 sm:py-6 sm:text-lg"
               )}
             >
-              お電話（優先）{siteConfig.phoneDisplay}
+              <span className="text-pretty">
+                お電話（優先）{siteConfig.phoneDisplay}
+              </span>
             </Link>
             <a
               href={`tel:${siteConfig.phoneLandline}`}
@@ -83,6 +85,30 @@ export function Hero() {
             </a>
           </div>
         </div>
+
+        <nav
+          aria-label="主要ガイド"
+          className="flex flex-wrap gap-x-4 gap-y-2 border-t border-foreground/10 pt-5 text-sm sm:gap-x-6 sm:pt-6 sm:text-base"
+        >
+          <Link
+            href="/visit-nursing"
+            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+          >
+            訪問看護とは
+          </Link>
+          <Link
+            href="/about"
+            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+          >
+            私たちについて
+          </Link>
+          <Link
+            href="/for-whom"
+            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+          >
+            こんな方・ご家族へ
+          </Link>
+        </nav>
       </div>
     </RevealSection>
   );

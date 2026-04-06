@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
@@ -12,6 +12,12 @@ const notoSansJP = Noto_Sans_JP({
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
   : new URL("http://localhost:4000");
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   metadataBase: baseUrl,
   icons: {
@@ -23,12 +29,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.nameShort}`,
   },
   description:
-    "高崎市の精神科特化型訪問看護「りたの輪」。医師がバックアップする専門性と、ICTが生み出すゆとりの時間で、想いが巡り心が整うケアを。高崎市 精神科 訪問看護のご相談はお気軽に。",
+    "高崎市の精神科特化型訪問看護「りたのわ」。医師がバックアップする専門性と、ICTが生み出すゆとりの時間で、想いが巡り心が整うケアを。高崎市 精神科 訪問看護のご相談はお気軽に。",
   keywords: [
     "高崎市",
     "精神科",
     "訪問看護",
-    "りたの輪",
+    "りたのわ",
     "訪問看護ステーション",
     "群馬県",
     "精神科訪問看護",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.nameShort} | 高崎市の精神科特化型訪問看護`,
     description:
-      "想いが巡り、心が整う。利他の心が循環する、新しい訪問看護。高崎市で精神科特化の訪問看護をお探しなら「りたの輪」へ。",
+      "想いが巡り、心が整う。利他の心が循環する、新しい訪問看護。高崎市で精神科特化の訪問看護をお探しなら「りたのわ」へ。",
   },
   twitter: {
     card: "summary_large_image",
@@ -59,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+      <body className="flex min-h-dvh min-h-screen flex-col">
         {children}
         <Analytics />
       </body>

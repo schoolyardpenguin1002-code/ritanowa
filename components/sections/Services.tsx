@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Clock,
   Heart,
@@ -41,8 +42,8 @@ const services = [
 
 export function Services() {
   return (
-    <RevealSection id="services" className="py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+    <RevealSection id="services" className="py-16 md:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
         <SectionTitle
           eyebrow="Services"
           title="サービス内容"
@@ -59,6 +60,15 @@ export function Services() {
             />
           ))}
         </RevealRingList>
+
+        <p className="mt-12 text-center text-lg">
+          <Link
+            href="/visit-nursing"
+            className="font-semibold text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+          >
+            訪問看護とは（詳しい説明）
+          </Link>
+        </p>
       </div>
     </RevealSection>
   );

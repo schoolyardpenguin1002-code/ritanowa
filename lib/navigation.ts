@@ -18,6 +18,15 @@ export const recruitNavLink = {
 /** ヘッダー・フッター共通の階層ナビ */
 export const navGroups: readonly NavGroup[] = [
   {
+    id: "station",
+    label: "当ステーションについて",
+    items: [
+      { href: "/about", label: "私たちについて" },
+      { href: "/visit-nursing", label: "訪問看護とは" },
+      { href: "/for-whom", label: "こんな方・ご家族へ" },
+    ],
+  },
+  {
     id: "about",
     label: "施設・トップ",
     items: [
