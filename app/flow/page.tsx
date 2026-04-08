@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site-config";
 const steps = [
   {
     title: "ご相談・お問い合わせ",
-    body: "お電話またはお問い合わせフォームより、ご状況やご不安をお聞かせください。訪問看護が適切かどうかは、かかりつけ医やケアマネジャーと相談のうえ決まります。",
+    body: "お電話またはお問い合わせフォームより、ご状況やご不安をお聞かせください。訪問看護が適切かどうかは、かかりつけ医やケアマネージャー様と相談のうえ決まります。",
     icon: Phone,
   },
   {
     title: "ケアプランと契約",
-    body: "居宅サービス計画（ケアプラン）に訪問看護が位置づけられれば、サービスが始まります。必要な手続きはケアマネジャーがご案内します。",
+    body: "居宅サービス計画（ケアプラン）に訪問看護が位置づけられれば、サービスが始まります。必要な手続きはケアマネージャー様がご案内します。",
     icon: Users,
   },
   {
@@ -23,7 +23,7 @@ const steps = [
     icon: Stethoscope,
   },
   {
-    title: "主治医・ケアマネとの連携",
+    title: "主治医・ケアマネージャーとの連携",
     body: "利用者様を中心に、医療・介護・ご家族が情報を共有し、安心して療養が続くよう連携します。",
     icon: MessageCircle,
   },
@@ -39,7 +39,7 @@ export default function FlowPage() {
     <SiteLayout>
       <SubpageHeader
         title="ご利用の流れ"
-        description="実際の手続きは、かかりつけ医・ケアマネジャーの説明を優先してください。ここでは一般的な流れを示します。"
+        description="実際の手続きは、かかりつけ医・ケアマネージャー様の説明を優先してください。ここでは一般的な流れを示します。"
       />
       <RevealSection className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
         <ol className="space-y-10">

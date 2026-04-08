@@ -26,7 +26,7 @@ export default function AboutPage() {
           <p className="text-muted-foreground">
             {siteConfig.name}は、群馬県高崎市を拠点に、{" "}
             <strong className="font-semibold text-foreground">精神科領域に強みを持った訪問看護</strong>
-            を提供しています。ご本人のペースを大切にし、ご家族・主治医・ケアマネジャーと連携しながら、在宅での療養生活を支えます。
+            を提供しています。ご本人のペースを大切にし、ご家族・主治医・ケアマネージャーと連携しながら、在宅での療養生活を支えます。
           </p>
           <p className="text-muted-foreground">
             記録や事務に追われすぎないよう ICT を活用し、看護師が{" "}

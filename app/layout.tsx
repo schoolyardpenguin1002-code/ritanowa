@@ -1,10 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { Analytics } from "@vercel/analytics/react";
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -64,7 +70,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSansJP.variable} scroll-smooth`}>
+    <html
+      lang="ja"
+      className={`${notoSansJP.variable} ${notoSerifJP.variable} scroll-smooth`}
+    >
       <body className="flex min-h-dvh min-h-screen flex-col">
         {children}
         <Analytics />

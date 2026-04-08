@@ -43,7 +43,7 @@ export default function GuidePage() {
     <SiteLayout>
       <SubpageHeader
         title="ご相談のヒント"
-        description="診断や治療効果を約束するものではありません。生活の中でのつらさや不安を言葉にし、主治医・ケアマネ・訪問看護などの役割を整理するための入口です。"
+        description="診断や治療効果を約束するものではありません。生活の中でのつらさや不安を言葉にし、主治医・ケアマネージャー・訪問看護などの役割を整理するための入口です。"
       />
       <RevealSection className="mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
         <p className="mx-auto max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">

@@ -9,6 +9,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-noto-sans-jp), "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif-jp), "Hiragino Mincho ProN", "Yu Mincho", "YuMincho",
+    ui-serif, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -55,6 +57,12 @@
   --ritanowa-sand: #f5f5dc;
   --ritanowa-sand-deep: #ebe8d8;
   --ritanowa-gold: #c9a962;
+  /** 理念ページ・自然系アクセント（群馬の山・利他のイメージ） */
+  --ritanowa-sage: #5a6b52;
+  --ritanowa-sage-light: #e4ebe0;
+  --ritanowa-sage-deep: #3d4a38;
+  /** アクセント（温かみのあるレッド） */
+  --ritanowa-accent-red: #c41e3a;
   --ritanowa-ink: #2a221c;
 
   --background: #faf8f3;

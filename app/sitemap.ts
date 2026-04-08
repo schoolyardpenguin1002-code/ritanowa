@@ -8,6 +8,7 @@ const base =
 const staticPaths = [
   "",
   "/about",
+  "/philosophy",
   "/visit-nursing",
   "/for-whom",
   "/news",

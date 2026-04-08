@@ -22,6 +22,7 @@ export const navGroups: readonly NavGroup[] = [
     label: "当ステーションについて",
     items: [
       { href: "/about", label: "私たちについて" },
+      { href: "/philosophy", label: "経営理念" },
       { href: "/visit-nursing", label: "訪問看護とは" },
       { href: "/for-whom", label: "こんな方・ご家族へ" },
     ],

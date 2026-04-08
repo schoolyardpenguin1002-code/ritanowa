@@ -16,7 +16,7 @@ export default function PricingPage() {
     <SiteLayout>
       <SubpageHeader
         title="料金・費用について"
-        description="個別の金額は、保険者区分や利用回数等により異なります。必ずケアマネジャー等の説明をご確認ください。"
+        description="個別の金額は、保険者区分や利用回数等により異なります。必ずケアマネージャー様等の説明をご確認ください。"
       />
       <RevealSection className="mx-auto max-w-3xl space-y-8 px-4 py-12 text-lg leading-relaxed md:px-8 md:py-16">
         <div className="rounded-3xl border border-amber-200/80 bg-amber-50/90 p-6 text-foreground">
@@ -36,7 +36,7 @@ export default function PricingPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">ご確認いただきたい方</h2>
           <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
-            <li>介護保険のケアマネジャー（または担当者）</li>
+            <li>介護保険のケアマネージャー（または担当者）</li>
             <li>ご利用者様の加入している保険の窓口</li>
           </ul>
         </section>

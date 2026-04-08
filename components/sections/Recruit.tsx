@@ -16,7 +16,7 @@ export function Recruit() {
         <SectionTitle
           eyebrow="採用のご案内"
           title="スタッフ採用のお知らせ"
-          lead="このサイトのトップは、ご利用をお考えの方・ケアマネジャー様・ご家族様向けの内容です。採用に関する詳細は、求職者向けの専用ページをご覧ください。ご利用・ご相談は「お問い合わせ」よりお願いいたします。"
+          lead="このサイトのトップは、ご利用をお考えの方・ケアマネージャー様・ご家族様向けの内容です。採用に関する詳細は、求職者向けの専用ページをご覧ください。ご利用・ご相談は「お問い合わせ」よりお願いいたします。"
           align="center"
         />
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
