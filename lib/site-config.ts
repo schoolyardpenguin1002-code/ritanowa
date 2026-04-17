@@ -44,7 +44,7 @@ export const siteConfig = {
   mapSearchUrl:
     "https://www.google.com/maps/search/?api=1&query=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5",
   /** 公式LINE（https://… を入れるとアイコンがリンク有効になります） */
-  lineUrl: "",
+  lineUrl: "https://lin.ee/tuWuLYJ",
   /** 公式Instagram */
   instagramUrl: "",
 } as const;
