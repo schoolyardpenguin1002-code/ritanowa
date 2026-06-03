@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactLinePrimary } from "@/components/contact/ContactLinePrimary";
 import { EmailCopyButton } from "@/components/EmailCopyButton";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
@@ -10,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: `${siteConfig.name}へのご相談・お問い合わせフォームです。`,
+  description: `${siteConfig.name}へのご相談・お問い合わせ。LINEが便利です。お急ぎの方はお電話ください。`,
 };
 
 type Props = {
@@ -24,37 +25,12 @@ export default async function ContactPage({ searchParams }: Props) {
     <SiteLayout>
       <SubpageHeader
         title="お問い合わせ"
-        description="フォーム送信後、メールアプリが開きます。お急ぎの場合はお電話ください。"
+        description="LINEからのお問い合わせが便利です。なんでもお気軽にどうぞ。お急ぎの場合はお電話ください。"
       />
-      <RevealSection className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
-        <div className="mb-10 rounded-3xl border border-border/80 bg-card p-6 text-lg leading-relaxed shadow-sm">
-          <p className="font-semibold text-foreground">お電話でのお問い合わせ（タップで発信）</p>
-          <ul className="mt-3 space-y-2 text-muted-foreground">
-            <li>
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="-mx-2 block min-h-[52px] rounded-2xl px-2 py-3 font-semibold text-[var(--ritanowa-terracotta)] transition-colors hover:bg-secondary/80 hover:underline"
-              >
-                <span className="block text-base font-normal">優先（携帯）</span>
-                {siteConfig.phoneDisplay}
-              </a>
-            </li>
-            <li>
-              <a
-                href={`tel:${siteConfig.phoneLandline}`}
-                className="-mx-2 block min-h-[52px] rounded-2xl px-2 py-3 font-semibold text-[var(--ritanowa-terracotta)] transition-colors hover:bg-secondary/80 hover:underline"
-              >
-                <span className="block text-base font-normal">固定</span>
-                {siteConfig.phoneLandlineDisplay}
-              </a>
-              <p className="mt-1 px-2 text-sm text-muted-foreground">
-                ※固定電話は出られない可能性があります
-              </p>
-            </li>
-          </ul>
-        </div>
+      <RevealSection className="page-container-narrow py-12 md:py-16">
+        <ContactLinePrimary />
 
-        <div className="mb-10 rounded-3xl border border-border/80 bg-card p-6 shadow-sm">
+        <div className="mt-10 rounded-3xl border border-border/80 bg-card p-6 shadow-sm sm:p-8">
           <p className="font-semibold text-foreground">メール</p>
           <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
@@ -67,11 +43,21 @@ export default async function ContactPage({ searchParams }: Props) {
           </div>
         </div>
 
-        <div className="mb-10 rounded-3xl border border-border/80 bg-card p-6 shadow-sm">
+        <div className="mt-8 rounded-3xl border border-border/80 bg-card p-6 shadow-sm">
           <SocialLinks showCaption instanceId="contact" />
         </div>
 
-        <ContactForm defaultInquiryType={defaultInquiryType} />
+        <div className="mt-12 border-t border-border/60 pt-12">
+          <h2 className="text-xl font-bold text-foreground sm:text-2xl">
+            フォームからのお問い合わせ
+          </h2>
+          <p className="mt-2 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            送信後、お使いのメールアプリが開きます。LINE・お電話でも承ります。
+          </p>
+          <div className="mt-8">
+            <ContactForm defaultInquiryType={defaultInquiryType} />
+          </div>
+        </div>
       </RevealSection>
     </SiteLayout>
   );

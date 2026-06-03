@@ -19,7 +19,7 @@ export type FaqCornerItem = {
   imageAlt: string;
 };
 
-/** よくある質問コーナー（パンフレット・HP向け） */
+/** よくある質問（パンフレット・HP向け） */
 export const faqCornerItems: readonly FaqCornerItem[] = [
   {
     id: "cost",
@@ -72,7 +72,7 @@ export const faqCornerItems: readonly FaqCornerItem[] = [
     a: "はい、ご家族のサポートも訪問看護の大切な役割です。毎日の育児疲れや悩みを専門スタッフが丁寧にお聞きし、心の負担を和らげます。お子さまの特性に合わせた関わり方のアドバイスや、親御さんが休息（レスパイト）をとるための見守りなども行っています。",
     icon: HeartHandshake,
     imageSrc:
-      "https://images.unsplash.com/photo-1511895426328-dc871419eb0a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
     imageAlt: "親子が寄り添う様子",
   },
   {
@@ -90,7 +90,7 @@ export const faqCornerItems: readonly FaqCornerItem[] = [
     a: "訪問看護は原則としてご自宅への訪問となります。ただし、お子さまの状況によっては、主治医や学校と相談の上でご自宅以外の場所への訪問を検討できる場合があります。なお、利用前の「無料相談・初回面談」はご自宅以外でも実施可能です。",
     icon: MapPin,
     imageSrc:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
     imageAlt: "学校・外出のイメージ",
   },
 ] as const;

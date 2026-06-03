@@ -68,7 +68,7 @@ export function CommunityPageContent() {
             掲載・イベント登録のご希望
           </p>
           <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            共生サポーターとしての掲載、またはカレンダーへのイベント登録については、お問い合わせください。
+            協力サポーターとしての掲載、またはカレンダーへのイベント登録については、お問い合わせください。
           </p>
           <Link
             href="/contact"

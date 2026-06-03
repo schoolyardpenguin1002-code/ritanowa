@@ -42,7 +42,7 @@ export function Header() {
           onClick={() => setOpen((v) => !v)}
           className={cn(
             buttonVariants({ variant: "ghost", size: "icon-lg" }),
-            "shrink-0 rounded-full lg:hidden"
+            "shrink-0 rounded-full xl:hidden"
           )}
           aria-expanded={open}
           aria-label={open ? "メニューを閉じる" : "メニューを開く"}
@@ -53,7 +53,7 @@ export function Header() {
 
       <div
         className={cn(
-          "max-h-[min(75vh,calc(100dvh-5rem))] overflow-y-auto border-t border-border/50 bg-background lg:hidden",
+          "max-h-[min(75vh,calc(100dvh-5rem))] overflow-y-auto overscroll-contain border-t border-border/50 bg-background xl:hidden",
           open ? "block" : "hidden"
         )}
       >

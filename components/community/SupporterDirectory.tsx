@@ -90,7 +90,7 @@ export function SupporterDirectory() {
       <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
         <SectionTitle
           eyebrow="Supporters"
-          title="共生サポーターの皆さま"
+          title="協力サポーターの皆さま"
           lead="りたのわと共感・連携している団体・個人のご紹介です。くわしい活動内容は、各リンク先のホームページ等をご覧ください。"
         />
 

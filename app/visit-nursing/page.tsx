@@ -165,7 +165,7 @@ export default function VisitNursingPage() {
             href="/faq"
             className="inline-flex min-h-[52px] items-center justify-center text-lg font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
           >
-            よくある質問コーナー
+            よくある質問
           </Link>
         </div>
       </RevealSection>

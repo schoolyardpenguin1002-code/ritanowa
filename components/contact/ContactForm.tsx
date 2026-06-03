@@ -123,10 +123,8 @@ export function ContactForm({
 
       <p className="text-base text-muted-foreground">
         送信後、お使いのメールアプリが開きます。宛先は {siteConfig.email}{" "}
-        です。届かない場合はお電話（優先 {siteConfig.phoneDisplay}
-        ／固定 {siteConfig.phoneLandlineDisplay}
-        <span className="text-sm"> ※固定は出られない可能性があります</span>
-        ）もご利用ください。
+        です。お急ぎ・気軽なご相談はページ上部の公式LINE、またはお電話（優先{" "}
+        {siteConfig.phoneDisplay}）もご利用ください。
       </p>
 
       <button

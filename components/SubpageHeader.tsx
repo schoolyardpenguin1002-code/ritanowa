@@ -7,8 +7,8 @@ type SubpageHeaderProps = {
 
 export function SubpageHeader({ title, description }: SubpageHeaderProps) {
   return (
-    <header className="border-b border-border/60 bg-[color-mix(in_srgb,var(--ritanowa-sand)_25%,var(--background))] px-4 py-10 sm:px-5 sm:py-12 md:px-8 md:py-20">
-      <div className="mx-auto min-w-0 max-w-3xl">
+    <header className="border-b border-border/60 bg-[color-mix(in_srgb,var(--ritanowa-sand)_25%,var(--background))] py-10 sm:py-12 md:py-20">
+      <div className="page-container min-w-0 max-w-3xl">
         <p className="mb-3 text-base font-medium text-[var(--ritanowa-gold)] sm:text-lg">
           <Link
             href="/"

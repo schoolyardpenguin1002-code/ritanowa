@@ -30,10 +30,10 @@ export function FaqCornerContent() {
         </div>
         <div className="mx-auto flex min-h-[220px] max-w-6xl flex-col justify-center px-4 py-12 sm:min-h-[260px] sm:px-5 md:min-h-[300px] md:px-8 md:py-16">
           <p className="text-sm font-semibold tracking-wide text-[var(--ritanowa-gold)] sm:text-base">
-            FAQ Corner
+            FAQ
           </p>
           <h2 className="mt-2 text-balance text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-            よくある質問コーナー
+            よくある質問
           </h2>
           <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
             料金・対象・利用の流れなど、ご家族からよくいただく質問をまとめました。くわしいご状況は、お気軽にご相談ください。

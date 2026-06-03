@@ -42,7 +42,6 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/#specialty", label: "小児・精神科・特化" },
       { href: "/#concern-gateway", label: "お悩みから探す" },
-      { href: "/#strengths", label: "3つの約束" },
       { href: "/#director-message", label: "代表挨拶" },
     ],
   },
@@ -52,7 +51,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/pricing", label: "料金" },
       { href: "/area", label: "地域" },
-      { href: "/faq", label: "よくある質問コーナー" },
+      { href: "/faq", label: "よくある質問" },
     ],
   },
   {
@@ -61,7 +60,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
-      { href: "/community", label: "共生サポーター・イベント" },
+      { href: "/community", label: "協力サポーター・イベント" },
     ],
   },
   {
