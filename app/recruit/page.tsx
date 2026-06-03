@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   CalendarHeart,
@@ -13,6 +14,7 @@ import {
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { buttonVariants } from "@/lib/button-variants";
+import { director } from "@/lib/staff-data";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -263,19 +265,34 @@ export default function RecruitPage() {
       <RevealSection className="mx-auto max-w-3xl px-4 pb-14 md:px-8 md:pb-20">
         <div className="rounded-3xl border border-dashed border-border/90 bg-muted/30 p-8 md:p-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-10">
-            <div
-              className="flex min-h-[220px] w-full shrink-0 items-center justify-center rounded-2xl border-2 border-dashed border-[var(--ritanowa-gold)]/40 bg-[color-mix(in_srgb,var(--ritanowa-sand)_40%,var(--background))] md:max-w-[260px]"
-              aria-label="医師・代表の写真（未掲載）"
-            >
-              <p className="px-4 text-center text-base text-muted-foreground">
-                医師・代表の写真
-                <span className="mt-2 block text-sm">（準備中・未掲載）</span>
-              </p>
-            </div>
+            {director.imageSrc ? (
+              <div className="relative mx-auto aspect-[4/5] w-full shrink-0 overflow-hidden rounded-2xl border border-border/80 shadow-md md:mx-0 md:max-w-[260px]">
+                <Image
+                  src={director.imageSrc}
+                  alt={director.imageAlt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="260px"
+                />
+              </div>
+            ) : (
+              <div
+                className="flex min-h-[220px] w-full shrink-0 items-center justify-center rounded-2xl border-2 border-dashed border-[var(--ritanowa-gold)]/40 bg-[color-mix(in_srgb,var(--ritanowa-sand)_40%,var(--background))] md:max-w-[260px]"
+                aria-label={director.imageAlt}
+              >
+                <p className="px-4 text-center text-base text-muted-foreground">
+                  医師・代表の写真
+                  <span className="mt-2 block text-sm">（準備中・未掲載）</span>
+                </p>
+              </div>
+            )}
             <div>
               <h2 className="text-xl font-bold md:text-2xl">代表メッセージ</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {director.name}　{director.title}
+              </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                代表は医師として、現場の看護師と二人三脚で、ご本人とご家族のペースを大切にするケアを目指しています。写真は準備が整い次第、掲載いたします。
+                代表は医師として、現場の看護師と二人三脚で、ご本人とご家族のペースを大切にするケアを目指しています。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 ご本人のメッセージ全文は

@@ -47,7 +47,10 @@ export default function StaffPage() {
                   </span>
                 </div>
               )}
-              <p className="mt-3 text-sm text-muted-foreground">代表／医師</p>
+              <div className="mt-3">
+                <p className="font-semibold text-foreground">{director.name}</p>
+                <p className="text-sm text-muted-foreground">{director.title}</p>
+              </div>
             </div>
             <div className="min-w-0 flex-1 space-y-4">
               <div className="whitespace-pre-line text-lg leading-relaxed md:text-xl">

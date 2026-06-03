@@ -4,9 +4,6 @@ import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { director } from "@/lib/staff-data";
 
-/** トップの代表挨拶では氏名は出さず、肩書のみ（写真は空欄） */
-const DIRECTOR_LABEL = "代表／医師";
-
 export function DirectorMessage() {
   return (
     <RevealSection
@@ -42,9 +39,10 @@ export function DirectorMessage() {
                 </span>
               </div>
             )}
-            <p className="mt-3 text-center text-sm text-muted-foreground md:text-left">
-              {DIRECTOR_LABEL}
-            </p>
+            <div className="mt-3 text-center md:text-left">
+              <p className="font-semibold text-foreground">{director.name}</p>
+              <p className="text-sm text-muted-foreground">{director.title}</p>
+            </div>
           </div>
 
           <div className="min-w-0 flex-1 space-y-6">
