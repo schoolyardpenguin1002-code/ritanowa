@@ -15,7 +15,6 @@ export type DirectorProfile = {
 export type RepresentativeNurseProfile = {
   id: string;
   name: string;
-  nameKana: string;
   roleLabel: string;
   intro: string;
 };
@@ -36,7 +35,6 @@ export const director: DirectorProfile = {
 export const representativeNurse: RepresentativeNurseProfile = {
   id: "representative-nurse",
   name: "上原 実紅",
-  nameKana: "うえはら みくべに",
   roleLabel: "管理者／代表看護師",
   intro: "自己紹介は Coming Soon",
 };

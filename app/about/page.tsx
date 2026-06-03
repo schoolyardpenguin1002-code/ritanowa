@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "私たちについて",
-  description: `${siteConfig.name}の理念、名称の由来、小児精神科特化型訪問看護としての想い。高崎市を拠点に群馬県内で在宅療養を支えます。`,
+  description: `${siteConfig.name}の理念、名称の由来、小児精神科訪問看護としての想い。高崎市を拠点に群馬県内で在宅療養を支えます。`,
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
     <SiteLayout>
       <SubpageHeader
         title="私たちについて"
-        description="お子さまとご家族に寄り添う、小児精神科特化型の訪問看護を、地域の日常のなかで。"
+        description="お子さまとご家族に寄り添う、小児精神科の訪問看護を、地域の日常のなかで。"
       />
       <RevealSection className="mx-auto max-w-3xl space-y-12 px-4 py-12 text-lg leading-relaxed md:px-8 md:py-16">
         <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">

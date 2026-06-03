@@ -8,8 +8,10 @@ export const siteConfig = {
   /** ヘッダーロゴ横の表記（ファビコンと並べる） */
   headerBrandTitle: "訪問看護ステーションりたのわ",
   /** サイト全体の専門領域（SEO・ヒーロー等で使用） */
-  specialtyShort: "小児精神科特化型",
-  specialtyPillars: ["小児", "精神科", "特化"] as const,
+  specialtyShort: "小児精神科",
+  /** バッジ・見出し用（「特化」は出さない） */
+  specialtyCross: "小児×精神",
+  specialtyPillars: ["小児", "精神"] as const,
   concept:
     "想いが巡り、心が整う。お子さまとご家族に寄り添う、小児精神科の訪問看護。",
   /** 優先の連絡先（携帯） */
@@ -56,7 +58,7 @@ export const siteConfig = {
   /** 公式LINE（https://… を入れるとアイコンがリンク有効になります） */
   lineUrl: "https://lin.ee/tuWuLYJ",
   /** 公式Instagram */
-  instagramUrl: "",
+  instagramUrl: "https://www.instagram.com/ritanowa_gunma",
   /** サイト共通：連携先の表記 */
   regionalPartners: "地域の公的機関・行政・NPO",
   regionalPartnersHonorific: "地域の公的機関・行政・NPO様",

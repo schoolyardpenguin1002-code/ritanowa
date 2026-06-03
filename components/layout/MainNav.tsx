@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -11,7 +11,11 @@ import {
 } from "@/components/ui/accordion";
 import { buttonVariants } from "@/lib/button-variants";
 import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
-import { navGroups, recruitNavLink } from "@/lib/navigation";
+import {
+  contactNavLink,
+  headerNavGroups,
+  recruitNavLink,
+} from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -79,7 +83,7 @@ export function MainNav({
         className="hidden max-w-[70%] flex-1 flex-wrap items-center justify-end gap-x-0.5 gap-y-1 lg:flex xl:max-w-none xl:gap-x-1"
         aria-label="メインナビゲーション"
       >
-        {navGroups.map((g) => (
+        {headerNavGroups.map((g) => (
           <DesktopDropdown
             key={g.id}
             groupId={g.id}
@@ -88,6 +92,16 @@ export function MainNav({
           />
         ))}
         <AiConsultNavLink variant="desktop" />
+        <Link
+          href={contactNavLink.href}
+          className={cn(
+            buttonVariants({ variant: "default" }),
+            "ml-1.5 inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2.5 text-base font-bold shadow-md ring-2 ring-[color-mix(in_srgb,var(--ritanowa-gold)_45%,transparent)] transition-[filter,box-shadow] hover:brightness-[1.04] hover:shadow-lg xl:gap-2 xl:px-6 xl:py-3 xl:text-lg"
+          )}
+        >
+          <Mail className="size-4 shrink-0 xl:size-5" aria-hidden />
+          {contactNavLink.label}
+        </Link>
         <Link
           href={recruitNavLink.href}
           className={cn(
@@ -116,8 +130,23 @@ export function MainNav({
     >
       <AiConsultNavLink variant="mobile" onNavigate={onNavigate} />
 
+      <Link
+        href={contactNavLink.href}
+        onClick={onNavigate}
+        className="group relative overflow-hidden rounded-3xl border-2 border-[color-mix(in_srgb,var(--ritanowa-gold)_55%,var(--ritanowa-terracotta))] bg-gradient-to-br from-[var(--ritanowa-terracotta)] via-[color-mix(in_srgb,var(--ritanowa-terracotta)_92%,#c45a3a)] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_78%,#8b3d2a)] px-5 py-5 text-left text-primary-foreground shadow-lg ring-2 ring-[color-mix(in_srgb,var(--ritanowa-gold)_35%,transparent)] transition hover:brightness-[1.05] hover:shadow-xl"
+      >
+        <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/90">
+          <Mail className="size-4" aria-hidden />
+          Contact
+        </span>
+        <span className="mt-1 block text-xl font-bold">{contactNavLink.label}</span>
+        <span className="mt-2 block text-base leading-snug text-white/90">
+          LINE・フォームから、お気軽にご相談ください
+        </span>
+      </Link>
+
       <Accordion multiple className="rounded-2xl border border-border/60 bg-card/50">
-        {navGroups.map((g) => (
+        {headerNavGroups.map((g) => (
           <AccordionItem key={g.id} value={g.id} className="border-border/60 px-2">
             <AccordionTrigger className="py-4 text-lg font-semibold hover:no-underline">
               {g.label}

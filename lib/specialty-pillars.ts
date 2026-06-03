@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Baby, Brain, Target } from "lucide-react";
+import { Baby, Brain } from "lucide-react";
 
 export type SpecialtyPillar = {
   id: string;
@@ -9,7 +9,7 @@ export type SpecialtyPillar = {
   icon: LucideIcon;
 };
 
-/** トップ「小児 × 精神科 × 特化」セクション */
+/** トップ「小児×精神」セクション */
 export const specialtyPillars: readonly SpecialtyPillar[] = [
   {
     id: "pediatric",
@@ -19,17 +19,16 @@ export const specialtyPillars: readonly SpecialtyPillar[] = [
     icon: Baby,
   },
   {
-    id: "psychiatry",
-    label: "精神科",
+    id: "mental-health",
+    label: "精神",
     title: "精神・心理の専門性を土台に",
-    body: "気分や不安、発達の特性、服薬など、精神領域の看護知識をもとに在宅を支えます。医師の指示とケアプランに沿った支援です。",
+    body: "気分や不安、服薬など、精神領域の看護知識をもとに在宅を支えます。医師の指示とケアプランに沿い、お子さまとご家族のペースを大切に伴走します。",
     icon: Brain,
   },
-  {
-    id: "specialized",
-    label: "特化",
-    title: "小児精神科領域に特化した訪問看護",
-    body: "不登校・発達の特性・お子さまのこころの不調など、ご家族が抱えやすいテーマに経験を重ね、地域の医療・教育・福祉とつなぎます。",
-    icon: Target,
-  },
 ] as const;
+
+/** 小児×精神セクション全体のまとめ（「特化」という項目名では出さない） */
+export const specialtyMission = {
+  title: "小児精神科領域に特化した訪問看護",
+  body: "不登校・発達の特性・お子さまのこころの不調など、ご家族が抱えやすいテーマに経験を重ね、地域の医療・教育・福祉とつなぎます。",
+} as const;

@@ -38,16 +38,11 @@ export function Hero() {
       <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-32">
         <div className="max-w-3xl min-w-0 space-y-4 sm:space-y-6">
           <div className="flex flex-wrap items-center gap-2">
-            {siteConfig.specialtyPillars.map((label) => (
-              <span
-                key={label}
-                className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3 py-1 text-sm font-bold text-white shadow-sm sm:text-base"
-              >
-                {label}
-              </span>
-            ))}
+            <span className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3.5 py-1 text-sm font-bold tracking-wide text-white shadow-sm sm:px-4 sm:text-base">
+              {siteConfig.specialtyCross}
+            </span>
             <span className="text-sm font-semibold text-[var(--ritanowa-gold)] sm:text-base">
-              {siteConfig.specialtyShort}訪問看護
+              訪問看護
             </span>
           </div>
           <p className="text-base font-semibold tracking-wide text-[var(--ritanowa-gold)] sm:text-lg md:text-xl">

@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site-config";
+
 export type NavLink = {
   href: string;
   label: string;
@@ -14,7 +16,13 @@ export const aiConsultNavLink = {
   label: "AIに相談",
 } as const;
 
-/** ヘッダー「採用サイト」用（お問い合わせと電話の間に表示） */
+/** ヘッダー「お問い合わせ」用（目立つCTA） */
+export const contactNavLink = {
+  href: "/contact",
+  label: "お問い合わせ",
+} as const;
+
+/** ヘッダー「採用サイト」用 */
 export const recruitNavLink = {
   href: "/recruit",
   label: "採用サイト",
@@ -26,7 +34,7 @@ export const navGroups: readonly NavGroup[] = [
     id: "pediatric",
     label: "小児精神科訪問看護",
     items: [
-      { href: "/#specialty", label: "小児・精神科・特化" },
+      { href: "/#specialty", label: siteConfig.specialtyCross },
       { href: "/#concern-gateway", label: "お悩みから探す" },
       { href: "/visit-nursing", label: "訪問看護とは" },
       { href: "/for-whom", label: "お子さま・ご家族へ" },
@@ -70,3 +78,6 @@ export const navGroups: readonly NavGroup[] = [
     ],
   },
 ] as const;
+
+/** ヘッダー用（お問い合わせは contactNavLink で別表示） */
+export const headerNavGroups = navGroups.filter((g) => g.id !== "support");

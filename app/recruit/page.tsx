@@ -120,7 +120,7 @@ export default function RecruitPage() {
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 「りたのわ」は、利用者様とご家族様、主治医・地域の公的機関・行政・NPOがつながる<strong className="font-semibold text-foreground">“輪”</strong>
-                を大切にする小児精神科特化型の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
+                を大切にする小児精神科の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 高崎市を拠点に、地域の方々の暮らしに長く寄り添えるケアを積み重ねていきたい——そのために、互いを尊重し、学び合える職場でありたいと考えています。
@@ -146,7 +146,7 @@ export default function RecruitPage() {
                 icon: MessageCircle,
               },
               {
-                title: "小児精神科特化と医師のバックアップ",
+                title: "小児精神科領域と医師のバックアップ",
                 body: "小児・精神領域の医療的視点を背景に、現場の判断を支える体制を整えています（詳細は面談時にご説明します）。",
                 icon: HeartHandshake,
               },

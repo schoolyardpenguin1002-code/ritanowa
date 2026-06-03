@@ -5,7 +5,7 @@ import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { buttonVariants } from "@/lib/button-variants";
-import { specialtyPillars } from "@/lib/specialty-pillars";
+import { specialtyMission, specialtyPillars } from "@/lib/specialty-pillars";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +38,7 @@ const serviceItems = [
 
 export const metadata: Metadata = {
   title: "小児精神科訪問看護とは",
-  description: `${siteConfig.nameShort}が提供する小児精神科特化型訪問看護の概要。不登校・発達の特性・在宅療養の支援。高崎市・群馬県内。`,
+  description: `${siteConfig.nameShort}が提供する小児精神科訪問看護の概要。不登校・発達の特性・在宅療養の支援。高崎市・群馬県内。`,
 };
 
 export default function VisitNursingPage() {
@@ -46,13 +46,13 @@ export default function VisitNursingPage() {
     <SiteLayout>
       <SubpageHeader
         title="小児精神科訪問看護とは"
-        description={`${siteConfig.specialtyPillars.join("・")}の専門性を軸に、お子さまの在宅療養とご家族の暮らしを支える訪問看護です。`}
+        description={`${siteConfig.specialtyCross}を軸に、お子さまの在宅療養とご家族の暮らしを支える訪問看護です。`}
       />
 
       <RevealSection className="mx-auto max-w-3xl space-y-14 px-4 py-12 md:px-8 md:py-16">
         <section className="space-y-6">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-            {siteConfig.specialtyPillars.join(" × ")}の考え方
+            {siteConfig.specialtyCross}の考え方
           </h2>
           <ul className="grid gap-4 sm:grid-cols-1">
             {specialtyPillars.map((p) => (
@@ -66,6 +66,14 @@ export default function VisitNursingPage() {
               </li>
             ))}
           </ul>
+          <div className="rounded-2xl border border-[var(--ritanowa-gold)]/35 bg-[color-mix(in_srgb,var(--ritanowa-sand)_40%,var(--card))] p-5 shadow-sm sm:p-6">
+            <h3 className="text-lg font-bold leading-snug md:text-xl">
+              {specialtyMission.title}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+              {specialtyMission.body}
+            </p>
+          </div>
         </section>
 
         <section className="space-y-6">
@@ -106,9 +114,9 @@ export default function VisitNursingPage() {
           <p className="text-lg text-muted-foreground">
             当ステーションはそのなかでも、
             <strong className="font-semibold text-foreground">
-              小児・精神・心理の領域に特化
+              {siteConfig.specialtyCross}
             </strong>
-            し、不登校、発達の特性、気分や不安、ご家族の負担など、ご家庭の文脈で看護を行います。
+            の領域を中心に、不登校、発達の特性、気分や不安、ご家族の負担など、ご家庭の文脈で看護を行います。
           </p>
         </section>
 
