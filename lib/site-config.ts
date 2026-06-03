@@ -9,6 +9,8 @@ export const siteConfig = {
   headerBrandTitle: "訪問看護ステーションりたのわ",
   /** サイト全体の専門領域（SEO・ヒーロー等で使用） */
   specialtyShort: "小児精神科",
+  /** SEO・ヒーロー等の主要エリア表記 */
+  primaryServiceAreaLabel: "群馬県高崎市・前橋市",
   /** バッジ・見出し用（「特化」は出さない） */
   specialtyCross: "小児×精神",
   specialtyPillars: ["小児", "精神"] as const,

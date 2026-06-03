@@ -19,9 +19,9 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
   : new URL("http://localhost:4000");
 
-const defaultTitle = `${siteConfig.nameShort} | 高崎市の${siteConfig.specialtyShort}訪問看護`;
+const defaultTitle = `${siteConfig.nameShort} | ${siteConfig.primaryServiceAreaLabel}の${siteConfig.specialtyShort}訪問看護`;
 const defaultDescription =
-  `高崎市の小児精神科訪問看護「りたのわ」。不登校・発達の特性・お子さまのこころの不調——ご家族に寄り添う訪問看護。${siteConfig.regionalPartners}と連携し、想いが巡り心が整うケアを。`;
+  `${siteConfig.primaryServiceAreaLabel}の小児精神科訪問看護「りたのわ」。不登校・発達の特性・お子さまのこころの不調——ご家族に寄り添う訪問看護。${siteConfig.regionalPartners}と連携し、想いが巡り心が整うケアを。`;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   description: defaultDescription,
   keywords: [
     "高崎市",
+    "前橋市",
     "小児",
     "精神科",
     "訪問看護",

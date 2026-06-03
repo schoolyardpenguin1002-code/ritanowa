@@ -53,7 +53,7 @@ export function Hero() {
             <span className="block">「利他の輪」を、日常の隣に。</span>
           </h1>
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
-            高崎市の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
+            {siteConfig.primaryServiceAreaLabel}の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
           </p>
         </div>
 
