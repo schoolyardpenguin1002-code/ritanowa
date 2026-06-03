@@ -7,17 +7,17 @@ import { SectionTitle } from "@/components/SectionTitle";
 const items = [
   {
     title: "医師によるバックアップ",
-    body: "医療的なエビデンスに基づいた的確なアセスメントと迅速な判断。",
+    body: "小児・精神領域の医療的視点に基づくアセスメントと、必要時の迅速な連携。お子さまの安全を土台にします。",
     icon: HeartHandshake,
   },
   {
     title: "システムが生む「対話の時間」",
-    body: "最新ツールの導入で記録業務を効率化。その分、お一人おひとりの話をじっくり聴く時間を創出。",
+    body: "記録業務を効率化し、お子さまとご家族の話をじっくり聴く時間を創出。成長段階に合わせた関わりを大切にします。",
     icon: MessageCircle,
   },
   {
-    title: "地域を繋ぐ循環のケア",
-    body: "利用者様を中心に、主治医やケアマネージャー、ご家族を一つの「輪」として繋ぐ連携。",
+    title: "ご家庭と地域を繋ぐ「輪」",
+    body: "主治医・ケアマネージャー・学校・ご家族をつなぎ、不登校や発達の特性など、暮らしの文脈で支援します。",
     icon: Network,
   },
 ] as const;
@@ -32,7 +32,7 @@ export function OurStrengths() {
         <SectionTitle
           eyebrow="Our Strengths"
           title="「りたのわ」3つの約束"
-          lead="ケアは一方通行ではなく、想いと時間が巡る「輪」として設計しています。"
+          lead="小児精神科の訪問看護は、お子さまだけでなくご家族の「輪」として設計します。"
         />
 
         <RevealRingList className="mt-10 grid gap-6 sm:mt-16 md:grid-cols-3 md:gap-8 lg:gap-10">

@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "ブログ・コラム",
-  description: `精神科訪問看護・在宅療養に関するコラム。${siteConfig.nameShort}（高崎市）。`,
+  description: `小児精神科訪問看護・お子さまとご家族向けのコラム。${siteConfig.nameShort}（高崎市）。`,
 };
 
 type Props = {
@@ -28,7 +28,7 @@ export default async function BlogPage({ searchParams }: Props) {
     <SiteLayout>
       <SubpageHeader
         title="ブログ・コラム"
-        description="精神科訪問看護やご家族向けの読み物を掲載しています。"
+        description="小児精神科訪問看護や、お子さま・ご家族向けの読み物を掲載しています。"
       />
       <RevealSection className="mx-auto max-w-3xl px-4 py-10 md:px-8 md:py-14">
         <div className="mb-10 flex flex-wrap gap-2">

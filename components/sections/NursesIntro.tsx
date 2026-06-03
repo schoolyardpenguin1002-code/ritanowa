@@ -13,7 +13,7 @@ export function NursesIntro() {
         <SectionTitle
           eyebrow="Team"
           title="看護師のご紹介"
-          lead="訪問看護を担うスタッフです。掲載はイメージ用の写真・仮名です。"
+          lead="小児精神科訪問看護を担うスタッフです。掲載はイメージ用の写真・仮名です。"
         />
 
         <RevealRingList className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">

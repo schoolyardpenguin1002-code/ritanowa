@@ -18,6 +18,11 @@ const notoSerifJP = Noto_Serif_JP({
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
   : new URL("http://localhost:4000");
+
+const defaultTitle = `${siteConfig.nameShort} | 高崎市の${siteConfig.specialtyShort}訪問看護`;
+const defaultDescription =
+  "高崎市の小児精神科特化型訪問看護「りたのわ」。不登校・発達の特性・お子さまのこころの不調——ご家族に寄り添う訪問看護。医師バックアップとICTで、想いが巡り心が整うケアを。";
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -31,33 +36,34 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "750x750" }],
   },
   title: {
-    default: `${siteConfig.nameShort} | 高崎市の精神科特化型訪問看護`,
+    default: defaultTitle,
     template: `%s | ${siteConfig.nameShort}`,
   },
-  description:
-    "高崎市の精神科特化型訪問看護「りたのわ」。医師がバックアップする専門性と、ICTが生み出すゆとりの時間で、想いが巡り心が整うケアを。高崎市 精神科 訪問看護のご相談はお気軽に。",
+  description: defaultDescription,
   keywords: [
     "高崎市",
+    "小児",
     "精神科",
     "訪問看護",
     "りたのわ",
     "訪問看護ステーション",
     "群馬県",
-    "精神科訪問看護",
+    "小児精神科訪問看護",
+    "不登校",
+    "発達障害",
+    "発達の特性",
   ],
   openGraph: {
     type: "website",
     locale: "ja_JP",
     siteName: siteConfig.name,
-    title: `${siteConfig.nameShort} | 高崎市の精神科特化型訪問看護`,
-    description:
-      "想いが巡り、心が整う。利他の心が循環する、新しい訪問看護。高崎市で精神科特化の訪問看護をお探しなら「りたのわ」へ。",
+    title: defaultTitle,
+    description: siteConfig.concept,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.nameShort} | 高崎市の精神科特化型訪問看護`,
-    description:
-      "高崎市の精神科特化型訪問看護。医師バックアップとICTで、対話に時間をかけられる訪問看護ステーションです。",
+    title: defaultTitle,
+    description: defaultDescription,
   },
   robots: {
     index: true,

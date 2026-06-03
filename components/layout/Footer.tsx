@@ -23,7 +23,7 @@ export function Footer() {
             会社概要・お問い合わせ
           </h2>
           <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-            群馬県高崎市浜尻町を拠点に、精神科特化型の訪問看護サービスを提供しています。ご相談・ご不明点はお電話またはお問い合わせフォームにて承ります。
+            群馬県高崎市浜尻町を拠点に、小児精神科特化型の訪問看護サービスを提供しています。ご相談・ご不明点はお電話またはお問い合わせフォームにて承ります。
           </p>
           <dl className="space-y-3.5 text-sm leading-relaxed md:text-[0.9375rem]">
             <div>

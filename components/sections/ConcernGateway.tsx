@@ -13,12 +13,12 @@ export function ConcernGateway() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
         <SectionTitle
-          eyebrow="For families & individuals"
+          eyebrow="For children & families"
           title="こんなことで困っていませんか"
-          lead="診断名の有無にかかわらず、生活の中で感じるモヤモヤを一人で抱え込まず、まずは読み物やFAQで整理してみてください。医療的判断は主治医にお任せし、私たちは訪問看護の立場から伴走します。くわしくは「こんな方・ご家族へ」ページもご覧ください。"
+          lead="不登校、発達の特性、お子さまの気持ちの不調、ご家族の負担——診断名の有無にかかわらず、一人で抱え込まず、まずは読み物やFAQで整理してみてください。医療的判断は主治医にお任せし、私たちは訪問看護の立場からご家庭に寄り添います。"
         />
 
-        <ul className="mt-10 grid gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+        <ul className="mt-10 grid gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {concernGatewayCards.map((c) => (
             <li key={c.href} className="min-w-0">
               <Link
@@ -42,7 +42,7 @@ export function ConcernGateway() {
             href="/for-whom"
             className="inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-[var(--ritanowa-gold)] bg-transparent px-6 py-3 text-base font-semibold text-foreground transition-colors hover:bg-[color-mix(in_srgb,var(--ritanowa-gold)_12%,transparent)] sm:px-8 sm:py-4 sm:text-lg"
           >
-            こんな方・ご家族へ
+            お子さま・ご家族へ
           </Link>
           <Link
             href="/guide"

@@ -17,7 +17,7 @@ export function DirectorMessage() {
         <SectionTitle
           eyebrow="Message"
           title="代表挨拶"
-          lead="地域に根ざし、誠実に、ご利用者様とご家族に寄り添います。"
+          lead="お子さまとご家族に寄り添い、地域の小児精神科訪問看護を誠実に支えます。"
         />
 
         <div className="mt-12 flex flex-col gap-10 md:mt-16 md:flex-row md:items-start md:gap-12 lg:gap-16">

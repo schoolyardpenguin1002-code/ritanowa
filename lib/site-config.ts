@@ -7,8 +7,11 @@ export const siteConfig = {
   nameKana: "りたのわ",
   /** ヘッダーロゴ横の表記（ファビコンと並べる） */
   headerBrandTitle: "訪問看護ステーションりたのわ",
+  /** サイト全体の専門領域（SEO・ヒーロー等で使用） */
+  specialtyShort: "小児精神科特化型",
+  specialtyPillars: ["小児", "精神科", "特化"] as const,
   concept:
-    "想いが巡り、心が整う。利他の心が循環する、新しい訪問看護。",
+    "想いが巡り、心が整う。お子さまとご家族に寄り添う、小児精神科の訪問看護。",
   /** 優先の連絡先（携帯） */
   phone: "09071816814",
   phoneDisplay: "090-7181-6814",

@@ -18,32 +18,41 @@ export const recruitNavLink = {
 /** ヘッダー・フッター共通の階層ナビ */
 export const navGroups: readonly NavGroup[] = [
   {
+    id: "pediatric",
+    label: "小児精神科訪問看護",
+    items: [
+      { href: "/visit-nursing", label: "訪問看護とは" },
+      { href: "/for-whom", label: "お子さま・ご家族へ" },
+      { href: "/guide", label: "ご相談のヒント" },
+      { href: "/flow", label: "利用の流れ" },
+    ],
+  },
+  {
     id: "station",
     label: "当ステーションについて",
     items: [
       { href: "/about", label: "私たちについて" },
       { href: "/philosophy", label: "経営理念" },
-      { href: "/visit-nursing", label: "訪問看護とは" },
-      { href: "/for-whom", label: "こんな方・ご家族へ" },
+      { href: "/staff", label: "スタッフ" },
     ],
   },
   {
     id: "about",
     label: "施設・トップ",
     items: [
+      { href: "/#specialty", label: "小児・精神科・特化" },
+      { href: "/#concern-gateway", label: "お悩みから探す" },
       { href: "/#strengths", label: "3つの約束" },
       { href: "/#director-message", label: "代表挨拶" },
-      { href: "/#services", label: "サービス" },
-      { href: "/staff", label: "スタッフ" },
     ],
   },
   {
     id: "use",
     label: "ご利用ガイド",
     items: [
-      { href: "/flow", label: "利用の流れ" },
       { href: "/pricing", label: "料金" },
       { href: "/area", label: "地域" },
+      { href: "/faq", label: "よくある質問" },
     ],
   },
   {
@@ -52,14 +61,12 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
-      { href: "/guide", label: "ご相談のヒント" },
     ],
   },
   {
     id: "support",
     label: "ご相談・お問い合わせ",
     items: [
-      { href: "/faq", label: "よくある質問" },
       { href: "/contact", label: "お問い合わせ" },
     ],
   },

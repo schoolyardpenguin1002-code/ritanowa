@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const heroImage =
-  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2000&q=80";
+  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=2000&q=80";
 
 export function Hero() {
   return (
@@ -23,7 +23,7 @@ export function Hero() {
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[color-mix(in_srgb,var(--background)_82%,transparent)] via-[color-mix(in_srgb,var(--ritanowa-sand)_55%,transparent)] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_28%,transparent)]"
+          className="absolute inset-0 bg-gradient-to-br from-[color-mix(in_srgb,var(--background)_85%,transparent)] via-[color-mix(in_srgb,var(--ritanowa-sand)_50%,transparent)] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_22%,transparent)]"
           aria-hidden
         />
       </div>
@@ -35,17 +35,30 @@ export function Hero() {
         <CircleRing size={140} strokeWidth={2} />
       </div>
 
-      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-36">
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-32">
         <div className="max-w-3xl min-w-0 space-y-4 sm:space-y-6">
+          <div className="flex flex-wrap items-center gap-2">
+            {siteConfig.specialtyPillars.map((label) => (
+              <span
+                key={label}
+                className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3 py-1 text-sm font-bold text-white shadow-sm sm:text-base"
+              >
+                {label}
+              </span>
+            ))}
+            <span className="text-sm font-semibold text-[var(--ritanowa-gold)] sm:text-base">
+              {siteConfig.specialtyShort}訪問看護
+            </span>
+          </div>
           <p className="text-base font-semibold tracking-wide text-[var(--ritanowa-gold)] sm:text-lg md:text-xl">
             {siteConfig.concept}
           </p>
           <h1 className="text-balance text-[1.65rem] font-bold leading-[1.2] tracking-tight text-foreground min-[400px]:text-[1.85rem] sm:text-4xl md:text-5xl lg:text-6xl">
-            <span className="block">「利他の輪」を</span>
-            <span className="block">あなたの日常の隣に。</span>
+            <span className="block">お子さまとご家族の</span>
+            <span className="block">「利他の輪」を、日常の隣に。</span>
           </h1>
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
-            高崎市の精神科特化型訪問看護。医師がバックアップする専門性と、ICTが生み出す「ゆとりの時間」で、あなたの心に深く寄り添います。
+            高崎市の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、医師バックアップとICTで「ゆとりの対話」を届けます。
           </p>
         </div>
 
@@ -57,7 +70,7 @@ export function Hero() {
               "flex min-h-[3.25rem] w-full items-center justify-center rounded-3xl px-6 py-5 text-base shadow-md sm:w-auto sm:px-8 sm:py-6 sm:text-lg"
             )}
           >
-            相談してみる（無料）
+            ご家族の相談（無料）
           </Link>
           <div className="flex w-full min-w-0 flex-col gap-2 sm:w-auto sm:min-h-[3.25rem] sm:justify-center">
             <Link
@@ -94,19 +107,19 @@ export function Hero() {
             href="/visit-nursing"
             className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
           >
-            訪問看護とは
-          </Link>
-          <Link
-            href="/about"
-            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
-          >
-            私たちについて
+            小児精神科訪問看護とは
           </Link>
           <Link
             href="/for-whom"
             className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
           >
-            こんな方・ご家族へ
+            お子さま・ご家族へ
+          </Link>
+          <Link
+            href="/#concern-gateway"
+            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+          >
+            お悩みから探す
           </Link>
         </nav>
       </div>

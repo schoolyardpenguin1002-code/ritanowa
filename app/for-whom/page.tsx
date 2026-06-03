@@ -7,52 +7,36 @@ import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { buttonVariants } from "@/lib/button-variants";
 import { concernGatewayCards } from "@/lib/concern-gateway-cards";
+import { pediatricScenarios } from "@/lib/pediatric-scenarios";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
-const scenarios = [
-  {
-    title: "介護や育児で限界に近く、気分の落ち込みや不眠が続いている",
-    body: "本人の支援に追われるあまり、自分の心身のサインを後回しにしてしまうことがあります。訪問看護はご利用者様だけでなく、ご家族の状況にも耳を傾け、連携のなかで支え方を一緒に考えます。",
-  },
-  {
-    title: "以前は元気に働けていたのに、急にやる気が出なくなった",
-    body: "体調に目に見えた変化がなくても、心の疲れは行動や表情に表れることがあります。早めの相談で、主治医・ケアマネージャー・訪問看護が同じ方向を向けるようお手伝いします。",
-  },
-  {
-    title: "服薬や通院が続かず、生活が不規則になってきた",
-    body: "リズムを取り戻す小さな一歩から始められます。訪問看護では、お薬の管理だけでなく、眠りや食事、外出の工夫など、日々の生活全体を見ながら支援します。",
-  },
-  {
-    title: "不登校・ひきこもりが長引き、家族だけでは相談先がわからない",
-    body: "お子さまのペースを尊重しつつ、ご家族の不安にも向き合います。学校・医療機関との連携が必要な場合は、情報を整理しながら伴走します。",
-  },
-  {
-    title: "精神科の受診自体が怖い、ハードルが高く感じる",
-    body: "「まず訪問看護から」という選択肢もあります。診断や治療方針は医師の役割であり、訪問看護は在宅での看護と生活支援に特化しています。無理に受診を勧める立場ではありません。",
-  },
-  {
-    title: "発達の特性があり、職場や対人で疲れやすい",
-    body: "特性そのものを「直す」のではなく、暮らしやすい工夫や自己理解を深める支援ができます。必要に応じて、就労や地域活動につながる情報も共有します。",
-  },
-] as const;
-
 export const metadata: Metadata = {
-  title: "こんな方・ご家族へ",
-  description: `${siteConfig.name}が支援しやすいご状況の例。精神科訪問看護・在宅療養を検討中の方・ご家族向け。高崎市・群馬。`,
+  title: "お子さま・ご家族へ",
+  description: `${siteConfig.name}が支援しやすいご状況の例。小児精神科訪問看護・不登校・発達の特性など、お子さまとご家族向け。高崎市・群馬。`,
 };
 
 export default function ForWhomPage() {
   return (
     <SiteLayout>
       <SubpageHeader
-        title="こんな方・ご家族へ"
-        description="診断名の有無を問わず、生活のなかで感じている負担やモヤモヤを整理するお手伝いができます。以下は例です。ご自身の状況と必ずしも一致しなくても構いません。"
+        title="お子さま・ご家族へ"
+        description="不登校、発達の特性、お子さまの気持ちの不調、ご家族の負担——診断名の有無を問わず、暮らしのなかで感じているモヤモヤを整理するお手伝いができます。以下は例です。"
       />
 
       <RevealSection className="mx-auto max-w-3xl space-y-14 px-4 py-12 md:px-8 md:py-16">
+        <section className="rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-[color-mix(in_srgb,var(--ritanowa-sand)_30%,var(--card))] p-6 md:p-8">
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            当ステーションは
+            <strong className="font-semibold text-foreground">
+              {siteConfig.specialtyShort}の訪問看護
+            </strong>
+            を提供しています。お子さまの成長段階と、ご家族の状況をひとつの文脈として見ながら、主治医・ケアマネージャーと連携します。
+          </p>
+        </section>
+
         <section className="space-y-6">
-          {scenarios.map((s) => (
+          {pediatricScenarios.map((s) => (
             <article
               key={s.title}
               className="rounded-3xl border border-border/80 bg-card p-6 shadow-sm md:p-8"
@@ -101,7 +85,7 @@ export default function ForWhomPage() {
               "inline-flex justify-center rounded-3xl px-8 py-6 text-lg"
             )}
           >
-            訪問看護とは
+            小児精神科訪問看護とは
           </Link>
           <Link
             href="/guide"

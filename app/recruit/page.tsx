@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "採用情報",
-  description: `${siteConfig.nameShort}の採用情報。高崎市で精神科訪問看護に携わる仲間を募集しています。カジュアル面談・事務所見学も承ります。`,
+  description: `${siteConfig.nameShort}の採用情報。高崎市で小児精神科訪問看護に携わる仲間を募集しています。カジュアル面談・事務所見学も承ります。`,
 };
 
 function CtaBlock({ className }: { className?: string }) {
@@ -75,7 +75,7 @@ export default function RecruitPage() {
             看護の本質に向き合うチームへ
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            高崎市を拠点に、精神科訪問看護で地域の暮らしに寄り添う。ICTで記録の負担を減らし、対話に時間をかけられる職場づくりを大切にしています。
+            高崎市を拠点に、小児精神科訪問看護でお子さまとご家族に寄り添う。ICTで記録の負担を減らし、対話に時間をかけられる職場づくりを大切にしています。
           </p>
           <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:flex-wrap">
             <Link
@@ -120,7 +120,7 @@ export default function RecruitPage() {
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 「りたのわ」は、利用者様とご家族様、主治医・ケアマネージャーがつながる<strong className="font-semibold text-foreground">“輪”</strong>
-                を大切にする精神科特化型の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
+                を大切にする小児精神科特化型の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
                 高崎市を拠点に、地域の方々の暮らしに長く寄り添えるケアを積み重ねていきたい——そのために、互いを尊重し、学び合える職場でありたいと考えています。
@@ -146,8 +146,8 @@ export default function RecruitPage() {
                 icon: MessageCircle,
               },
               {
-                title: "精神科特化と医師のバックアップ",
-                body: "医療的な視点を背景に、現場の判断を支える体制を整えています（詳細は面談時にご説明します）。",
+                title: "小児精神科特化と医師のバックアップ",
+                body: "小児・精神領域の医療的視点を背景に、現場の判断を支える体制を整えています（詳細は面談時にご説明します）。",
                 icon: HeartHandshake,
               },
               {

@@ -5,56 +5,75 @@ import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { buttonVariants } from "@/lib/button-variants";
+import { specialtyPillars } from "@/lib/specialty-pillars";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const worrySnapshots = [
   {
-    title: "介護や家事に疲れ、夜も眠れず気分が沈みがち",
-    body: "体調を崩しやすくなり、受診の回数が増えてきた。",
+    title: "不登校・学校に行きづらさが続いている",
+    body: "お子さまのペースと、ご家族の不安の両方に向き合いたい。",
   },
   {
-    title: "意欲や集中が続かず、仕事や学校に行きづらい",
-    body: "本人は困っていないように見えても、家族は不安を抱えている。",
+    title: "発達の特性があり、日常生活や対人でつらさがある",
+    body: "特性への理解と、暮らしやすい工夫を一緒に考えたい。",
   },
   {
-    title: "服薬や生活リズムが乱れ、外出や交流が減ってきた",
-    body: "物忘れや同じ話の繰り返しなど、変化が気になる。",
+    title: "気分の落ち込み・不安・生活リズムの乱れ",
+    body: "成長とともに変化する心身のサインが気になる。",
   },
   {
-    title: "精神科を受診するハードルを感じている",
-    body: "症状のはっきりしないモヤモヤを、誰かに話して整理したい。",
+    title: "ご家族の見守り・介護育児に限界を感じている",
+    body: "一人で抱え込まず、専門職と役割分担したい。",
   },
 ] as const;
 
 const serviceItems = [
-  "病状の観察と服薬に関する支援",
-  "精神・心理状態に配慮したケア",
-  "生活リズムや日常生活の工夫のサポート",
-  "対人関係や社会生活への復帰に向けた伴走",
-  "ご家族への相談・情報提供",
+  "お子さまの病状観察と服薬に関する支援（主治医の指示に基づく）",
+  "不登校・学校生活・生活リズムのサポート",
+  "発達特性に配慮した関わりと、ご家族への相談",
+  "対人関係や外出など、社会生活への復帰に向けた伴走",
+  "主治医・ケアマネージャー・学校等との情報共有と連携",
 ] as const;
 
 export const metadata: Metadata = {
-  title: "訪問看護とは（精神科）",
-  description: `${siteConfig.nameShort}が提供する精神科訪問看護の概要。在宅療養での看護、保険対応、ご利用までの流れへの導線。高崎市・群馬県内。`,
+  title: "小児精神科訪問看護とは",
+  description: `${siteConfig.nameShort}が提供する小児精神科特化型訪問看護の概要。不登校・発達の特性・在宅療養の支援。高崎市・群馬県内。`,
 };
 
 export default function VisitNursingPage() {
   return (
     <SiteLayout>
       <SubpageHeader
-        title="訪問看護とは"
-        description="在宅での療養を、看護の専門性で支えるサービスです。精神科領域に強みを持つ当ステーションの考え方をご紹介します。"
+        title="小児精神科訪問看護とは"
+        description={`${siteConfig.specialtyPillars.join("・")}の専門性を軸に、お子さまの在宅療養とご家族の暮らしを支える訪問看護です。`}
       />
 
       <RevealSection className="mx-auto max-w-3xl space-y-14 px-4 py-12 md:px-8 md:py-16">
         <section className="space-y-6">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+            {siteConfig.specialtyPillars.join(" × ")}の考え方
+          </h2>
+          <ul className="grid gap-4 sm:grid-cols-1">
+            {specialtyPillars.map((p) => (
+              <li
+                key={p.id}
+                className="rounded-2xl border border-border/80 bg-card p-5 shadow-sm"
+              >
+                <p className="text-sm font-bold text-[var(--ritanowa-gold)]">{p.label}</p>
+                <p className="mt-1 font-semibold text-foreground">{p.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
             このようなことはありませんか？
           </h2>
           <p className="text-lg text-muted-foreground">
-            心や生活の負担は、体の不調として現れたり、ご家族の関係にも影響したりします。ひとりで抱え込まず、専門職に相談できる選択肢があります。
+            お子さまの心や生活の負担は、ご家族の関係にも影響します。ひとりで抱え込まず、専門職に相談できる選択肢があります。
           </p>
           <ul className="grid gap-4 sm:grid-cols-2">
             {worrySnapshots.map((w) => (
@@ -72,7 +91,7 @@ export default function VisitNursingPage() {
               href="/for-whom"
               className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
             >
-              こんな方・ご家族へ（詳しく）
+              お子さま・ご家族へ（詳しく）
             </Link>
           </p>
         </section>
@@ -82,26 +101,28 @@ export default function VisitNursingPage() {
           <p className="text-lg text-muted-foreground">
             訪問看護は、医師の指示とケアプランに基づき、看護師等が{" "}
             <strong className="font-semibold text-foreground">ご自宅を訪問して看護を提供する</strong>
-            制度です。病院に行くことが難しい方も、住み慣れた場所で医療的な支援を受けられます。
+            制度です。通院が難しいお子さまも、住み慣れた場所で医療的な支援を受けられます。
           </p>
           <p className="text-lg text-muted-foreground">
-            当ステーションはそのなかでも、うつ病・双極性障害・統合失調症など精神疾患の在宅療養、発達や不安に関する支援、ご家族の負担に配慮したケアなど、
-            <strong className="font-semibold text-foreground">精神・心理の領域に力を入れて</strong>
-            います。
+            当ステーションはそのなかでも、
+            <strong className="font-semibold text-foreground">
+              小児・精神・心理の領域に特化
+            </strong>
+            し、不登校、発達の特性、気分や不安、ご家族の負担など、ご家庭の文脈で看護を行います。
           </p>
         </section>
 
         <section className="space-y-4 rounded-3xl border border-border/80 bg-[color-mix(in_srgb,var(--ritanowa-sand)_35%,var(--card))] p-8 shadow-sm">
-          <h2 className="text-2xl font-bold tracking-tight">精神科訪問看護のイメージ</h2>
+          <h2 className="text-2xl font-bold tracking-tight">小児精神科訪問看護のイメージ</h2>
           <p className="text-lg text-muted-foreground">
-            心のエネルギーは、充電と消費のバランスで保たれているとイメージできます。ストレスや症状で「消費」が続くとき、生活のリズムや服薬、人間関係のなかに負担がたまりやすくなります。
+            成長段階ごとに、心と体の「充電」と「消費」のバランスは変わります。学校や対人、発達の特性、服薬など、さまざまな要因が重なるとき、ご家族も含めて負担がたまりやすくなります。
           </p>
           <p className="text-lg text-muted-foreground">
             訪問看護師は、{" "}
             <strong className="font-semibold text-foreground">
-              その人らしいペースを取り戻すための「充電」と「負担の調整」
+              お子さまとご家族のペースを取り戻すための伴走者
             </strong>
-            を、対話と観察を通じて一緒に考えるパートナーです。治療方針の決定は主治医に任せ、私たちは在宅での看護と生活の支援に専念します。
+            です。治療方針の決定は主治医に任せ、私たちは在宅での看護と生活の支援に専念します。
           </p>
         </section>
 

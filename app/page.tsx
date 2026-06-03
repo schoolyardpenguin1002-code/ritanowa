@@ -6,13 +6,15 @@ import { NursesIntro } from "@/components/sections/NursesIntro";
 import { OurStrengths } from "@/components/sections/OurStrengths";
 import { Recruit } from "@/components/sections/Recruit";
 import { Services } from "@/components/sections/Services";
+import { SpecialtyPillars } from "@/components/sections/SpecialtyPillars";
 
 export default function Home() {
   return (
     <SiteLayout>
       <Hero />
-      <OurStrengths />
+      <SpecialtyPillars />
       <ConcernGateway />
+      <OurStrengths />
       <Services />
       <DirectorMessage />
       <NursesIntro />

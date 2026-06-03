@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "私たちについて",
-  description: `${siteConfig.name}の理念、名称の由来、精神科特化型訪問看護としての想い。高崎市を拠点に群馬県内で在宅療養を支えます。`,
+  description: `${siteConfig.name}の理念、名称の由来、小児精神科特化型訪問看護としての想い。高崎市を拠点に群馬県内で在宅療養を支えます。`,
 };
 
 export default function AboutPage() {
@@ -18,15 +18,17 @@ export default function AboutPage() {
     <SiteLayout>
       <SubpageHeader
         title="私たちについて"
-        description="利他の心が循環するケアを、地域の日常のなかで。"
+        description="お子さまとご家族に寄り添う、小児精神科特化型の訪問看護を、地域の日常のなかで。"
       />
       <RevealSection className="mx-auto max-w-3xl space-y-12 px-4 py-12 text-lg leading-relaxed md:px-8 md:py-16">
         <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">
           <h2 className="text-2xl font-bold tracking-tight">りたのわとは</h2>
           <p className="text-muted-foreground">
             {siteConfig.name}は、群馬県高崎市を拠点に、{" "}
-            <strong className="font-semibold text-foreground">精神科領域に強みを持った訪問看護</strong>
-            を提供しています。ご本人のペースを大切にし、ご家族・主治医・ケアマネージャーと連携しながら、在宅での療養生活を支えます。
+            <strong className="font-semibold text-foreground">
+              {siteConfig.specialtyShort}の訪問看護
+            </strong>
+            を提供しています。不登校、発達の特性、お子さまのこころの不調など、ご家庭のペースを大切にし、ご家族・主治医・ケアマネージャーと連携しながら、在宅での療養生活を支えます。
           </p>
           <p className="text-muted-foreground">
             記録や事務に追われすぎないよう ICT を活用し、看護師が{" "}
@@ -39,7 +41,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold tracking-tight">名称の由来</h2>
           <p className="text-muted-foreground">
             <strong className="font-semibold text-foreground">「利他」</strong>
-            は、他者の幸せを願い、支え合う心です。利用者様・ご家族、地域の医療・介護の仲間たちとのあいだに、小さな優しさと信頼が{" "}
+            は、他者の幸せを願い、支え合う心です。お子さま・ご家族、地域の医療・介護・教育の仲間たちとのあいだに、小さな優しさと信頼が{" "}
             <strong className="font-semibold text-foreground">「輪」</strong>{" "}
             のように広がっていく——そんなケアを大切にしています。
           </p>
@@ -71,7 +73,7 @@ export default function AboutPage() {
               "inline-flex justify-center rounded-3xl px-8 py-6 text-lg"
             )}
           >
-            訪問看護とは
+            小児精神科訪問看護とは
           </Link>
           <Link
             href="/staff"
