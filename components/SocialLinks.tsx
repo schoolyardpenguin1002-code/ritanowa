@@ -86,6 +86,8 @@ type SocialLinksProps = {
   className?: string;
   /** 説明テキストを上に表示（お問い合わせページ用） */
   showCaption?: boolean;
+  /** false のとき LINE アイコンを非表示（フッター等で別表示する場合） */
+  showLine?: boolean;
   /** 同一ページに複数配置するときの識別子（SVGグラデーションID用） */
   instanceId?: string;
 };
@@ -93,6 +95,7 @@ type SocialLinksProps = {
 export function SocialLinks({
   className,
   showCaption,
+  showLine = true,
   instanceId = "default",
 }: SocialLinksProps) {
   const lineReady = isReadyUrl(siteConfig.lineUrl);
@@ -112,25 +115,27 @@ export function SocialLinks({
         </p>
       ) : null}
       <div className="flex flex-wrap items-center gap-4">
-        {lineReady ? (
-          <Link
-            href={siteConfig.lineUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={hitArea}
-            aria-label="公式LINEを開く"
-          >
-            <LineAppIcon />
-          </Link>
-        ) : (
-          <span
-            className={inactiveWrap}
-            aria-label="公式LINE（準備中）"
-            title="準備中"
-          >
-            <LineAppIcon />
-          </span>
-        )}
+        {showLine ? (
+          lineReady ? (
+            <Link
+              href={siteConfig.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={hitArea}
+              aria-label="公式LINEを開く"
+            >
+              <LineAppIcon />
+            </Link>
+          ) : (
+            <span
+              className={inactiveWrap}
+              aria-label="公式LINE（準備中）"
+              title="準備中"
+            >
+              <LineAppIcon />
+            </span>
+          )
+        ) : null}
 
         {igReady ? (
           <Link

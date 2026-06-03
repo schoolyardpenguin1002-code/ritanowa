@@ -1,10 +1,16 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import { EmailCopyButton } from "@/components/EmailCopyButton";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SocialLinks } from "@/components/SocialLinks";
 import { navGroups, recruitNavLink } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
+
+const LINE_GREEN = "#06C755";
+
+const lineReady =
+  siteConfig.lineUrl.trim().length > 0 && /^https?:\/\//i.test(siteConfig.lineUrl);
 
 const legalLinks = [
   { href: "/privacy", label: "プライバシーポリシー" },
@@ -23,8 +29,51 @@ export function Footer() {
             会社概要・お問い合わせ
           </h2>
           <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-            群馬県高崎市浜尻町を拠点に、小児精神科特化型の訪問看護サービスを提供しています。ご相談・ご不明点はお電話またはお問い合わせフォームにて承ります。
+            群馬県高崎市浜尻町を拠点に、小児精神科特化型の訪問看護サービスを提供しています。
           </p>
+
+          <div className="rounded-2xl border-2 border-[color-mix(in_srgb,#06C755_45%,var(--border))] bg-[color-mix(in_srgb,#06C755_8%,var(--card))] p-4 shadow-sm sm:p-5">
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#06C755]">
+              お問い合わせはまずこちら
+            </p>
+            <p className="mt-2 text-pretty text-base font-medium leading-relaxed text-foreground md:text-lg">
+              まず公式LINEからお問い合わせをください。公式LINEが最も繋がりやすいです。
+            </p>
+            {lineReady ? (
+              <Link
+                href={siteConfig.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-4 flex min-h-[3.25rem] w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-base font-bold text-white shadow-md transition-[filter,transform] hover:brightness-105 active:scale-[0.99] sm:text-lg"
+                style={{ backgroundColor: LINE_GREEN }}
+              >
+                <span
+                  className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 text-xs font-bold"
+                  aria-hidden
+                >
+                  LINE
+                </span>
+                公式LINEで相談する
+                <ArrowRight
+                  className="size-4 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </Link>
+            ) : (
+              <p className="mt-3 text-sm text-muted-foreground">公式LINE（準備中）</p>
+            )}
+            <p className="mt-3 text-sm text-muted-foreground">
+              お急ぎの方は下記お電話、くわしい内容は
+              <Link
+                href="/contact"
+                className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+              >
+                お問い合わせページ
+              </Link>
+              のフォームもご利用ください。
+            </p>
+          </div>
+
           <dl className="space-y-3.5 text-sm leading-relaxed md:text-[0.9375rem]">
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -64,7 +113,7 @@ export function Footer() {
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                電話（タップで発信）
+                お電話（お急ぎの方・タップで発信）
               </dt>
               <dd className="mt-1 space-y-2">
                 <a
@@ -104,10 +153,10 @@ export function Footer() {
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                公式アカウント
+                Instagram
               </dt>
               <dd className="mt-1 pt-0.5">
-                <SocialLinks instanceId="footer" />
+                <SocialLinks instanceId="footer" showLine={false} />
               </dd>
             </div>
             <div>

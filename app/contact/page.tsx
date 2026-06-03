@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactGoogleForm } from "@/components/contact/ContactGoogleForm";
 import { ContactLinePrimary } from "@/components/contact/ContactLinePrimary";
 import { EmailCopyButton } from "@/components/EmailCopyButton";
 import { RevealSection } from "@/components/motion/RevealSection";
@@ -11,24 +11,20 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: `${siteConfig.name}へのご相談・お問い合わせ。LINEが便利です。お急ぎの方はお電話ください。`,
+  description: `${siteConfig.name}へのご相談・お問い合わせ。LINEが便利です。フォーム・お電話も承ります。`,
 };
 
-type Props = {
-  searchParams: Promise<{ topic?: string }>;
-};
-
-export default async function ContactPage({ searchParams }: Props) {
-  const { topic } = await searchParams;
-  const defaultInquiryType = topic === "recruit" ? ("採用" as const) : undefined;
+export default function ContactPage() {
   return (
     <SiteLayout>
       <SubpageHeader
         title="お問い合わせ"
-        description="LINEからのお問い合わせが便利です。なんでもお気軽にどうぞ。お急ぎの場合はお電話ください。"
+        description="LINEからのお問い合わせが便利です。なんでもお気軽にどうぞ。くわしい内容は下記フォーム、お急ぎの場合はお電話ください。"
       />
       <RevealSection className="page-container-narrow py-12 md:py-16">
         <ContactLinePrimary />
+
+        <ContactGoogleForm />
 
         <div className="mt-10 rounded-3xl border border-border/80 bg-card p-6 shadow-sm sm:p-8">
           <p className="font-semibold text-foreground">メール</p>
@@ -45,18 +41,6 @@ export default async function ContactPage({ searchParams }: Props) {
 
         <div className="mt-8 rounded-3xl border border-border/80 bg-card p-6 shadow-sm">
           <SocialLinks showCaption instanceId="contact" />
-        </div>
-
-        <div className="mt-12 border-t border-border/60 pt-12">
-          <h2 className="text-xl font-bold text-foreground sm:text-2xl">
-            フォームからのお問い合わせ
-          </h2>
-          <p className="mt-2 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            送信後、お使いのメールアプリが開きます。LINE・お電話でも承ります。
-          </p>
-          <div className="mt-8">
-            <ContactForm defaultInquiryType={defaultInquiryType} />
-          </div>
         </div>
       </RevealSection>
     </SiteLayout>

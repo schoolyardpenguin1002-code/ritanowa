@@ -46,6 +46,12 @@ export const siteConfig = {
     "https://www.google.com/maps?q=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5&hl=ja&z=17&output=embed",
   mapSearchUrl:
     "https://www.google.com/maps/search/?api=1&query=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5",
+  /** お問い合わせ Google フォーム（閲覧用） */
+  googleContactFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdZq6FDmI8MBxFizLvtAMB3e5ubbURu6Vpqjeh41VJrS1NfjQ/viewform",
+  /** お問い合わせ Google フォーム（サイト埋め込み用） */
+  googleContactFormEmbedUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdZq6FDmI8MBxFizLvtAMB3e5ubbURu6Vpqjeh41VJrS1NfjQ/viewform?embedded=true",
   /** 公式LINE（https://… を入れるとアイコンがリンク有効になります） */
   lineUrl: "https://lin.ee/tuWuLYJ",
   /** 公式Instagram */

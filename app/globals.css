@@ -172,6 +172,10 @@
     min-height: min(420px, 70vh);
     height: min(720px, 75vh);
   }
+  .responsive-embed iframe[title*="お問い合わせフォーム"] {
+    min-height: 640px;
+    height: min(3200px, 90vh);
+  }
   /** 横スクロール可能なチップ・ナビ */
   .scroll-chips {
     @apply flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible sm:pb-0;
