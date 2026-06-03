@@ -101,7 +101,7 @@ export default function RecruitPage() {
             <Link href="/" className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline">
               トップページ
             </Link>
-            はご利用者様・ご家族様・ケアマネージャー様向けです。ご利用のご相談はお問い合わせへ。
+            はご利用者様・ご家族様向けです。ご利用のご相談はお問い合わせへ。
           </p>
         </div>
       </header>
@@ -119,7 +119,7 @@ export default function RecruitPage() {
                 ビジョン
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                「りたのわ」は、利用者様とご家族様、主治医・ケアマネージャーがつながる<strong className="font-semibold text-foreground">“輪”</strong>
+                「りたのわ」は、利用者様とご家族様、主治医・地域の公的機関・行政・NPOがつながる<strong className="font-semibold text-foreground">“輪”</strong>
                 を大切にする小児精神科特化型の訪問看護ステーションです。看護の本質である対話と観察に集中できるよう、ICTで記録の負担を減らし、現場の看護師が心に余白を持てる運営を目指しています。
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -152,7 +152,7 @@ export default function RecruitPage() {
               },
               {
                 title: "連携を重視する文化",
-                body: "主治医・ケアマネージャー・ご家族様との線をつなぎ、利用者様を中心にしたケアを一緒に考えるチームを目指しています。",
+                body: "主治医・地域の公的機関・行政・NPO・ご家族様との線をつなぎ、利用者様を中心にしたケアを一緒に考えるチームを目指しています。",
                 icon: Handshake,
               },
             ].map((item) => {

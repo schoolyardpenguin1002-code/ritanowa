@@ -184,3 +184,24 @@
     display: none;
   }
 }
+
+@keyframes pyokon-pop {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem) scale(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pyokon-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

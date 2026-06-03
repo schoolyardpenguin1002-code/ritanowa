@@ -9,6 +9,11 @@ export type NavGroup = {
   items: readonly NavLink[];
 };
 
+/** ヘッダー「AIに相談」用（外部リンク・NotebookLM） */
+export const aiConsultNavLink = {
+  label: "AIに相談",
+} as const;
+
 /** ヘッダー「採用サイト」用（お問い合わせと電話の間に表示） */
 export const recruitNavLink = {
   href: "/recruit",

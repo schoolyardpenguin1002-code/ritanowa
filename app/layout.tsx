@@ -21,7 +21,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 const defaultTitle = `${siteConfig.nameShort} | 高崎市の${siteConfig.specialtyShort}訪問看護`;
 const defaultDescription =
-  "高崎市の小児精神科特化型訪問看護「りたのわ」。不登校・発達の特性・お子さまのこころの不調——ご家族に寄り添う訪問看護。医師バックアップとICTで、想いが巡り心が整うケアを。";
+  `高崎市の小児精神科特化型訪問看護「りたのわ」。不登校・発達の特性・お子さまのこころの不調——ご家族に寄り添う訪問看護。${siteConfig.regionalPartners}と連携し、想いが巡り心が整うケアを。`;
 
 export const viewport: Viewport = {
   width: "device-width",

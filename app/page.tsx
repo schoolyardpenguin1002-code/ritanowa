@@ -2,7 +2,7 @@ import { SiteLayout } from "@/components/layout/SiteLayout";
 import { ConcernGateway } from "@/components/sections/ConcernGateway";
 import { DirectorMessage } from "@/components/sections/DirectorMessage";
 import { Hero } from "@/components/sections/Hero";
-import { NursesIntro } from "@/components/sections/NursesIntro";
+import { RepresentativeNurseIntro } from "@/components/sections/RepresentativeNurseIntro";
 import { Recruit } from "@/components/sections/Recruit";
 import { Services } from "@/components/sections/Services";
 import { SpecialtyPillars } from "@/components/sections/SpecialtyPillars";
@@ -15,7 +15,7 @@ export default function Home() {
       <ConcernGateway />
       <Services />
       <DirectorMessage />
-      <NursesIntro />
+      <RepresentativeNurseIntro />
       <Recruit />
     </SiteLayout>
   );

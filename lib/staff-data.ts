@@ -1,4 +1,4 @@
-/** 看護師の写真・氏名の一部はイメージです。必要に応じて実データに差し替えてください。 */
+/** スタッフ掲載データ。写真・文言は必要に応じて差し替えてください。 */
 
 export type DirectorProfile = {
   id: string;
@@ -12,13 +12,11 @@ export type DirectorProfile = {
   note?: string;
 };
 
-export type NurseProfile = {
+export type RepresentativeNurseProfile = {
   id: string;
   name: string;
   nameKana: string;
-  title: string;
-  imageSrc: string;
-  imageAlt: string;
+  roleLabel: string;
   intro: string;
 };
 
@@ -32,41 +30,13 @@ export const director: DirectorProfile = {
   imageAlt: "代表・医師（写真準備中）",
   message: `高崎市で「りたのわ」を立ち上げた想いは、ひとつです。お子さまとご家族が、心を落ち着けて暮らせる時間を少しでも増やしたい。私たちは小児・精神領域の医療的視点を背景に、現場の看護師と二人三脚で、ご家庭のペースを大切にします。
 
-不登校や発達の特性、お子さまのこころの不調——ご家族だけで抱え込まないでください。主治医やケアマネージャー、学校の皆様とも線をつなぎながら、安心が循環するケアを目指します。どうぞ、お気軽にご相談ください。`,
+不登校や発達の特性、お子さまのこころの不調——ご家族だけで抱え込まないでください。主治医や地域の公的機関・行政・NPO、学校の皆様とも線をつなぎながら、安心が循環するケアを目指します。どうぞ、お気軽にご相談ください。`,
 };
 
-export const nurses: NurseProfile[] = [
-  {
-    id: "nurse-1",
-    name: "山田 美咲",
-    nameKana: "やまだ みさき",
-    title: "訪問看護師",
-    imageSrc:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
-    imageAlt: "看護師のイメージ写真",
-    intro:
-      "在宅の看護が好きで、ご本人の「今日はこうしたい」を一緒に考えることを大切にしています。落ち着いて話せる時間をつくります。",
-  },
-  {
-    id: "nurse-2",
-    name: "佐藤 あかり",
-    nameKana: "さとう あかり",
-    title: "訪問看護師",
-    imageSrc:
-      "https://images.unsplash.com/photo-1594824476966-48c8b964273f?auto=format&fit=crop&w=800&q=80",
-    imageAlt: "看護師のイメージ写真",
-    intro:
-      "服薬や生活リズムの工夫、ご家族の不安にも耳を傾けます。小さな変化も見逃さないよう、丁寧にフォローします。",
-  },
-  {
-    id: "nurse-3",
-    name: "高橋 奈々",
-    nameKana: "たかはし なな",
-    title: "訪問看護師",
-    imageSrc:
-      "https://images.unsplash.com/photo-1640622842228-3a785e6e3b36?auto=format&fit=crop&w=800&q=80",
-    imageAlt: "看護師のイメージ写真",
-    intro:
-      "地域の医療・介護の皆さまと連携しながら、ご利用者様がご自宅で安心して過ごせるよう伴走します。よろしくお願いします。",
-  },
-];
+export const representativeNurse: RepresentativeNurseProfile = {
+  id: "representative-nurse",
+  name: "上原 実紅",
+  nameKana: "うえはら みくべに",
+  roleLabel: "管理者／代表看護師",
+  intro: "自己紹介は Coming Soon",
+};

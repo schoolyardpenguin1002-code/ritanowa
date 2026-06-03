@@ -28,7 +28,7 @@ export default function AboutPage() {
             <strong className="font-semibold text-foreground">
               {siteConfig.specialtyShort}の訪問看護
             </strong>
-            を提供しています。不登校、発達の特性、お子さまのこころの不調など、ご家庭のペースを大切にし、ご家族・主治医・ケアマネージャーと連携しながら、在宅での療養生活を支えます。
+            を提供しています。不登校、発達の特性、お子さまのこころの不調など、ご家庭のペースを大切にし、ご家族・主治医・地域の公的機関・行政・NPOと連携しながら、在宅での療養生活を支えます。
           </p>
           <p className="text-muted-foreground">
             記録や事務に追われすぎないよう ICT を活用し、看護師が{" "}

@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { buttonVariants } from "@/lib/button-variants";
+import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
 import { navGroups, recruitNavLink } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -86,6 +87,7 @@ export function MainNav({
             items={g.items}
           />
         ))}
+        <AiConsultNavLink variant="desktop" />
         <Link
           href={recruitNavLink.href}
           className={cn(
@@ -112,6 +114,8 @@ export function MainNav({
       className="flex flex-col gap-3 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:hidden"
       aria-label="メインナビゲーション"
     >
+      <AiConsultNavLink variant="mobile" onNavigate={onNavigate} />
+
       <Accordion multiple className="rounded-2xl border border-border/60 bg-card/50">
         {navGroups.map((g) => (
           <AccordionItem key={g.id} value={g.id} className="border-border/60 px-2">

@@ -31,7 +31,7 @@ export default function ForWhomPage() {
             <strong className="font-semibold text-foreground">
               {siteConfig.specialtyShort}の訪問看護
             </strong>
-            を提供しています。お子さまの成長段階と、ご家族の状況をひとつの文脈として見ながら、主治医・ケアマネージャーと連携します。
+            を提供しています。お子さまの成長段階と、ご家族の状況をひとつの文脈として見ながら、主治医・地域の公的機関・行政・NPOと連携します。
           </p>
         </section>
 

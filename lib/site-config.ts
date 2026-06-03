@@ -39,8 +39,6 @@ export const siteConfig = {
   /** 受付時間の補足 */
   officeHoursNote:
     "上記以外の時間帯も、お気軽にご相談ください。フットワークよく対応いたします。",
-  /** 指定訪問看護事業所番号（確定後に入力） */
-  officeNumber: "（指定番号は確定次第に記載）",
   /** Googleマップ埋め込み（住所検索ベース） */
   mapEmbedUrl:
     "https://www.google.com/maps?q=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5&hl=ja&z=17&output=embed",
@@ -52,8 +50,14 @@ export const siteConfig = {
   /** お問い合わせ Google フォーム（サイト埋め込み用） */
   googleContactFormEmbedUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSdZq6FDmI8MBxFizLvtAMB3e5ubbURu6Vpqjeh41VJrS1NfjQ/viewform?embedded=true",
+  /** AI相談（NotebookLM） */
+  aiConsultUrl:
+    "https://notebooklm.google.com/notebook/0792ec83-6dcf-4dfc-8ddb-aa4196e674ac",
   /** 公式LINE（https://… を入れるとアイコンがリンク有効になります） */
   lineUrl: "https://lin.ee/tuWuLYJ",
   /** 公式Instagram */
   instagramUrl: "",
+  /** サイト共通：連携先の表記 */
+  regionalPartners: "地域の公的機関・行政・NPO",
+  regionalPartnersHonorific: "地域の公的機関・行政・NPO様",
 } as const;

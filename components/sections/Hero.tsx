@@ -58,7 +58,7 @@ export function Hero() {
             <span className="block">「利他の輪」を、日常の隣に。</span>
           </h1>
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
-            高崎市の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、医師バックアップとICTで「ゆとりの対話」を届けます。
+            高崎市の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
           </p>
         </div>
 
@@ -72,31 +72,6 @@ export function Hero() {
           >
             ご家族の相談（無料）
           </Link>
-          <div className="flex w-full min-w-0 flex-col gap-2 sm:w-auto sm:min-h-[3.25rem] sm:justify-center">
-            <Link
-              href={`tel:${siteConfig.phone}`}
-              className={cn(
-                buttonVariants({ variant: "secondary" }),
-                "flex min-h-[3.25rem] w-full items-center justify-center rounded-3xl border border-border/80 px-4 py-5 text-center text-base sm:inline-flex sm:w-auto sm:px-8 sm:py-6 sm:text-lg"
-              )}
-            >
-              <span className="text-pretty">
-                お電話（優先）{siteConfig.phoneDisplay}
-              </span>
-            </Link>
-            <a
-              href={`tel:${siteConfig.phoneLandline}`}
-              className="block min-h-[48px] rounded-2xl px-2 py-2 text-center text-base text-foreground/90 transition-colors hover:bg-black/5 sm:text-left"
-            >
-              <span className="block text-muted-foreground">固定（タップで発信）</span>
-              <span className="font-semibold text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline">
-                {siteConfig.phoneLandlineDisplay}
-              </span>
-              <span className="mt-1 block text-sm text-muted-foreground">
-                ※出られない可能性があります
-              </span>
-            </a>
-          </div>
         </div>
 
         <nav

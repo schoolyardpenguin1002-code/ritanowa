@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
 import { EmailCopyButton } from "@/components/EmailCopyButton";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -74,7 +75,9 @@ export function Footer() {
             </p>
           </div>
 
-          <dl className="space-y-3.5 text-sm leading-relaxed md:text-[0.9375rem]">
+          <AiConsultNavLink variant="footer" className="mt-4" />
+
+          <dl className="mt-6 space-y-3.5 text-sm leading-relaxed md:text-[0.9375rem]">
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                 事業所名
@@ -158,12 +161,6 @@ export function Footer() {
               <dd className="mt-1 pt-0.5">
                 <SocialLinks instanceId="footer" showLine={false} />
               </dd>
-            </div>
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                指定訪問看護事業所番号
-              </dt>
-              <dd className="mt-1 text-foreground">{siteConfig.officeNumber}</dd>
             </div>
           </dl>
 
