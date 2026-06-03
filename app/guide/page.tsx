@@ -16,37 +16,37 @@ const topics = [
     title: "不登校・学校に行きづらさ",
     body: "お子さまのペースと、ご家族の見守り・不安について、話を聞くことから始められます。",
     href: "/blog/school-refusal-and-family",
-    faqHref: "/faq#school-refusal",
+    faqHref: "/faq#when-to-use",
   },
   {
     title: "発達の特性・ご家族の負担",
     body: "特性や発達に関する不安は、ご家族の負担にもつながります。支援のつなぎ方を、生活の文脈で整理します。",
     href: "/blog/developmental-diversity-and-family",
-    faqHref: "/faq#developmental",
+    faqHref: "/faq#who-eligible",
   },
   {
     title: "お子さまの気持ち・生活リズム",
     body: "眠り・食事・服薬など、在宅での変化を一緒に整理するヒントをまとめました。",
     href: "/blog/rhythm-and-medication-at-home",
-    faqHref: "/faq#mild-symptoms",
+    faqHref: "/faq#no-diagnosis",
   },
   {
     title: "ご家族の心のケア・見守りの限界",
     body: "介護育児や見守りの負担について、専門職と役割分担する視点です。",
     href: "/blog/family-burnout",
-    faqHref: "/faq#family-only",
+    faqHref: "/faq#parent-support",
   },
   {
     title: "精神科受診への不安・ハードル",
     body: "受診への怖さや抵抗感は珍しくありません。まずは相談の一歩を考えるための視点です。",
     href: "/blog/psychiatry-feels-like-a-high-bar",
-    faqHref: "/faq#psychiatry-barrier",
+    faqHref: "/faq#no-diagnosis",
   },
   {
     title: "診断前・軽いつらさから相談したい",
     body: "「まだ大ごとではない」と感じる段階でも、相談のタイミングは人それぞれです。",
     href: "/blog/mild-mood-and-consultation",
-    faqHref: "/faq#mild-symptoms",
+    faqHref: "/faq#no-diagnosis",
   },
 ] as const;
 

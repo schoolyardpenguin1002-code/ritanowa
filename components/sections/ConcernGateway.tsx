@@ -54,7 +54,7 @@ export function ConcernGateway() {
             href="/faq"
             className="text-lg font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
           >
-            よくある質問へ
+            よくある質問コーナーへ
           </Link>
         </div>
       </div>

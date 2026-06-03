@@ -52,7 +52,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/pricing", label: "料金" },
       { href: "/area", label: "地域" },
-      { href: "/faq", label: "よくある質問" },
+      { href: "/faq", label: "よくある質問コーナー" },
     ],
   },
   {
