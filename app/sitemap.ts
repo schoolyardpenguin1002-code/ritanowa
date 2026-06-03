@@ -23,6 +23,7 @@ const staticPaths = [
   "/important-disclosure",
   "/guide",
   "/recruit",
+  "/community",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -61,6 +61,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
+      { href: "/community", label: "共生サポーター・イベント" },
     ],
   },
   {
