@@ -14,6 +14,7 @@ import {
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { buttonVariants } from "@/lib/button-variants";
+import { jobCommonTerms, jobOpenings } from "@/lib/job-openings";
 import { director } from "@/lib/staff-data";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -61,9 +62,188 @@ function CtaBlock({ className }: { className?: string }) {
   );
 }
 
+/**
+ * Google しごと検索・Indeed などに拾ってもらうための構造化データ（JobPosting）。
+ * 内容は lib/job-openings.ts から生成しているので、条件を直すときはそちらを編集してください。
+ */
+function JobPostingJsonLd() {
+  const hiringOrganization = {
+    "@type": "Organization",
+    name: siteConfig.name,
+    sameAs: siteConfig.instagramUrl,
+  };
+  const jobLocation = {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.addressLine,
+      addressLocality: "高崎市",
+      addressRegion: "群馬県",
+      addressCountry: "JP",
+    },
+  };
+
+  const data = jobOpenings.map((job) => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: `${job.summary}\n\n【応募資格】${job.qualification}\n【勤務時間】${job.hours}\n【勤務日数】${job.days}\n【待遇】${jobCommonTerms.benefits.join(
+      "／"
+    )}\n${jobCommonTerms.wageNote}`,
+    datePosted: jobCommonTerms.datePosted,
+    validThrough: jobCommonTerms.validThrough,
+    employmentType: jobCommonTerms.employmentType,
+    hiringOrganization,
+    jobLocation,
+    occupationalCategory: job.occupation,
+    baseSalary: {
+      "@type": "MonetaryAmount",
+      currency: "JPY",
+      value: {
+        "@type": "QuantitativeValue",
+        value: job.hourlyWage,
+        unitText: "HOUR",
+      },
+    },
+  }));
+
+  return (
+    <script
+      type="application/ld+json"
+      // 静的に生成した JSON のみを埋め込みます（ユーザー入力は含みません）
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+function OpeningsSection() {
+  if (jobOpenings.length === 0) return null;
+
+  return (
+    <RevealSection className="border-y-2 border-[var(--ritanowa-terracotta)]/40 bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_10%,var(--background))] py-14 md:py-20">
+      <div className="mx-auto max-w-4xl px-4 md:px-8">
+        <p className="text-center text-lg font-semibold tracking-wide text-[var(--ritanowa-terracotta)] md:text-xl">
+          いま募集しています
+        </p>
+        <h2 className="mt-3 text-balance text-center text-2xl font-bold tracking-tight md:text-4xl">
+          夕方〜夜の時間帯に
+          <br className="md:hidden" />
+          動ける方を探しています
+        </h2>
+        <p className="mx-auto mt-5 max-w-2xl text-pretty text-center text-lg leading-relaxed text-muted-foreground">
+          学校やお仕事が終わってからでないと会えないご家庭があります。
+          <strong className="font-semibold text-foreground">
+            夕方から夜は、その時間にしか届けられないケアがある時間帯
+          </strong>
+          です。日中は別のお仕事をされている方、お子さんのことが一段落してから働きたい方、ブランクのある方も歓迎します。
+        </p>
+
+        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+          {jobOpenings.map((job) => (
+            <li
+              key={job.id}
+              className="flex flex-col rounded-3xl border border-border/80 bg-card p-7 shadow-sm md:p-8"
+            >
+              <h3 className="text-xl font-bold leading-snug md:text-2xl">
+                {job.occupation}
+              </h3>
+              <p className="mt-2 text-base text-muted-foreground">
+                {jobCommonTerms.employmentTypeLabel}
+              </p>
+              <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+                {job.summary}
+              </p>
+              <dl className="mt-6 divide-y divide-border/70 border-t border-border/70 text-base">
+                <div className="flex gap-4 py-3">
+                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                    時給
+                  </dt>
+                  <dd className="min-w-0 text-muted-foreground">
+                    <strong className="text-lg font-bold text-foreground">
+                      {job.hourlyWage.toLocaleString("ja-JP")}円
+                    </strong>
+                  </dd>
+                </div>
+                <div className="flex gap-4 py-3">
+                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                    勤務時間
+                  </dt>
+                  <dd className="min-w-0 text-muted-foreground">{job.hours}</dd>
+                </div>
+                <div className="flex gap-4 py-3">
+                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                    勤務日数
+                  </dt>
+                  <dd className="min-w-0 text-muted-foreground">{job.days}</dd>
+                </div>
+                <div className="flex gap-4 py-3">
+                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                    応募資格
+                  </dt>
+                  <dd className="min-w-0 text-muted-foreground">
+                    {job.qualification}
+                  </dd>
+                </div>
+              </dl>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-10 rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-card p-7 shadow-sm md:p-8">
+          <h3 className="text-lg font-bold md:text-xl">共通の待遇</h3>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {jobCommonTerms.benefits.map((benefit) => (
+              <li
+                key={benefit}
+                className="flex gap-2 text-base leading-relaxed text-muted-foreground"
+              >
+                <span aria-hidden className="text-[var(--ritanowa-terracotta)]">
+                  ●
+                </span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            {jobCommonTerms.wageNote}
+          </p>
+        </div>
+
+        <p className="mx-auto mt-10 max-w-2xl text-pretty text-center text-lg leading-relaxed text-muted-foreground">
+          応募を決めていなくて大丈夫です。
+          <strong className="font-semibold text-foreground">
+            まずは見学だけでも歓迎します。
+          </strong>
+        </p>
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:flex-wrap">
+          <Link
+            href="/contact?topic=recruit"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "min-h-14 justify-center rounded-full px-10 py-6 text-lg shadow-lg"
+            )}
+          >
+            見学・面談を申し込む
+          </Link>
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "min-h-14 justify-center rounded-full border-2 border-[var(--ritanowa-gold)]/60 bg-card/90 px-10 py-6 text-lg"
+            )}
+          >
+            電話で相談（{siteConfig.phoneDisplay}）
+          </a>
+        </div>
+      </div>
+    </RevealSection>
+  );
+}
+
 export default function RecruitPage() {
   return (
     <SiteLayout>
+      <JobPostingJsonLd />
       <header className="relative overflow-x-clip overflow-y-visible border-b border-[var(--ritanowa-gold)]/35 bg-gradient-to-b from-[color-mix(in_srgb,var(--ritanowa-gold)_22%,var(--background))] via-[color-mix(in_srgb,var(--ritanowa-sand)_45%,var(--background))] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_8%,var(--background))] px-4 pb-16 pt-10 sm:px-5 md:px-8 md:pb-24 md:pt-14">
         <div className="pointer-events-none absolute -right-20 top-10 size-80 rounded-full bg-[color-mix(in_srgb,var(--ritanowa-gold)_25%,transparent)] blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-0 size-72 rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_18%,transparent)] blur-3xl" />
@@ -107,6 +287,8 @@ export default function RecruitPage() {
           </p>
         </div>
       </header>
+
+      <OpeningsSection />
 
       <RevealSection className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
         <div className="rounded-3xl border border-border/80 bg-card p-8 shadow-sm md:p-10">
