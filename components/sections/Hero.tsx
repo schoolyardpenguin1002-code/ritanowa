@@ -55,6 +55,9 @@ export function Hero() {
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
             {siteConfig.primaryServiceAreaLabel}の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
           </p>
+          <p className="text-pretty text-base font-bold leading-relaxed text-[var(--ritanowa-terracotta)] sm:text-lg md:text-xl">
+            営業時間は9:00〜21:00。夕方〜夜や週末の訪問にも対応し、学校のあとの時間帯も、ご家庭のリズムに合わせて伺えます。
+          </p>
         </div>
 
         <div className="flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-4">

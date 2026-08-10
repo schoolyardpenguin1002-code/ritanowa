@@ -39,7 +39,7 @@ export const siteConfig = {
   serviceAreaNote:
     "お住まいの地域・体調・スケジュールにより訪問可否が異なります。お気軽にご相談ください。",
   /** 事務・お電話の受付時間（表示用） */
-  officeHoursLine: "平日 9:00〜18:00",
+  officeHoursLine: "9:00〜21:00（夕方〜夜・週末の訪問にも対応）",
   /** 受付時間の補足 */
   officeHoursNote:
     "上記以外の時間帯も、お気軽にご相談ください。フットワークよく対応いたします。",
