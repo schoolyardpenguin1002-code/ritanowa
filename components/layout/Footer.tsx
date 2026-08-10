@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 
 import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
 import { EmailCopyButton } from "@/components/EmailCopyButton";
-import { RevealSection } from "@/components/motion/RevealSection";
 import { SocialLinks } from "@/components/SocialLinks";
 import { navGroups, recruitNavLink } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
@@ -20,7 +19,7 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <RevealSection
+    <section
       id="contact"
       className="border-t border-border/70 bg-[color-mix(in_srgb,var(--ritanowa-sand)_35%,var(--background))] py-16 md:py-24"
     >
@@ -242,6 +241,6 @@ export function Footer() {
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </p>
       </div>
-    </RevealSection>
+    </section>
   );
 }
