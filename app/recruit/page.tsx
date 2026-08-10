@@ -138,56 +138,82 @@ function OpeningsSection() {
           です。日中は別のお仕事をされている方、お子さんのことが一段落してから働きたい方、ブランクのある方も歓迎します。
         </p>
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 space-y-6">
           {jobOpenings.map((job) => (
-            <li
+            <div
               key={job.id}
-              className="flex flex-col rounded-3xl border border-border/80 bg-card p-7 shadow-sm md:p-8"
+              className="overflow-hidden rounded-3xl border border-border/80 bg-card shadow-md"
             >
-              <h3 className="text-xl font-bold leading-snug md:text-2xl">
-                {job.occupation}
-              </h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                {jobCommonTerms.employmentTypeLabel}
-              </p>
-              <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-                {job.summary}
-              </p>
-              <dl className="mt-6 divide-y divide-border/70 border-t border-border/70 text-base">
-                <div className="flex gap-4 py-3">
-                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+              <div className="bg-gradient-to-r from-[var(--ritanowa-terracotta)] to-[color-mix(in_srgb,var(--ritanowa-gold)_55%,var(--ritanowa-terracotta))] px-7 py-6 md:px-10 md:py-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
+                  Open Positions
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  {job.occupation.split("・").map((o) => (
+                    <span
+                      key={o}
+                      className="rounded-full bg-white/95 px-4 py-1.5 text-base font-bold text-[var(--ritanowa-terracotta)] shadow-sm md:px-5 md:text-lg"
+                    >
+                      {o}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 text-sm font-semibold text-white md:text-base">
+                  {jobCommonTerms.employmentTypeLabel}／週1日からOK
+                </p>
+              </div>
+
+              <div className="grid gap-3 px-7 pt-6 sm:grid-cols-3 md:px-10">
+                <div className="rounded-2xl bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_8%,var(--background))] p-5 text-center">
+                  <p className="text-xs font-semibold tracking-widest text-[var(--ritanowa-terracotta)]">
                     時給
-                  </dt>
-                  <dd className="min-w-0 text-muted-foreground">
-                    <strong className="text-lg font-bold text-foreground">
-                      {job.hourlyWage.toLocaleString("ja-JP")}円
-                    </strong>
-                  </dd>
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-foreground">
+                    {job.hourlyWage.toLocaleString("ja-JP")}
+                    <span className="text-base font-semibold">円〜</span>
+                  </p>
                 </div>
-                <div className="flex gap-4 py-3">
-                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                <div className="rounded-2xl bg-[color-mix(in_srgb,var(--ritanowa-sage)_10%,var(--background))] p-5 text-center">
+                  <p className="text-xs font-semibold tracking-widest text-[var(--ritanowa-sage-deep)]">
                     勤務時間
-                  </dt>
-                  <dd className="min-w-0 text-muted-foreground">{job.hours}</dd>
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-foreground">
+                    9:00
+                    <span className="text-base font-semibold">〜</span>
+                    22:00
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    可能な時間で調整できます
+                  </p>
                 </div>
-                <div className="flex gap-4 py-3">
-                  <dt className="w-24 shrink-0 font-semibold text-foreground">
+                <div className="rounded-2xl bg-[color-mix(in_srgb,var(--ritanowa-gold)_14%,var(--background))] p-5 text-center">
+                  <p className="text-xs font-semibold tracking-widest text-[color-mix(in_srgb,var(--ritanowa-gold)_70%,var(--foreground))]">
                     勤務日数
-                  </dt>
-                  <dd className="min-w-0 text-muted-foreground">{job.days}</dd>
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-foreground">
+                    週1日
+                    <span className="text-base font-semibold">〜</span>
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    正社員の働き方もご相談ください
+                  </p>
                 </div>
-                <div className="flex gap-4 py-3">
-                  <dt className="w-24 shrink-0 font-semibold text-foreground">
-                    応募資格
-                  </dt>
-                  <dd className="min-w-0 text-muted-foreground">
+              </div>
+
+              <div className="space-y-5 px-7 py-7 md:px-10 md:py-8">
+                <p className="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {job.summary}
+                </p>
+                <div className="rounded-2xl border border-border/70 bg-background/60 p-5">
+                  <p className="text-sm font-bold text-foreground">応募資格</p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground md:text-base">
                     {job.qualification}
-                  </dd>
+                  </p>
                 </div>
-              </dl>
-            </li>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div className="mt-10 rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-card p-7 shadow-sm md:p-8">
           <h3 className="text-lg font-bold md:text-xl">共通の待遇</h3>
@@ -289,6 +315,49 @@ export default function RecruitPage() {
       </header>
 
       <OpeningsSection />
+
+      <RevealSection className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
+        <div className="overflow-hidden rounded-3xl border border-[var(--ritanowa-terracotta)]/30 bg-card shadow-sm">
+          <div className="bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_8%,var(--background))] px-8 pb-6 pt-8 md:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--ritanowa-terracotta)]">
+              Message
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
+              「仕事だから」で終わらせない場所を、つくりたい。
+            </h2>
+          </div>
+          <div className="space-y-5 px-8 py-8 text-pretty text-base leading-relaxed text-muted-foreground md:px-10 md:text-lg">
+            <p>
+              りたのわは、すこし変わった訪問看護ステーションです。訪問して看護を届けるだけでなく、地域に
+              <strong className="font-semibold text-foreground">
+                「大きな実家」のようなつながり——家族
+              </strong>
+              をつくっていきたいと、本気で考えています。
+            </p>
+            <p>
+              これまで、地域のこうした活動の多くは、NPOやボランティアの善意が支えてきました。ボランティアは尊い行動です。でも私は、同じことを
+              <strong className="font-semibold text-foreground">
+                「本業」としてやれたら、もっと多くの人を、もっと長く支えられる
+              </strong>
+              と考えています。
+            </p>
+            <p>
+              そして、もうひとつ大切にしたいことがあります。人に親切にすること。信頼関係を築くこと。新しいことに挑戦すること——本当はこんなにハッピーなことが、お給料をもらった途端に「これは仕事だから」と、つまらなくなってしまうことがあります。私は、それが嫌なのです。
+            </p>
+            <p>
+              ここでは、楽しんでほしい。人との関わり、信頼、誰かの役に立てた実感——
+              <strong className="font-semibold text-foreground">
+                お金では測れない「本当の豊かさ」をここで得ながら、きちんとお給料も受け取ってほしい。
+              </strong>
+              働くあなた自身に、人生の素晴らしい時間を過ごしてもらいたいのです。
+            </p>
+            <p>そういう場所を、仲間と一緒につくっていきます。</p>
+            <p className="text-right font-semibold text-foreground">
+              代表・医師　狩野 遊太
+            </p>
+          </div>
+        </div>
+      </RevealSection>
 
       <RevealSection className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
         <div className="rounded-3xl border border-border/80 bg-card p-8 shadow-sm md:p-10">

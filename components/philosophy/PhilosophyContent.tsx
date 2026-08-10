@@ -1,13 +1,100 @@
 "use client";
 
-import { animate, useReducedMotion } from "framer-motion";
+import { AnimatePresence, animate, motion, useReducedMotion } from "framer-motion";
 import { Heart, Scale, Users } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { RevealSection } from "@/components/motion/RevealSection";
 import { buttonVariants } from "@/lib/button-variants";
 import { cn } from "@/lib/utils";
+
+const HERO_IMAGES = [
+  {
+    src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=2000&q=80",
+    alt: "夕暮れの浜辺で手をつなぐ大家族",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=2000&q=80",
+    alt: "リビングで子どもたちと過ごす母親",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=2000&q=80",
+    alt: "子どもたちを抱いて笑う父親",
+  },
+] as const;
+
+function VisionHero() {
+  const [index, setIndex] = useState(0);
+  const reduce = useReducedMotion();
+
+  useEffect(() => {
+    if (reduce) return;
+    const timer = setInterval(
+      () => setIndex((v) => (v + 1) % HERO_IMAGES.length),
+      6000
+    );
+    return () => clearInterval(timer);
+  }, [reduce]);
+
+  const current = HERO_IMAGES[index];
+
+  return (
+    <div className="relative h-[58vh] min-h-[420px] w-full overflow-hidden md:h-[68vh]">
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={current.src}
+          className="absolute inset-0"
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: reduce ? 1 : 1.07 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            opacity: { duration: 1.8, ease: "easeInOut" },
+            scale: { duration: 7.5, ease: "linear" },
+          }}
+        >
+          <Image
+            src={current.src}
+            alt={current.alt}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/20" />
+
+      <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="text-center">
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.3em] text-white/85 md:text-sm">
+            Vision
+          </p>
+          <h2 className="mt-4 text-balance font-serif font-bold leading-[1.25] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.45)] text-[clamp(1.8rem,6.2vw,4.2rem)]">
+            <span className="inline-block">大きな実家、</span>
+            <span className="inline-block">最強のおせっかい組織。</span>
+          </h2>
+        </div>
+      </div>
+
+      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
+        {HERO_IMAGES.map((img, i) => (
+          <button
+            key={img.src}
+            type="button"
+            aria-label={`写真 ${i + 1} を表示`}
+            onClick={() => setIndex(i)}
+            className={`h-1.5 rounded-full transition-all ${
+              i === index ? "w-6 bg-white/95" : "w-1.5 bg-white/45"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const VISION_TARGET = 1000;
 
@@ -78,6 +165,7 @@ const valueCards = [
 export function PhilosophyContent() {
   return (
     <div className="bg-[color-mix(in_srgb,var(--ritanowa-sage-light)_55%,var(--background))]">
+      <VisionHero />
       <header className="relative overflow-hidden border-b border-[color-mix(in_srgb,var(--ritanowa-sage)_18%,transparent)] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.35]"
@@ -104,9 +192,19 @@ export function PhilosophyContent() {
           <h1 className="mt-6 font-serif text-3xl font-semibold leading-tight tracking-tight text-[var(--ritanowa-sage-deep)] sm:text-4xl md:text-5xl">
             経営理念
           </h1>
-          <p className="mx-auto mt-5 max-w-xl font-sans text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            ミッション・ビジョン・バリュー。私たちが大切にする「利他」のかたちを、ここに置いています。
+          <p className="mx-auto mt-8 max-w-2xl font-serif text-pretty text-xl font-medium leading-relaxed text-[var(--ritanowa-sage-deep)] sm:text-2xl md:text-[1.7rem] md:leading-[1.7]">
+            人生を心から楽しめる土台を創造し、
+            <br className="hidden sm:block" />
+            ウェルビーイングで世界を満たす。
           </p>
+          <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-[color-mix(in_srgb,var(--ritanowa-sage)_16%,transparent)] bg-card/80 px-6 py-5 backdrop-blur-sm">
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-[var(--ritanowa-sage)]">
+              自社におけるウェルビーイングの定義
+            </p>
+            <p className="mt-2 font-serif text-base font-medium leading-relaxed text-[var(--ritanowa-sage-deep)] sm:text-lg">
+              精神的・肉体的・社会的に満たされ、持続可能な状態。
+            </p>
+          </div>
         </div>
       </header>
 
@@ -133,8 +231,13 @@ export function PhilosophyContent() {
             私たちが目指す未来
           </p>
 
+          <p className="mx-auto mt-10 max-w-3xl text-center font-serif font-bold leading-snug tracking-tight text-[var(--ritanowa-sage-deep)] text-[clamp(1.7rem,5vw,3rem)]">
+            <span className="inline-block">大きな実家、</span>
+            <span className="inline-block">最強のおせっかい組織。</span>
+          </p>
+
           <p className="sr-only">
-            ビジョン：群馬から1,000の利他の拠点を創り、子供たちの未来を照らすインフラになる。
+            ビジョン：大きな実家、最強のおせっかい組織。群馬から1,000の利他の拠点を創り、子供たちの未来を照らすインフラになる。
           </p>
           <div
             className="mt-12 flex flex-col items-center gap-2 text-center sm:gap-3"
@@ -157,7 +260,7 @@ export function PhilosophyContent() {
           </div>
 
           <p className="mx-auto mt-12 max-w-2xl font-sans text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            1,000の拠点が網の目のように繋がり、地域全体を温かく包み込むセーフティネット。今の支援が、次の世代の子供たちが安心して暮らせる街の礎となることを目指します。
+            大きな実家のように頼れて、少しおせっかいなくらい気にかけてくれる——そんな拠点が1,000、網の目のようにつながり、地域全体を温かく包み込むセーフティネットになる。今日の支援を、次の世代の子どもたちが安心して暮らせる街の礎にしていきます。
           </p>
         </div>
       </RevealSection>

@@ -50,6 +50,9 @@ export const navGroups: readonly NavGroup[] = [
       { href: "/philosophy", label: "経営理念" },
       { href: "/#director-message", label: "代表挨拶" },
       { href: "/staff", label: "スタッフ" },
+      { href: "/company", label: "運営会社" },
+      { href: "/group-home", label: "グループホーム（開設予定）" },
+      { href: "/clinic", label: "連携クリニック" },
     ],
   },
   {
