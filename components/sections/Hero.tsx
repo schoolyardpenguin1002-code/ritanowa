@@ -23,7 +23,7 @@ export function Hero() {
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[color-mix(in_srgb,var(--background)_85%,transparent)] via-[color-mix(in_srgb,var(--ritanowa-sand)_50%,transparent)] to-[color-mix(in_srgb,var(--ritanowa-terracotta)_22%,transparent)]"
+          className="absolute inset-0 bg-[color-mix(in_srgb,var(--background)_78%,transparent)] md:bg-transparent md:bg-gradient-to-br md:from-[color-mix(in_srgb,var(--background)_85%,transparent)] md:via-[color-mix(in_srgb,var(--ritanowa-sand)_50%,transparent)] md:to-[color-mix(in_srgb,var(--ritanowa-terracotta)_22%,transparent)]"
           aria-hidden
         />
       </div>

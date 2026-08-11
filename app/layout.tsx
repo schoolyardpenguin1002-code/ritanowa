@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { Analytics } from "@vercel/analytics/react";
@@ -13,6 +13,12 @@ const notoSerifJP = Noto_Serif_JP({
   variable: "--font-noto-serif-jp",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+const zenMaru = Zen_Maru_Gothic({
+  variable: "--font-zen-maru",
+  subsets: ["latin"],
+  weight: ["500", "700"],
   display: "swap",
 });
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
@@ -79,7 +85,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${notoSansJP.variable} ${notoSerifJP.variable} scroll-smooth`}
+      className={`${notoSansJP.variable} ${notoSerifJP.variable} ${zenMaru.variable} scroll-smooth`}
     >
       <body className="flex min-h-dvh min-h-screen flex-col">
         {children}

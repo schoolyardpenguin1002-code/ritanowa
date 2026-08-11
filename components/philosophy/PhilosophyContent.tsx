@@ -179,16 +179,6 @@ export function PhilosophyContent() {
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-[var(--ritanowa-sage)] sm:text-sm">
             Philosophy
           </p>
-          <p className="mt-2 font-sans text-sm text-muted-foreground sm:text-base">
-            <Link
-              href="/"
-              className="rounded-md text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
-            >
-              トップ
-            </Link>
-            <span className="text-muted-foreground"> / </span>
-            <span>経営理念</span>
-          </p>
           <h1 className="mt-6 font-serif text-3xl font-semibold leading-tight tracking-tight text-[var(--ritanowa-sage-deep)] sm:text-4xl md:text-5xl">
             経営理念
           </h1>
