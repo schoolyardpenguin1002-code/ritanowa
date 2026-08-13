@@ -19,12 +19,18 @@ export function RepresentativeNurseCard({
     <article className="overflow-hidden rounded-3xl border border-border/80 bg-card shadow-md">
       <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:gap-8 md:p-10">
         {nurse.imageSrc ? (
-          <div className="mx-auto w-full max-w-[16rem] shrink-0 overflow-hidden rounded-2xl sm:mx-0">
+          <div
+            className={
+              (nurse.imageWidth ?? 0) > (nurse.imageHeight ?? 1)
+                ? "mx-auto w-full max-w-[22rem] shrink-0 overflow-hidden rounded-2xl sm:mx-0"
+                : "mx-auto w-full max-w-[16rem] shrink-0 overflow-hidden rounded-2xl sm:mx-0"
+            }
+          >
             <Image
               src={nurse.imageSrc}
               alt={nurse.imageAlt}
-              width={1108}
-              height={1477}
+              width={nurse.imageWidth ?? 1200}
+              height={nurse.imageHeight ?? 1200}
               className="h-auto w-full object-cover"
             />
           </div>

@@ -5,7 +5,7 @@ import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { RepresentativeNurseCard } from "@/components/staff/RepresentativeNurseCard";
-import { director, representativeNurse } from "@/lib/staff-data";
+import { director, nurses, representativeNurse } from "@/lib/staff-data";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -74,6 +74,20 @@ export default function StaffPage() {
           </p>
           <div className="mt-10">
             <RepresentativeNurseCard nurse={representativeNurse} />
+          </div>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/60 pb-14 pt-14 md:pb-20 md:pt-20">
+        <div className="mx-auto max-w-4xl px-4 md:px-8">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">看護師</h2>
+          <p className="mt-2 text-lg text-muted-foreground">
+            ご家庭を訪問する看護師です。
+          </p>
+          <div className="mt-10 space-y-8">
+            {nurses.map((nurse) => (
+              <RepresentativeNurseCard key={nurse.id} nurse={nurse} />
+            ))}
           </div>
         </div>
       </RevealSection>
