@@ -2,7 +2,7 @@
 export const concernGatewayCards = [
   {
     title: "不登校・学校に行きづらさ",
-    href: "/blog/school-refusal-and-family",
+    href: "/futoko",
   },
   {
     title: "発達の特性・発達障害の不安",

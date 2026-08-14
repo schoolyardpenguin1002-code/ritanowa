@@ -104,14 +104,8 @@ export default function ClinicPage() {
               お問い合わせフォーム
             </Link>
           </div>
-        </section>
-
-        <section className="space-y-2 border-t border-border/60 pt-6 text-sm text-muted-foreground">
-          <h2 className="text-base font-semibold text-foreground">クリニック概要</h2>
-          <p>名称：ロコクリニック（オンライン精神科診療）</p>
-          <p>管理者（医師）：狩野 遊太</p>
-          <p>
-            ※診療体制・対応時間は準備中のため、最新の状況はお問い合わせください。緊急のご相談には対応できません。緊急時は最寄りの医療機関または救急（119）へご連絡ください。
+          <p className="text-xs text-muted-foreground">
+            ※緊急のご相談には対応できません。緊急時は最寄りの医療機関または救急（119）へご連絡ください。
           </p>
         </section>
       </RevealSection>

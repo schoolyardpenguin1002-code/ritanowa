@@ -13,9 +13,10 @@ import {
 
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { RepresentativeNurseCard } from "@/components/staff/RepresentativeNurseCard";
 import { buttonVariants } from "@/lib/button-variants";
 import { jobCommonTerms, jobOpenings } from "@/lib/job-openings";
-import { director } from "@/lib/staff-data";
+import { director, nurses, representativeNurse } from "@/lib/staff-data";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -431,6 +432,95 @@ export default function RecruitPage() {
         </div>
       </RevealSection>
 
+      <RevealSection className="py-14 md:py-20">
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-[var(--ritanowa-gold)]">
+            How We Grow
+          </p>
+          <h2 className="mt-3 text-center text-2xl font-bold tracking-tight md:text-3xl">
+            りたのわの育ちかた・評価のしくみ
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            評価と給与のしくみは、入職前に全部お見せします。基準が見えないまま働く不安を、私たちはつくりたくありません。
+          </p>
+          <ul className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                title: "毎月チャンスがある昇格ランク",
+                body: "C から始まり、CC、CCC…と文字が増えていく昇格制度をつくりました。判定は毎月。基準は全員に公開されたチェックリストだけで決まるので、上司の気分で左右されません。ランクは偉さの序列ではなく、仕事を分かりやすくする道具。誰もが同じ発言権を持つチームです。",
+              },
+              {
+                title: "成長図鑑（300項目の行動リスト）",
+                body: "「挨拶を自分からする」から「拠点の運営を任される」まで、できることがひとつずつ増えていく図鑑があります。読んだとおりにやれば誰でもできる行動だけを書いた、マニュアル兼スタンプ帳。なお、集めるかどうかは自由です。落ち着いたペースで働きたい方の働き方も、同じように尊重します。",
+              },
+              {
+                title: "毎月、自分で書く通信簿",
+                body: "月末に1枚、自分で書いて提出する通信簿があります。3つの合格点がそろえば、毎月お給料が少しずつ上がります。誰かに査定される緊張感より、自分で振り返って自分で積み上げる手応えを大事にしたくて、この形にしました。",
+              },
+              {
+                title: "お互い様の約束",
+                body: "会社は、契約した勤務枠と収入を守ります。シフトの変更をお願いすることはあっても、それは相談であって命令ではなく、断っても不利益はありません。子どもの行事も、急な用事も、お互い様。この約束は制度として文章になっています。",
+              },
+              {
+                title: "記録は音声とAIで",
+                body: "訪問後の記録は、音声入力とAIが下書きまで作ります。夜まで記録に追われる訪問看護の常識を、仕組みで変えているところです。浮いた時間は、利用者様との対話と、あなた自身の暮らしに返します。",
+              },
+              {
+                title: "AIで学べるステーション",
+                body: "利用者役のAIを相手にした会話のトレーニングなど、新しい学び方を取り入れています。「同行できる先輩の数」に縛られず、失敗を気にせず何度でも練習できる環境を整えていきます。新しい道具を面白がれる方、大歓迎です。",
+              },
+            ].map((item) => (
+              <li
+                key={item.title}
+                className="rounded-3xl border border-border/80 bg-card p-7 shadow-sm"
+              >
+                <h3 className="text-lg font-bold text-[var(--ritanowa-terracotta)]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {item.body}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
+            制度の細かい数字や条件は、カジュアル面談で資料を見ながらご説明します。ご利用者様・ご家族様・連携先の皆様にも、私たちがどんなチームづくりをしているかの参考になれば嬉しいです。
+          </p>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/50 py-14 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
+            ある日の働き方（夕方の訪問枠の例）
+          </h2>
+          <div className="mt-10 space-y-0">
+            {[
+              ["15:45", "自宅から直行。移動中に今日の利用者様の情報をアプリで確認"],
+              ["16:00", "1件目の訪問。学校から帰ってきたお子さまと、今日の話から"],
+              ["17:30", "2件目へ。移動の車内で、1件目の記録を音声入力"],
+              ["19:00", "3件目の訪問。お仕事から帰られたご家族とゆっくり話せる時間帯"],
+              ["20:30", "訪問終了。記録はAIの下書きを確認して完了、そのまま直帰"],
+            ].map(([time, body]) => (
+              <div
+                key={time}
+                className="flex gap-5 border-l-2 border-[var(--ritanowa-gold)]/50 pb-7 pl-6 last:pb-0"
+              >
+                <span className="w-14 shrink-0 font-bold text-[var(--ritanowa-terracotta)]">
+                  {time}
+                </span>
+                <p className="text-base leading-relaxed text-muted-foreground">
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-sm leading-relaxed text-muted-foreground">
+            ※一例です。担当件数や時間帯は、契約した勤務枠とご希望に合わせて組みます。
+          </p>
+        </div>
+      </RevealSection>
+
       <RevealSection className="mx-auto max-w-3xl px-4 py-14 md:px-8 md:py-20">
         <div className="flex items-start gap-4">
           <MapPin
@@ -556,6 +646,50 @@ export default function RecruitPage() {
                 ページもご覧ください。
               </p>
             </div>
+          </div>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/50 bg-[color-mix(in_srgb,var(--background)_94%,var(--ritanowa-sand))] py-14 md:py-20">
+        <div className="mx-auto max-w-4xl px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
+            一緒に働く仲間
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            どんな人と働くのかが、いちばん気になるところだと思います。まずは2人、紹介させてください。
+          </p>
+          <div className="mt-10 space-y-8">
+            <RepresentativeNurseCard nurse={representativeNurse} />
+            {nurses.map((nurse) => (
+              <RepresentativeNurseCard key={nurse.id} nurse={nurse} />
+            ))}
+          </div>
+          <p className="mt-8 text-center text-base text-muted-foreground">
+            <Link
+              href="/staff"
+              className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+            >
+              スタッフ紹介ページはこちら
+            </Link>
+          </p>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="py-14 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-8">
+          <div className="rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-card p-8 shadow-sm md:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--ritanowa-gold)]">
+              Referral
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
+              ご紹介、大歓迎です
+            </h2>
+            <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+              いい仲間は、いい仲間を知っている——私たちはそう考えています。りたのわに合いそうな看護師・作業療法士のお知り合いがいたら、ぜひ引き合わせてください。ご紹介から入職につながった場合は、紹介してくださった方にも、入職された方にも、感謝の気持ちとしてそれぞれ3万円をお渡ししています（支給条件の詳細は面談でご説明します）。
+            </p>
+            <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
+              「まず話だけ聞いてみたい」という段階のご友人の同席も歓迎です。
+            </p>
           </div>
         </div>
       </RevealSection>

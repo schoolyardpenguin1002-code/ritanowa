@@ -36,6 +36,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/#specialty", label: siteConfig.specialtyCross },
       { href: "/#concern-gateway", label: "お悩みから探す" },
+      { href: "/futoko", label: "不登校のご家庭へ" },
       { href: "/visit-nursing", label: "訪問看護とは" },
       { href: "/for-whom", label: "お子さま・ご家族へ" },
       { href: "/guide", label: "ご相談のヒント" },
@@ -71,7 +72,8 @@ export const navGroups: readonly NavGroup[] = [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
       { href: "/resources", label: "お役立ち情報（群馬の相談窓口・制度）" },
-      { href: "/community", label: "協力サポーター・イベント" },
+      { href: "/community", label: "協力サポーター" },
+      { href: "/events", label: "イベント情報" },
     ],
   },
   {
