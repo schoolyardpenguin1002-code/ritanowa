@@ -13,16 +13,27 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; sort?: string }>;
 };
 
 export default async function BlogPage({ searchParams }: Props) {
-  const { category } = await searchParams;
+  const { category, sort } = await searchParams;
   const all = getAllBlogPosts();
   const categories = getBlogCategories();
-  const posts = category
+  const filtered = category
     ? all.filter((p) => p.frontmatter.category === category)
     : all;
+  const posts =
+    sort === "asc" ? [...filtered].reverse() : filtered;
+  const countOf = (c?: string) =>
+    c ? all.filter((p) => p.frontmatter.category === c).length : all.length;
+  const buildHref = (c?: string, s?: string) => {
+    const params = new URLSearchParams();
+    if (c) params.set("category", c);
+    if (s === "asc") params.set("sort", "asc");
+    const q = params.toString();
+    return q ? `/blog?${q}` : "/blog";
+  };
 
   return (
     <SiteLayout>
@@ -31,30 +42,56 @@ export default async function BlogPage({ searchParams }: Props) {
         description="小児精神科訪問看護や、お子さま・ご家族向けの読み物を掲載しています。"
       />
       <RevealSection className="mx-auto max-w-3xl px-4 py-10 md:px-8 md:py-14">
-        <div className="mb-10 flex flex-wrap gap-2">
+        <div className="mb-6 flex flex-wrap gap-2">
           <Link
-            href="/blog"
+            href={buildHref(undefined, sort)}
             className={`rounded-full px-4 py-2 text-lg font-medium ${
               !category
                 ? "bg-primary text-primary-foreground"
                 : "border border-border bg-card hover:bg-secondary"
             }`}
           >
-            すべて
+            すべて（{countOf()}）
           </Link>
           {categories.map((c) => (
             <Link
               key={c}
-              href={`/blog?category=${encodeURIComponent(c)}`}
+              href={buildHref(c, sort)}
               className={`rounded-full px-4 py-2 text-lg font-medium ${
                 category === c
                   ? "bg-primary text-primary-foreground"
                   : "border border-border bg-card hover:bg-secondary"
               }`}
             >
-              {c}
+              {c}（{countOf(c)}）
             </Link>
           ))}
+        </div>
+
+        <div className="mb-8 flex items-center justify-between text-base text-muted-foreground">
+          <span>{posts.length}件</span>
+          <span className="flex gap-3">
+            <Link
+              href={buildHref(category)}
+              className={
+                sort !== "asc"
+                  ? "font-semibold text-foreground underline underline-offset-4"
+                  : "hover:underline"
+              }
+            >
+              新しい順
+            </Link>
+            <Link
+              href={buildHref(category, "asc")}
+              className={
+                sort === "asc"
+                  ? "font-semibold text-foreground underline underline-offset-4"
+                  : "hover:underline"
+              }
+            >
+              古い順
+            </Link>
+          </span>
         </div>
 
         <ul className="flex flex-col gap-6">

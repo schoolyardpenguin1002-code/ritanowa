@@ -70,6 +70,7 @@ export const navGroups: readonly NavGroup[] = [
     items: [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
+      { href: "/resources", label: "お役立ち情報（群馬の相談窓口・制度）" },
       { href: "/community", label: "協力サポーター・イベント" },
     ],
   },
