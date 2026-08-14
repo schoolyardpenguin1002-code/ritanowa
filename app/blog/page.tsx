@@ -16,6 +16,14 @@ type Props = {
   searchParams: Promise<{ category?: string; sort?: string }>;
 };
 
+/** カテゴリごとの「サムネ」タイルの下地色（やわらかい色をローテーション） */
+const CATEGORY_TINTS = [
+  "color-mix(in srgb, var(--ritanowa-sand) 55%, var(--background))",
+  "color-mix(in srgb, var(--ritanowa-sage-light) 45%, var(--background))",
+  "color-mix(in srgb, var(--ritanowa-terracotta) 14%, var(--background))",
+  "color-mix(in srgb, var(--ritanowa-gold) 16%, var(--background))",
+] as const;
+
 export default async function BlogPage({ searchParams }: Props) {
   const { category, sort } = await searchParams;
   const all = getAllBlogPosts();
@@ -41,7 +49,7 @@ export default async function BlogPage({ searchParams }: Props) {
         title="ブログ・コラム"
         description="小児精神科訪問看護や、お子さま・ご家族向けの読み物を掲載しています。"
       />
-      <RevealSection className="mx-auto max-w-3xl px-4 py-10 md:px-8 md:py-14">
+      <RevealSection className="mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
         <div className="mb-6 flex flex-wrap gap-2">
           <Link
             href={buildHref(undefined, sort)}
@@ -94,31 +102,45 @@ export default async function BlogPage({ searchParams }: Props) {
           </span>
         </div>
 
-        <ul className="flex flex-col gap-6">
-          {posts.map((item) => (
-            <li key={item.slug}>
-              <Link
-                href={`/blog/${item.slug}`}
-                className="block rounded-3xl border border-border/80 bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <span className="text-base font-medium text-[var(--ritanowa-gold)]">
-                  {item.frontmatter.category}
-                </span>
-                <h2 className="mt-2 text-xl font-semibold leading-snug">
-                  {item.frontmatter.title}
-                </h2>
-                <p className="mt-2 text-lg text-muted-foreground">
-                  {item.frontmatter.excerpt}
-                </p>
-                <time
-                  dateTime={item.frontmatter.date}
-                  className="mt-3 block text-base text-muted-foreground"
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((item) => {
+            const tint =
+              CATEGORY_TINTS[
+                categories.indexOf(item.frontmatter.category) %
+                  CATEGORY_TINTS.length
+              ];
+            return (
+              <li key={item.slug} className="h-full">
+                <Link
+                  href={`/blog/${item.slug}`}
+                  className="flex h-full flex-col overflow-hidden rounded-3xl border border-border/80 bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
                 >
-                  {item.frontmatter.date}
-                </time>
-              </Link>
-            </li>
-          ))}
+                  <div
+                    className="flex min-h-36 items-center p-5"
+                    style={{ background: tint }}
+                  >
+                    <h2 className="text-lg font-bold leading-snug">
+                      {item.frontmatter.title}
+                    </h2>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-2 p-5">
+                    <span className="text-sm font-semibold text-[var(--ritanowa-gold)]">
+                      {item.frontmatter.category}
+                    </span>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.frontmatter.excerpt}
+                    </p>
+                    <time
+                      dateTime={item.frontmatter.date}
+                      className="mt-auto pt-1 text-xs text-muted-foreground"
+                    >
+                      {item.frontmatter.date}
+                    </time>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {posts.length === 0 ? (
