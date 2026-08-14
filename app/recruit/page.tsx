@@ -160,7 +160,7 @@ function OpeningsSection() {
                   ))}
                 </div>
                 <p className="mt-3 text-sm font-semibold text-white md:text-base">
-                  {jobCommonTerms.employmentTypeLabel}／週1日からOK
+                  {jobCommonTerms.employmentTypeLabel}／週2コマから
                 </p>
               </div>
 
@@ -176,27 +176,27 @@ function OpeningsSection() {
                 </div>
                 <div className="rounded-2xl bg-[color-mix(in_srgb,var(--ritanowa-sage)_10%,var(--background))] p-5 text-center">
                   <p className="text-xs font-semibold tracking-widest text-[var(--ritanowa-sage-deep)]">
-                    勤務時間
+                    平日の夕コマ
                   </p>
                   <p className="mt-1 text-2xl font-bold text-foreground">
-                    9:00
+                    16:00
                     <span className="text-base font-semibold">〜</span>
-                    22:00
+                    21:00
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    可能な時間で調整できます
+                    ここが主戦場です
                   </p>
                 </div>
                 <div className="rounded-2xl bg-[color-mix(in_srgb,var(--ritanowa-gold)_14%,var(--background))] p-5 text-center">
                   <p className="text-xs font-semibold tracking-widest text-[color-mix(in_srgb,var(--ritanowa-gold)_70%,var(--foreground))]">
-                    勤務日数
+                    土日祝のコマ
                   </p>
-                  <p className="mt-1 text-2xl font-bold text-foreground">
-                    週1日
-                    <span className="text-base font-semibold">〜</span>
+                  <p className="mt-1 text-xl font-bold leading-snug text-foreground">
+                    昼 9:00〜15:00
+                    <span className="mt-0.5 block">夕 15:00〜21:00</span>
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    正社員の働き方もご相談ください
+                    土日祝は手当が付きます
                   </p>
                 </div>
               </div>
@@ -216,7 +216,35 @@ function OpeningsSection() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-card p-7 shadow-sm md:p-8">
+        <div className="mt-10 rounded-3xl border border-[var(--ritanowa-terracotta)]/40 bg-card p-7 shadow-sm md:p-8">
+          <h3 className="text-lg font-bold md:text-xl">コマ制という働き方</h3>
+          <p className="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">
+            りたのわの勤務は「コマ」で組みます。平日の夕コマは16時から21時までの5時間。土日祝は昼コマ（9〜15時）と夕コマ（15〜21時）です。週に何コマ入るかを契約で決めて、その分の収入をこちらが保障します。
+          </p>
+          <ul className="mt-5 space-y-3 text-base leading-relaxed text-muted-foreground">
+            <li>
+              <span className="font-semibold text-foreground">週2コマから始められます。</span>
+              日中は別のお仕事、夜だけりたのわ。そんな働き方の方がたくさんいます。
+            </li>
+            <li>
+              <span className="font-semibold text-foreground">コマの前後は多少ずらせます。</span>
+              「16時は保育園のお迎えで無理、16時半からなら」といった調整はご相談ください。基本の形はありますが、そこから少し動かすことはできます。
+            </li>
+            <li>
+              <span className="font-semibold text-foreground">入るコマが増えるほど時給も上がります。</span>
+              週4コマの方は週2コマの方より高い時給になる仕組みです。土日祝のコマには別途手当が付きます。
+            </li>
+            <li>
+              <span className="font-semibold text-foreground">シフトの谷でも収入は減りません。</span>
+              契約したコマ数と週給は会社が守ります。訪問が入らなかった時間の保障も制度にしています。
+            </li>
+          </ul>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            日中だけの勤務は、いまは募集の中心ではありません。夕方から夜の時間帯に動ける方を探しています。
+          </p>
+        </div>
+
+        <div className="mt-6 rounded-3xl border border-[var(--ritanowa-gold)]/40 bg-card p-7 shadow-sm md:p-8">
           <h3 className="text-lg font-bold md:text-xl">共通の待遇</h3>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {jobCommonTerms.benefits.map((benefit) => (

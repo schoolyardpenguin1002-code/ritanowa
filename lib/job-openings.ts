@@ -28,7 +28,7 @@ export const jobCommonTerms = {
   datePosted: "2026-08-01",
   /** 掲載終了予定（構造化データ用） */
   validThrough: "2027-03-31",
-  employmentTypeLabel: "正社員・パート",
+  employmentTypeLabel: "正社員・パート（夕方コマ中心）",
   /** 構造化データ用の雇用形態 */
   employmentType: ["FULL_TIME", "PART_TIME"],
   benefits: [
@@ -45,14 +45,14 @@ export const jobCommonTerms = {
 export const jobOpenings: readonly JobOpening[] = [
   {
     id: "nurse-ot",
-    title: "看護師・准看護師・作業療法士（正社員・パート／週1日からOK）",
+    title: "看護師・准看護師・作業療法士（正社員・パート／夕方コマ中心）",
     occupation: "看護師・准看護師・作業療法士",
     qualification:
       "看護師・准看護師・作業療法士いずれかの免許をお持ちの方。訪問の経験は不問です。ブランクのある方、病院・施設と兼務されている方もご相談ください。",
     summary:
       "精神科・小児の訪問看護（リハビリ・生活支援を含む）が中心です。ご本人の暮らしの場に伺い、生活のリズムや困りごとをご家族と一緒に整えていきます。学校や仕事が終わったあとの夕方〜夜は、その時間にしか会えないご家庭に届けられる、大切な時間帯です。",
     hourlyWage: 1800,
-    hours: "9:00〜22:00のあいだで、可能な時間で調整していただけます",
-    days: "パートは週1日・1回の訪問から。正社員の働き方もご相談ください。",
+    hours: "平日の夕コマ 16:00〜21:00／土日祝は 昼コマ 9:00〜15:00・夕コマ 15:00〜21:00",
+    days: "パートは週2コマから。正社員の働き方もご相談ください。",
   },
 ];
