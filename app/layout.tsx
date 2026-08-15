@@ -23,7 +23,7 @@ const zenMaru = Zen_Maru_Gothic({
 });
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
-  : new URL("http://localhost:4000");
+  : new URL("https://ritanowa.jp");
 
 const defaultTitle = `${siteConfig.nameShort} | ${siteConfig.primaryServiceAreaLabel}の${siteConfig.specialtyShort}訪問看護`;
 const defaultDescription =

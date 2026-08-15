@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { getAllBlogPosts, getAllNews } from "@/lib/content";
 
 const base =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "http://localhost:4000";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://ritanowa.jp";
 
 const staticPaths = [
   "",
@@ -24,6 +24,12 @@ const staticPaths = [
   "/guide",
   "/recruit",
   "/community",
+  "/events",
+  "/futoko",
+  "/resources",
+  "/clinic",
+  "/group-home",
+  "/company",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
