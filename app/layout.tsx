@@ -37,6 +37,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: baseUrl,
+  // Google Search Console の所有権確認（ritanowa.official@gmail.com で登録）
+  verification: {
+    google: "4SYrDNOZIPixtNOtakENkaxfat3uy646Eq8fWcZShGU",
+  },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png", sizes: "750x750" }],
     apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "750x750" }],
