@@ -55,7 +55,7 @@ export function Hero() {
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
             {siteConfig.primaryServiceAreaLabel}の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
           </p>
-          <p className="text-pretty text-base font-bold leading-relaxed text-[var(--ritanowa-terracotta)] sm:text-lg md:text-xl">
+          <p className="text-pretty text-base font-bold leading-relaxed text-[var(--ritanowa-blue)] sm:text-lg md:text-xl">
             営業時間は9:00〜21:00。夕方〜夜や週末の訪問にも対応し、学校のあとの時間帯も、ご家庭のリズムに合わせて伺えます。
           </p>
         </div>
@@ -78,19 +78,19 @@ export function Hero() {
         >
           <Link
             href="/visit-nursing"
-            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+            className="font-medium text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
           >
             小児精神科訪問看護とは
           </Link>
           <Link
             href="/for-whom"
-            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+            className="font-medium text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
           >
             お子さま・ご家族へ
           </Link>
           <Link
             href="/#concern-gateway"
-            className="font-medium text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+            className="font-medium text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
           >
             お悩みから探す
           </Link>

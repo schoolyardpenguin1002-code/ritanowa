@@ -70,7 +70,7 @@ export function Services() {
         <p className="mt-12 text-center text-lg">
           <Link
             href="/visit-nursing"
-            className="font-semibold text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+            className="font-semibold text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
           >
             小児精神科訪問看護とは（詳しい説明）
           </Link>

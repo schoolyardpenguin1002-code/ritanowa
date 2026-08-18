@@ -43,11 +43,11 @@ export const siteConfig = {
   /** 受付時間の補足 */
   officeHoursNote:
     "上記以外の時間帯も、お気軽にご相談ください。フットワークよく対応いたします。",
-  /** Googleマップ埋め込み（住所検索ベース） */
+  /** Googleマップ埋め込み（Googleビジネスプロフィール＝店舗名ベース） */
   mapEmbedUrl:
-    "https://www.google.com/maps?q=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5&hl=ja&z=17&output=embed",
+    "https://www.google.com/maps?q=%E8%A8%AA%E5%95%8F%E7%9C%8B%E8%AD%B7%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%8A%E3%81%9F%E3%81%AE%E3%82%8F+%E9%AB%98%E5%B4%8E%E5%B8%82&hl=ja&z=17&output=embed",
   mapSearchUrl:
-    "https://www.google.com/maps/search/?api=1&query=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%B5%9C%E5%B0%BB%E7%94%BA209-5",
+    "https://www.google.com/maps/search/?api=1&query=%E8%A8%AA%E5%95%8F%E7%9C%8B%E8%AD%B7%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%8A%E3%81%9F%E3%81%AE%E3%82%8F+%E9%AB%98%E5%B4%8E%E5%B8%82",
   /** お問い合わせ Google フォーム（閲覧用） */
   googleContactFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSdZq6FDmI8MBxFizLvtAMB3e5ubbURu6Vpqjeh41VJrS1NfjQ/viewform",

@@ -30,6 +30,7 @@ const staticPaths = [
   "/clinic",
   "/group-home",
   "/company",
+  "/goyokiki",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

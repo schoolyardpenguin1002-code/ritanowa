@@ -24,7 +24,7 @@ export function SpecialtyPillars() {
           {siteConfig.specialtyPillars.map((label) => (
             <span
               key={label}
-              className="rounded-full border-2 border-[var(--ritanowa-gold)] bg-[color-mix(in_srgb,var(--ritanowa-gold)_14%,transparent)] px-4 py-1.5 text-sm font-bold tracking-wide text-[var(--ritanowa-terracotta)] sm:px-5 sm:text-base"
+              className="rounded-full border-2 border-[var(--ritanowa-gold)] bg-[color-mix(in_srgb,var(--ritanowa-gold)_14%,transparent)] px-4 py-1.5 text-sm font-bold tracking-wide text-[var(--ritanowa-blue)] sm:px-5 sm:text-base"
             >
               {label}
             </span>

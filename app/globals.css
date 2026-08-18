@@ -63,6 +63,8 @@
   --ritanowa-sage-deep: #3d4a38;
   /** アクセント（温かみのあるレッド） */
   --ritanowa-accent-red: #c41e3a;
+  /** テキスト用ブルー（クリーム地で読める深めの青。視認性用） */
+  --ritanowa-blue: #21637e;
   --ritanowa-ink: #2a221c;
 
   --background: #faf8f3;

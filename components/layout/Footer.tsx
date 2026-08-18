@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
 import { EmailCopyButton } from "@/components/EmailCopyButton";
 import { SocialLinks } from "@/components/SocialLinks";
 import { navGroups, recruitNavLink } from "@/lib/navigation";
@@ -73,8 +72,6 @@ export function Footer() {
               のフォームもご利用ください。
             </p>
           </div>
-
-          <AiConsultNavLink variant="footer" className="mt-4" />
 
           <dl className="mt-6 space-y-3.5 text-sm leading-relaxed md:text-[0.9375rem]">
             <div>

@@ -10,7 +10,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { buttonVariants } from "@/lib/button-variants";
-import { AiConsultNavLink } from "@/components/layout/AiConsultNavLink";
 import {
   contactNavLink,
   headerNavGroups,
@@ -91,7 +90,6 @@ export function MainNav({
             items={g.items}
           />
         ))}
-        <AiConsultNavLink variant="desktop" />
         <Link
           href={contactNavLink.href}
           className={cn(
@@ -128,8 +126,6 @@ export function MainNav({
       className="flex flex-col gap-3 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:hidden"
       aria-label="メインナビゲーション"
     >
-      <AiConsultNavLink variant="mobile" onNavigate={onNavigate} />
-
       <Link
         href={contactNavLink.href}
         onClick={onNavigate}
