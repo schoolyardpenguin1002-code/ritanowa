@@ -140,10 +140,12 @@ export function FaqCornerContent() {
               ご利用の流れ
             </Link>
             <a
-              href={`tel:${siteConfig.phone}`}
-              className="inline-flex min-h-[3.25rem] items-center justify-center text-lg font-semibold text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline"
+              href={siteConfig.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[3.25rem] items-center justify-center text-lg font-semibold text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
             >
-              お電話 {siteConfig.phoneDisplay}
+              公式LINEで相談する
             </a>
           </div>
         </div>

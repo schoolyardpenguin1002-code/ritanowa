@@ -56,18 +56,9 @@ export default function AreaPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">緊急時の連絡</h2>
           <p className="text-muted-foreground">
-            緊急時の受付方法・連絡先は、契約内容や運用に沿ってご案内します。まずは携帯（優先）へお問い合わせください。
+            緊急時の受付方法・連絡先は、契約内容や運用に沿ってご案内します。まずは公式LINEかお問い合わせフォームへご連絡ください。
           </p>
           <ul className="space-y-3">
-            <li>
-              優先（携帯）:{" "}
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="font-semibold text-[var(--ritanowa-terracotta)] underline"
-              >
-                {siteConfig.phoneDisplay}
-              </a>
-            </li>
             <li>
               <span className="text-muted-foreground">固定: </span>
               <a

@@ -31,6 +31,23 @@ export const recruitNavLink = {
 /** ヘッダー・フッター共通の階層ナビ */
 export const navGroups: readonly NavGroup[] = [
   {
+    id: "ritanowa",
+    label: "りたのわ",
+    items: [
+      { href: "/about", label: "私たちについて" },
+      { href: "/philosophy", label: "経営理念" },
+      { href: "/#director-message", label: "代表挨拶" },
+      { href: "/staff", label: "スタッフ" },
+      { href: "/company", label: "運営会社" },
+      { href: "/news", label: "お知らせ" },
+      { href: "/blog", label: "ブログ" },
+      { href: "/events", label: "イベント情報" },
+      { href: "/community", label: "協力サポーター" },
+      { href: "/group-home", label: "グループホーム（開設予定）" },
+      { href: "/clinic", label: "連携クリニック" },
+    ],
+  },
+  {
     id: "pediatric",
     label: "小児精神科訪問看護",
     items: [
@@ -41,40 +58,17 @@ export const navGroups: readonly NavGroup[] = [
       { href: "/for-whom", label: "お子さま・ご家族へ" },
       { href: "/guide", label: "ご相談のヒント" },
       { href: "/flow", label: "利用の流れ" },
-    ],
-  },
-  {
-    id: "station",
-    label: "当ステーションについて",
-    items: [
-      { href: "/about", label: "私たちについて" },
-      { href: "/philosophy", label: "経営理念" },
-      { href: "/#director-message", label: "代表挨拶" },
-      { href: "/staff", label: "スタッフ" },
-      { href: "/company", label: "運営会社" },
-      { href: "/group-home", label: "グループホーム（開設予定）" },
-      { href: "/goyokiki", label: "りたのわ御用聞き（自費）" },
-      { href: "/clinic", label: "連携クリニック" },
-    ],
-  },
-  {
-    id: "use",
-    label: "ご利用ガイド",
-    items: [
       { href: "/pricing", label: "料金" },
       { href: "/area", label: "地域" },
       { href: "/faq", label: "よくある質問" },
+      { href: "/resources", label: "お役立ち情報（群馬の相談窓口・制度）" },
     ],
   },
   {
-    id: "content",
-    label: "お知らせ・読み物",
+    id: "goyokiki",
+    label: "りたきき（御用聞きサービス）",
     items: [
-      { href: "/news", label: "お知らせ" },
-      { href: "/blog", label: "ブログ" },
-      { href: "/resources", label: "お役立ち情報（群馬の相談窓口・制度）" },
-      { href: "/community", label: "協力サポーター" },
-      { href: "/events", label: "イベント情報" },
+      { href: "/goyokiki", label: "りたのわ御用聞きとは（自費・シニアの暮らし）" },
     ],
   },
   {

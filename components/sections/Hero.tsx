@@ -41,11 +41,11 @@ export function Hero() {
             <span className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3.5 py-1 text-sm font-bold tracking-wide text-white shadow-sm sm:px-4 sm:text-base">
               {siteConfig.specialtyCross}
             </span>
-            <span className="text-sm font-semibold text-[var(--ritanowa-gold)] sm:text-base">
+            <span className="text-sm font-semibold text-[var(--ritanowa-blue)] sm:text-base">
               訪問看護
             </span>
           </div>
-          <p className="text-base font-semibold tracking-wide text-[var(--ritanowa-gold)] sm:text-lg md:text-xl">
+          <p className="text-base font-semibold tracking-wide text-[var(--ritanowa-blue)] sm:text-lg md:text-xl">
             {siteConfig.concept}
           </p>
           <h1 className="text-balance text-[1.65rem] font-bold leading-[1.2] tracking-tight text-foreground min-[400px]:text-[1.85rem] sm:text-4xl md:text-5xl lg:text-6xl">

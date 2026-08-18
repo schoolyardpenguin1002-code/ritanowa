@@ -43,15 +43,8 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold">4. お問い合わせ</h2>
             <p className="text-muted-foreground">
-              個人情報の取扱いに関するお問い合わせは、お電話（優先{" "}
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="font-medium text-[var(--ritanowa-terracotta)] underline"
-              >
-                {siteConfig.phoneDisplay}
-              </a>
-              ／固定 {siteConfig.phoneLandlineDisplay}
-              <span className="text-sm"> ※固定は出られない可能性があります</span>
+              個人情報の取扱いに関するお問い合わせは、お電話（固定 {siteConfig.phoneLandlineDisplay}
+              <span className="text-sm"> ※出られない可能性があります</span>
               ）または
               <a
                 href={`mailto:${siteConfig.email}`}

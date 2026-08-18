@@ -41,13 +41,15 @@ export default function GoyokikiPage() {
             ご予約・ご相談（{siteConfig.officeHoursLine}）
           </p>
           <a
-            href={`tel:${siteConfig.phone}`}
-            className="block text-4xl font-bold tracking-wide text-[var(--ritanowa-blue)] md:text-5xl"
+            href={siteConfig.lineUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto block w-fit rounded-3xl bg-[var(--ritanowa-blue)] px-10 py-5 text-2xl font-bold text-white shadow-md transition hover:brightness-110 md:text-3xl"
           >
-            {siteConfig.phone}
+            公式LINEで「御用」を送る
           </a>
           <p className="text-base text-muted-foreground">
-            「御用聞きをお願いします」とお電話ください。LINEでもご依頼いただけます。
+            お電話をご希望の方は、ページ下部の会社情報にある番号へどうぞ。
           </p>
           <p className="text-2xl font-bold">20分 1,000円（出張費なし・明朗会計）</p>
         </section>
@@ -125,7 +127,10 @@ export default function GoyokikiPage() {
             御用聞きさんは、特別な資格を持ったプロではありません。近所の世話焼きな人、子育てがひと段落した人、まだまだ元気なシニア。「実家の親戚」のような人たちです。このページで、少しずつお顔を紹介していきます。
           </p>
           <p className="text-muted-foreground">
-            言い出しっぺは代表（医師）です。訪問看護で毎日ご家庭に伺うなかで、制度では拾えない「ちょっと困った」がどの家にもあることを知りました。それを断らずに受け止める窓口を作りたくて、この御用聞きを始めます。
+            言い出しっぺは代表（医師）です。訪問看護で毎日ご家庭に伺うなかで、制度では拾えない「ちょっと困った」がどの家にもあることを知りました。そして、看護だけではなく、大切な家族のように関わりたいという思いが、ずっとあります。
+          </p>
+          <p className="text-muted-foreground">
+            りたのわは「利他の輪」です。ご近所の困りごとを手伝い合ううちに、世代を越えたつながりが生まれて、地域に輪ができていく。その輪は、ここで働く看護師やスタッフの幸福にもつながっていく。人と人がつながる社会をつくること——それが、こころの問題だけでなく、これからのいろいろな社会課題を解くヒントになると、本気で考えています。御用聞きは、その入り口です。
           </p>
         </section>
 
@@ -180,7 +185,7 @@ export default function GoyokikiPage() {
 
         <section className="text-center">
           <p className="text-muted-foreground">
-            対応エリア：高崎市・前橋市（そのほかの地域はご相談ください）
+            対応エリア：訪問看護ステーションりたのわ（高崎市浜尻町）から、おおよそ半径5キロのご近所が基本です（そのほかの地域はご相談ください）
           </p>
           <Link
             href="/"

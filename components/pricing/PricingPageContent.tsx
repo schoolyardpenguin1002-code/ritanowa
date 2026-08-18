@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   MessageCircle,
-  Phone,
 } from "lucide-react";
 
 import { RevealRingList } from "@/components/motion/RevealRingList";
@@ -173,16 +172,6 @@ export function PricingPageContent() {
                 公式LINEのURLを設定すると、ここから相談できます。
               </p>
             )}
-            <Link
-              href={`tel:${siteConfig.phone}`}
-              className={cn(
-                buttonVariants({ variant: "secondary" }),
-                "flex min-h-[3.5rem] items-center justify-center gap-2 rounded-3xl border-2 border-border/80 px-6 py-5 text-lg font-semibold"
-              )}
-            >
-              <Phone className="size-5" aria-hidden />
-              お電話 {siteConfig.phoneDisplay}
-            </Link>
             <Link
               href="/contact"
               className="text-center text-base font-semibold text-[var(--ritanowa-terracotta)] underline-offset-4 hover:underline sm:text-lg"

@@ -55,7 +55,7 @@ function DesktopDropdown({
               <Link
                 role="menuitem"
                 href={item.href}
-                className="block rounded-xl px-3 py-2.5 text-base text-foreground/95 transition-colors hover:bg-secondary xl:text-lg"
+                className="block whitespace-nowrap rounded-xl px-3 py-2 text-sm text-foreground/95 transition-colors hover:bg-secondary xl:text-base"
               >
                 {item.label}
               </Link>
@@ -107,15 +107,6 @@ export function MainNav({
           )}
         >
           <span className="relative z-10">{recruitNavLink.label}</span>
-        </Link>
-        <Link
-          href={`tel:${siteConfig.phone}`}
-          className={cn(
-            buttonVariants({ variant: "default" }),
-            "ml-1 shrink-0 rounded-full px-4 py-5 text-base shadow-sm xl:px-6 xl:text-lg"
-          )}
-        >
-          電話
         </Link>
       </nav>
     );
@@ -189,13 +180,15 @@ export function MainNav({
       >
         地図・会社情報（フッター）
       </Link>
-      <Link
-        href={`tel:${siteConfig.phone}`}
-        className="rounded-3xl px-4 py-3 text-lg font-semibold text-[var(--ritanowa-terracotta)]"
+      <a
+        href={siteConfig.lineUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-3xl px-4 py-3 text-lg font-semibold text-[var(--ritanowa-blue)]"
         onClick={onNavigate}
       >
-        {siteConfig.phoneDisplay}（優先・携帯）
-      </Link>
+        公式LINEで相談する
+      </a>
       <div className="rounded-3xl px-4 py-2 text-sm text-muted-foreground">
         <Link
           href={`tel:${siteConfig.phoneLandline}`}

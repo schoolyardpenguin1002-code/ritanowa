@@ -55,17 +55,6 @@ export function ContactLinePrimary() {
         <ul className="mt-4 space-y-2">
           <li>
             <a
-              href={`tel:${siteConfig.phone}`}
-              className="-mx-2 block min-h-[52px] rounded-2xl px-2 py-3 font-semibold text-[var(--ritanowa-terracotta)] transition-colors hover:bg-secondary/80 hover:underline"
-            >
-              <span className="block text-sm font-normal text-muted-foreground">
-                優先（携帯）
-              </span>
-              <span className="text-lg sm:text-xl">{siteConfig.phoneDisplay}</span>
-            </a>
-          </li>
-          <li>
-            <a
               href={`tel:${siteConfig.phoneLandline}`}
               className="-mx-2 block min-h-[52px] rounded-2xl px-2 py-3 font-semibold text-[var(--ritanowa-terracotta)] transition-colors hover:bg-secondary/80 hover:underline"
             >

@@ -50,13 +50,15 @@ function CtaBlock({ className }: { className?: string }) {
           お問い合わせ（採用・見学）
         </Link>
         <a
-          href={`tel:${siteConfig.phone}`}
+          href={siteConfig.lineUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             buttonVariants({ variant: "outline" }),
             "min-h-14 justify-center rounded-full px-8 py-6 text-lg"
           )}
         >
-          電話で相談（{siteConfig.phoneDisplay}）
+          公式LINEで気軽に質問
         </a>
       </div>
     </div>
@@ -281,13 +283,15 @@ function OpeningsSection() {
             見学・面談を申し込む
           </Link>
           <a
-            href={`tel:${siteConfig.phone}`}
+            href={siteConfig.lineUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "outline" }),
               "min-h-14 justify-center rounded-full border-2 border-[var(--ritanowa-gold)]/60 bg-card/90 px-10 py-6 text-lg"
             )}
           >
-            電話で相談（{siteConfig.phoneDisplay}）
+            公式LINEで気軽に質問
           </a>
         </div>
       </div>
@@ -325,13 +329,15 @@ export default function RecruitPage() {
               カジュアル面談・見学を申し込む
             </Link>
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={siteConfig.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: "outline" }),
                 "min-h-14 justify-center rounded-full border-2 border-[var(--ritanowa-gold)]/60 bg-card/90 px-10 py-6 text-lg"
               )}
             >
-              電話で相談（{siteConfig.phoneDisplay}）
+              公式LINEで気軽に質問
             </a>
           </div>
           <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -482,8 +488,8 @@ export default function RecruitPage() {
                 body: "「挨拶を自分からする」から「拠点の運営を任される」まで、できることがひとつずつ増えていく図鑑があります。読んだとおりにやれば誰でもできる行動だけを書いた、マニュアル兼スタンプ帳。なお、集めるかどうかは自由です。落ち着いたペースで働きたい方の働き方も、同じように尊重します。",
               },
               {
-                title: "毎月、自分で書く通信簿",
-                body: "月末に1枚、自分で書いて提出する通信簿があります。3つの合格点がそろえば、毎月お給料が少しずつ上がります。誰かに査定される緊張感より、自分で振り返って自分で積み上げる手応えを大事にしたくて、この形にしました。",
+                title: "勘ではなく、型で守られる",
+                body: "「この様子が見えたら、こう動く。ここから先は医師に相談する」——観察と判断の型を、WHOの国際プログラム（mhGAP）に準拠して整備しています。訪問はひとりでも、判断はひとりで背負いません。代表が医師なので、迷ったらその場で電話できます。精神科が未経験の方に、安心して始めてもらうための仕組みです。",
               },
               {
                 title: "お互い様の約束",
@@ -512,7 +518,54 @@ export default function RecruitPage() {
             ))}
           </ul>
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-            制度の細かい数字や条件は、カジュアル面談で資料を見ながらご説明します。ご利用者様・ご家族様・連携先の皆様にも、私たちがどんなチームづくりをしているかの参考になれば嬉しいです。
+            主な数字は下にそのまま載せています。さらに細かい条件は、カジュアル面談で資料を見ながらご説明します。
+          </p>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/50 bg-[color-mix(in_srgb,var(--background)_94%,var(--ritanowa-sand))] py-14 md:py-20">
+        <div className="mx-auto max-w-4xl px-4 md:px-8">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-[var(--ritanowa-gold)]">
+            Money Talks
+          </p>
+          <h2 className="mt-3 text-center text-2xl font-bold tracking-tight md:text-3xl">
+            お金の話を、先にぜんぶ
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            「詳細は面談で」と隠すお金の話が、応募の一番のブレーキだと思っています。だから先に載せます。
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-border/80 bg-card p-7 shadow-sm">
+              <h3 className="text-lg font-bold">コマではたらく（枠社員）</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                平日の夕コマは時給1,600円から。週のコマ数が増えると1,700円、1,800円と上がります。土日祝のコマは1,800〜2,000円。
+                <strong className="font-semibold text-foreground">
+                  契約したコマ数と週給は、訪問が少ない週でも会社が保障します。
+                </strong>
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border/80 bg-card p-7 shadow-sm">
+              <h3 className="text-lg font-bold">1件ずつはたらく（出来高）</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                訪問1件3,500円（30〜60分・移動と記録の時間を含む）。
+                <strong className="font-semibold text-foreground">
+                  利用者様都合のキャンセルでも、1件につき1,750円をお支払いします
+                </strong>
+                （空振りをあなたの損にしない約束です）。
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border/80 bg-card p-7 shadow-sm">
+              <h3 className="text-lg font-bold">正社員（月給）</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                看護師は月給28万円スタート、独り立ちで30万円。その先は32万〜45万円まで昇格の階段が公開されています（准看護師・作業療法士は26万円から）。
+                <strong className="font-semibold text-foreground">
+                  オンコール・夜間待機はありません。
+                </strong>
+              </p>
+            </div>
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
+            昇格の基準はチェックリストとして全員に公開。社会保険は法定どおり完備。22時以降の勤務は原則ありません（発生時は深夜割増を支給）。
           </p>
         </div>
       </RevealSection>
@@ -546,6 +599,69 @@ export default function RecruitPage() {
           <p className="mt-8 text-center text-sm leading-relaxed text-muted-foreground">
             ※一例です。担当件数や時間帯は、契約した勤務枠とご希望に合わせて組みます。
           </p>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/50 py-14 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
+            正直に、大変なこともあります
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            いいことばかり書いて入職後にがっかりされるのが、いちばん悲しいので。
+          </p>
+          <ul className="mt-10 space-y-4">
+            {[
+              "こころの揺れに付き合う仕事です。うまく言葉が届かない日、帰り道に考え込んでしまう日もあります。だからこそ、ひとりで抱えない仕組み（チームでの相談・医師のバックアップ・観察の型）を整えています。",
+              "訪問はひとりで伺う場面が中心です。同行期間をしっかり取り、「ひとりで行ける」とお互いに思えるまで先に立ちませんが、最初は緊張すると思います。",
+              "車での移動が毎日あります。雨の日も、暑い日もあります。",
+              "立ち上げ期のステーションです。仕組みが毎月のように良くなっていく面白さと、まだ整っていないものに出会う不便さの両方があります。",
+            ].map((body) => (
+              <li
+                key={body}
+                className="rounded-3xl border border-border/80 bg-card p-6 text-base leading-relaxed text-muted-foreground shadow-sm"
+              >
+                {body}
+              </li>
+            ))}
+          </ul>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-pretty text-base leading-relaxed text-muted-foreground">
+            決まった正解だけをこなしたい方には、揺らぎの多い仕事かもしれません。逆に、目の前の人に合わせて考えることが好きな方には、これ以上ない仕事だと思っています。
+          </p>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="border-t border-border/50 bg-[color-mix(in_srgb,var(--background)_94%,var(--ritanowa-sand))] py-14 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
+            応募から入職まで
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            全部で2週間ほど。最短1週間です。どの段階でやめても大丈夫です。
+          </p>
+          <ol className="mt-10 space-y-0">
+            {[
+              ["1", "LINEか電話で連絡", "「質問だけ」「話を聞くだけ」で大丈夫です。履歴書は要りません。"],
+              ["2", "カジュアル面談（30分・オンライン可)", "働き方とお金の話を、資料を見ながら正直にします。志望動機は聞きません。"],
+              ["3", "同行見学（半日）", "実際の訪問に一緒に伺います。現場を見てから決めてください。条件のすり合わせもここで。"],
+              ["4", "内定・入職", "書類はこちらで整えます。社会保険や扶養の相談もお任せください。"],
+            ].map(([step, title, body]) => (
+              <li
+                key={step}
+                className="flex gap-5 border-l-2 border-[var(--ritanowa-terracotta)]/40 pb-8 pl-6 last:pb-0"
+              >
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--ritanowa-terracotta)] font-bold text-white">
+                  {step}
+                </span>
+                <div>
+                  <h3 className="font-bold text-foreground">{title}</h3>
+                  <p className="mt-1 text-base leading-relaxed text-muted-foreground">
+                    {body}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </RevealSection>
 
