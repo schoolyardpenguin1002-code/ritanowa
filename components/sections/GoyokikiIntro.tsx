@@ -23,7 +23,7 @@ export function GoyokikiIntro() {
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
           訪問看護でご家庭に伺うなかで、制度では拾えない「ちょっと困った」がどの家にもあることを知りました。
-          シニアの暮らしの「ちょっと」に、ご近所の御用聞きさんが伺います。
+          シニアの暮らしの「ちょっと」に、ご近所のりたのわサポーターが伺います。
           <strong className="font-semibold text-foreground">20分1,000円・高崎から</strong>。
         </p>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">

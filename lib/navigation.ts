@@ -42,7 +42,7 @@ export const navGroups: readonly NavGroup[] = [
       { href: "/news", label: "お知らせ" },
       { href: "/blog", label: "ブログ" },
       { href: "/events", label: "イベント情報" },
-      { href: "/community", label: "協力サポーター" },
+      { href: "/community", label: "協力パートナー" },
       { href: "/group-home", label: "グループホーム（開設予定）" },
       { href: "/clinic", label: "連携クリニック" },
     ],
@@ -68,7 +68,11 @@ export const navGroups: readonly NavGroup[] = [
     id: "goyokiki",
     label: "りたきき（御用聞きサービス）",
     items: [
-      { href: "/goyokiki", label: "りたのわ御用聞きとは（自費・シニアの暮らし）" },
+      { href: "/goyokiki", label: "りたのわ御用聞きとは" },
+      { href: "/goyokiki#menu", label: "御用の例と料金（20分1,000円）" },
+      { href: "/goyokiki#flow", label: "使い方・ご依頼の流れ" },
+      { href: "/goyokiki#family", label: "離れて暮らすご家族へ" },
+      { href: "/goyokiki/recruit", label: "りたのわサポーター募集" },
     ],
   },
   {
