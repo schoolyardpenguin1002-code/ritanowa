@@ -7,6 +7,8 @@ const CENTER_TOWNS = [
   "問屋町",
   "問屋町西",
   "東貝沢町",
+  "飯塚町",
+  "江木町",
 ] as const;
 
 const NORTH_TOWNS = [
