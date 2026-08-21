@@ -35,7 +35,7 @@ const FAQ = [
   ],
   [
     "報酬はどうなっていますか？",
-    "20分の御用で650円、40分なら1,300円です。御用ごとのお支払いで、働いたその日のうちに精算します。雇用ではなく業務委託という形で、契約書もきちんと交わします。",
+    "20分の御用で650円、40分なら1,300円です。週払いで、その週の分をその週のうちにお支払いします。雇用ではなく業務委託という形で、契約書もきちんと交わします。",
   ],
   [
     "物を壊してしまったら？",
@@ -111,10 +111,10 @@ export default function GoyokikiRecruitPage() {
         <section className="space-y-4 rounded-3xl border border-border/80 bg-card p-8 shadow-sm">
           <h2 className="text-2xl font-bold">報酬のこと</h2>
           <p className="text-2xl font-bold" style={{ color: GREEN }}>
-            20分の御用で、650円。働いたその日にお金になります。
+            20分の御用で、650円。お支払いは週払いです。
           </p>
           <p className="text-muted-foreground">
-            御用ごとのお支払いで、その日のうちに精算します。月末を待ってまとめて振り込み、ではありません。
+            御用ごとに計算して、1週間分をその週のうちにお支払いします。月末まで待たせません。
             40分の御用なら1,300円、60分なら1,950円。かんたんな決まりなので、面談のときに紙でもお見せします。
           </p>
           <p className="text-base text-muted-foreground">
