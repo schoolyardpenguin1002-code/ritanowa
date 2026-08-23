@@ -631,6 +631,39 @@ export default function RecruitPage() {
         </div>
       </RevealSection>
 
+      <RevealSection className="border-t border-border/50 py-14 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
+            訪問看護がはじめての方・一度離れた方へ
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-lg leading-relaxed text-muted-foreground">
+            看護師さんが訪問看護をためらう理由、離れていく理由は、だいたい決まっています。りたのわは、それをひとつずつ設計で消してきました。いまの正直な答えを書きます。
+          </p>
+          <ul className="mt-10 space-y-4">
+            {[
+              ["「夜のオンコールが不安」", "りたのわに、オンコールはありません。夜中に携帯が鳴る生活は、ここにはありません。"],
+              ["「ひとりで訪問する責任が重い」", "代表が医師です。判断に迷ったら、その場で医師に連絡し、対応の指示を仰ぐことができます。最初のひと月は必ず同行から始めます。"],
+              ["「記録と書類を、家に持ち帰りたくない」", "ICTを重視しています。書類のための残業や持ち帰りをなくす仕組みづくりを続けています。"],
+              ["「教育がないまま現場に出されるのが怖い」", "うちでは、ありえません。成長図鑑という300項目のリストで、できることが増えるのが目に見えます。いきなりひとりでは行かせません。"],
+              ["「子どもの熱で休みにくいのでは」", "うちは休みやすい職場です。お互い様を約束にしています。それでも正直、小さな所帯なので調整をお願いする日はあります。それにあわせて働きやすさを大きくあげる働き方も用意しました。"],
+            ].map(([q, a]) => (
+              <li
+                key={q}
+                className="rounded-3xl border border-border/80 bg-card p-6 shadow-sm"
+              >
+                <p className="font-bold">{q}</p>
+                <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                  {a}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-pretty text-base leading-relaxed text-muted-foreground">
+            気になることは、見学のときに今のスタッフへ直接聞いてください。
+          </p>
+        </div>
+      </RevealSection>
+
       <RevealSection className="border-t border-border/50 bg-[color-mix(in_srgb,var(--background)_94%,var(--ritanowa-sand))] py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-8">
           <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl">
