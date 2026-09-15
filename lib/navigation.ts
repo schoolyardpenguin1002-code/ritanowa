@@ -65,17 +65,6 @@ export const navGroups: readonly NavGroup[] = [
     ],
   },
   {
-    id: "goyokiki",
-    label: "りたきき（御用聞きサービス）",
-    items: [
-      { href: "/goyokiki", label: "りたのわ御用聞きとは" },
-      { href: "/goyokiki#menu", label: "御用の例と料金（20分1,000円）" },
-      { href: "/goyokiki#flow", label: "使い方・ご依頼の流れ" },
-      { href: "/goyokiki#family", label: "離れて暮らすご家族へ" },
-      { href: "/goyokiki/recruit", label: "りたのわサポーター募集" },
-    ],
-  },
-  {
     id: "support",
     label: "お問い合わせ",
     items: [
