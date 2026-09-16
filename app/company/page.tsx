@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "運営会社",
   description:
-    "株式会社かのう商会のビジョン。「大きな実家、最強のおせっかい組織」——人生を心から楽しめる土台を創造し、ウェルビーイングで世界を満たす。",
+    "株式会社かのう商会の社是・理念・ビジョン。社是「利他主義」、ビジョン「大きな家族」——人生を心から楽しめる土台を創造し、ウェルビーイングで世界を満たす。",
 };
 
 const ROADMAP = [
@@ -56,16 +56,23 @@ export default function CompanyPage() {
               VISION
             </p>
             <h1 className="mt-2 text-balance font-bold leading-tight text-white text-[clamp(1.7rem,5.5vw,3.2rem)]">
-              <span className="inline-block">大きな実家、</span>
-              <span className="inline-block">最強のおせっかい組織。</span>
+              <span className="inline-block">大きな家族。</span>
             </h1>
           </div>
         </div>
       </div>
 
       <RevealSection className="mx-auto max-w-4xl space-y-16 px-4 py-14 text-lg leading-relaxed md:px-8 md:py-20">
-        {/* 理念ブロック */}
+        {/* 社是・理念ブロック */}
         <section className="space-y-8 text-center">
+          <div className="space-y-3">
+            <p className="text-sm font-semibold tracking-widest text-[var(--ritanowa-gold)]">
+              社是
+            </p>
+            <p className="text-2xl font-bold tracking-[0.14em] md:text-3xl">
+              利他主義
+            </p>
+          </div>
           <div className="space-y-3">
             <p className="text-sm font-semibold tracking-widest text-[var(--ritanowa-gold)]">
               理念
@@ -95,7 +102,7 @@ export default function CompanyPage() {
           </p>
           <p className="text-muted-foreground">
             めざすのは、群馬で「診る・通う・住む」がひとつにつながった地域です。
-            困ったとき、実家のように頼れて、少しおせっかいなくらい気にかけてくれる人がいる。
+            困ったとき、家族のように頼れて、少しおせっかいなくらい気にかけてくれる人がいる。
             私たちはそれを事業としてまじめに、本気でつくります。
           </p>
           <p className="text-right text-base font-semibold">

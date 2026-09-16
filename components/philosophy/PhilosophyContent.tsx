@@ -73,8 +73,7 @@ function VisionHero() {
             Vision
           </p>
           <h2 className="mt-4 text-balance font-serif font-bold leading-[1.25] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.45)] text-[clamp(1.8rem,6.2vw,4.2rem)]">
-            <span className="inline-block">大きな実家、</span>
-            <span className="inline-block">最強のおせっかい組織。</span>
+            <span className="inline-block">大きな家族。</span>
           </h2>
         </div>
       </div>
@@ -182,7 +181,16 @@ export function PhilosophyContent() {
           <h1 className="mt-6 font-serif text-3xl font-semibold leading-tight tracking-tight text-[var(--ritanowa-sage-deep)] sm:text-4xl md:text-5xl">
             経営理念
           </h1>
-          <p className="mx-auto mt-8 max-w-2xl font-serif text-pretty text-xl font-medium leading-relaxed text-[var(--ritanowa-sage-deep)] sm:text-2xl md:text-[1.7rem] md:leading-[1.7]">
+          <p className="mt-10 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-[var(--ritanowa-sage)]">
+            社是
+          </p>
+          <p className="mt-3 font-serif text-2xl font-semibold tracking-[0.12em] text-[var(--ritanowa-sage-deep)] sm:text-3xl">
+            利他主義
+          </p>
+          <p className="mt-10 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-[var(--ritanowa-sage)]">
+            理念
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl font-serif text-pretty text-xl font-medium leading-relaxed text-[var(--ritanowa-sage-deep)] sm:text-2xl md:text-[1.7rem] md:leading-[1.7]">
             人生を心から楽しめる土台を創造し、
             <br className="hidden sm:block" />
             ウェルビーイングで世界を満たす。
@@ -222,12 +230,11 @@ export function PhilosophyContent() {
           </p>
 
           <p className="mx-auto mt-10 max-w-3xl text-center font-serif font-bold leading-snug tracking-tight text-[var(--ritanowa-sage-deep)] text-[clamp(1.7rem,5vw,3rem)]">
-            <span className="inline-block">大きな実家、</span>
-            <span className="inline-block">最強のおせっかい組織。</span>
+            <span className="inline-block">大きな家族。</span>
           </p>
 
           <p className="sr-only">
-            ビジョン：大きな実家、最強のおせっかい組織。群馬から1,000の利他の拠点を創り、子供たちの未来を照らすインフラになる。
+            ビジョン：大きな家族。群馬から1,000の利他の拠点を創り、子供たちの未来を照らすインフラになる。
           </p>
           <div
             className="mt-12 flex flex-col items-center gap-2 text-center sm:gap-3"
@@ -250,7 +257,7 @@ export function PhilosophyContent() {
           </div>
 
           <p className="mx-auto mt-12 max-w-2xl font-sans text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            大きな実家のように頼れて、少しおせっかいなくらい気にかけてくれる——そんな拠点が1,000、網の目のようにつながり、地域全体を温かく包み込むセーフティネットになる。今日の支援を、次の世代の子どもたちが安心して暮らせる街の礎にしていきます。
+            大きな家族のように頼れて、少しおせっかいなくらい気にかけてくれる——そんな拠点が1,000、網の目のようにつながり、地域全体を温かく包み込むセーフティネットになる。今日の支援を、次の世代の子どもたちが安心して暮らせる街の礎にしていきます。
           </p>
         </div>
       </RevealSection>

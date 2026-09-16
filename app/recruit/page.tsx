@@ -365,7 +365,7 @@ export default function RecruitPage() {
             <p>
               りたのわは、すこし変わった訪問看護ステーションです。訪問して看護を届けるだけでなく、地域に
               <strong className="font-semibold text-foreground">
-                「大きな実家」のようなつながり——家族
+                「大きな家族」のようなつながり
               </strong>
               をつくっていきたいと、本気で考えています。
             </p>
