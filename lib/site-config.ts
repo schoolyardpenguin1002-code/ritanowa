@@ -15,7 +15,7 @@ export const siteConfig = {
   specialtyCross: "小児×精神",
   specialtyPillars: ["小児", "精神"] as const,
   concept:
-    "想いが巡り、心が整う。お子さまとご家族に寄り添う、小児精神科の訪問看護。",
+    "想いが巡り、心が整う。お子さまと、お母さんと、女性のこころに寄り添う訪問看護。",
   /** 優先の連絡先（携帯） */
   phone: "09071816814",
   phoneDisplay: "090-7181-6814",

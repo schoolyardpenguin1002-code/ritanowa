@@ -41,6 +41,9 @@ export function Hero() {
             <span className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3.5 py-1 text-sm font-bold tracking-wide text-white shadow-sm sm:px-4 sm:text-base">
               {siteConfig.specialtyCross}
             </span>
+            <span className="rounded-full border border-[var(--ritanowa-gold)] bg-[color-mix(in_srgb,var(--ritanowa-gold)_18%,#fffefb)] px-3.5 py-1 text-sm font-bold tracking-wide text-[var(--ritanowa-ink)] shadow-sm sm:px-4 sm:text-base">
+              女性のこころ
+            </span>
             <span className="text-sm font-semibold text-[var(--ritanowa-blue)] sm:text-base">
               訪問看護
             </span>
@@ -53,7 +56,7 @@ export function Hero() {
             <span className="block">「利他の輪」を、日常の隣に。</span>
           </h1>
           <p className="text-pretty text-base leading-relaxed text-foreground/90 sm:text-lg md:text-2xl md:leading-relaxed">
-            {siteConfig.primaryServiceAreaLabel}の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。
+            {siteConfig.primaryServiceAreaLabel}の{siteConfig.specialtyShort}訪問看護。不登校・発達の特性・お子さまのこころの不調——ご家庭のペースを大切に、地域の皆さまとともにお子さまとご家族を支えます。お子さまを支えるお母さん、そして女性ご自身のこころのご相談にも力を入れています。
           </p>
           <p className="text-pretty text-base font-bold leading-relaxed text-[var(--ritanowa-blue)] sm:text-lg md:text-xl">
             営業時間は9:00〜21:00。夕方〜夜や週末の訪問にも対応し、学校のあとの時間帯も、ご家庭のリズムに合わせて伺えます。
@@ -81,6 +84,12 @@ export function Hero() {
             className="font-medium text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
           >
             小児精神科訪問看護とは
+          </Link>
+          <Link
+            href="/adult"
+            className="font-medium text-[var(--ritanowa-blue)] underline-offset-4 hover:underline"
+          >
+            大人・女性の精神科訪問看護
           </Link>
           <Link
             href="/for-whom"

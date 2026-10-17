@@ -10,6 +10,10 @@ import { cn } from "@/lib/utils";
 
 const adultWorries = [
   {
+    title: "子育てのしんどさ・産後のこころ",
+    body: "子どもはかわいいのに、涙が出る、イライラが止まらない、眠れない。「母親なのに」と自分を責めて、誰にも相談できずにいる。",
+  },
+  {
     title: "うつ・気分の落ち込み",
     body: "朝起き上がれず、家事や仕事が手につかない日が続いている。「怠けているだけでは」と自分を責めてしまい、誰にも言えないまま時間だけが過ぎていく。",
   },
@@ -71,32 +75,39 @@ const adultServiceItems = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "大人の精神科訪問看護",
-  description: `${siteConfig.nameShort}は大人の方の精神科訪問看護も行っています。うつ・不安・ひきこもり・退院後の在宅療養の支援。${siteConfig.primaryServiceAreaLabel}。`,
+  title: "大人・女性の精神科訪問看護",
+  description: `${siteConfig.nameShort}は大人の方の精神科訪問看護も行っています。お母さん・女性のこころのご相談に特に力を入れています。うつ・不安・更年期・介護疲れ・退院後の在宅療養の支援。${siteConfig.primaryServiceAreaLabel}。`,
 };
 
 export default function AdultPage() {
   return (
     <SiteLayout>
       <SubpageHeader
-        title="大人の精神科訪問看護"
-        description="りたのわは、お子さまだけでなく、大人の方の精神科訪問看護も行っています。ご本人とご家族のペースを大切に、ご自宅での療養を支えます。"
+        title="大人・女性の精神科訪問看護"
+        description="りたのわは、お子さまだけでなく、大人の方の精神科訪問看護も行っています。なかでも、お母さん・女性のこころのご相談に力を入れています。"
       />
 
       <RevealSection className="mx-auto max-w-3xl space-y-14 px-4 py-12 md:px-8 md:py-16">
         <section className="space-y-4 rounded-3xl border border-[var(--ritanowa-gold)]/35 bg-[color-mix(in_srgb,var(--ritanowa-sand)_40%,var(--card))] p-8 shadow-sm">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-            小児のりたのわが、大人の方も支える理由
+            女性のこころに、力を入れています
           </h2>
           <p className="text-lg text-muted-foreground">
-            りたのわは{siteConfig.specialtyCross}を軸にした訪問看護ステーションですが、精神科訪問看護そのものは{" "}
-            <strong className="font-semibold text-foreground">年齢を問わない制度</strong>
-            です。お子さまの訪問を重ねるなかで、親御さんご自身の不調や、同じ家に暮らす大人の方のつらさに出会うことが少なくありません。
+            りたのわは{siteConfig.specialtyCross}を軸にした訪問看護ステーションです。お子さまの訪問を重ねるなかで、いちばん近くで支えているお母さんが、いちばん疲れている——そんな場面にたくさん出会ってきました。
           </p>
           <p className="text-lg text-muted-foreground">
-            私たちは一人の患者さまではなく、
-            <strong className="font-semibold text-foreground">ご家庭まるごと</strong>
-            を見る看護を大切にしています。だからこそ、大人の方の精神科訪問看護も、同じチームで、同じ姿勢でお引き受けします。
+            子育てのこと、仕事のこと、更年期のこと、家族の介護のこと。女性のこころの負担は、暮らしのいくつもの役割と重なって押し寄せます。だからりたのわは、
+            <strong className="font-semibold text-foreground">
+              お子さまと、お母さんと、女性のこころ
+            </strong>
+            を一本の線で支える訪問看護をつくっています。訪問するのは、自身も子育て中の女性看護師を中心としたチームです。
+          </p>
+          <p className="text-lg text-muted-foreground">
+            精神科訪問看護は年齢を問わない制度です。
+            <strong className="font-semibold text-foreground">
+              男性のご相談も、もちろんお受けしています。
+            </strong>
+            どなたも、ご家庭まるごと支える同じ姿勢でお引き受けします。
           </p>
         </section>
 

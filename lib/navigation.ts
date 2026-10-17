@@ -55,7 +55,7 @@ export const navGroups: readonly NavGroup[] = [
       { href: "/#concern-gateway", label: "お悩みから探す" },
       { href: "/futoko", label: "不登校のご家庭へ" },
       { href: "/visit-nursing", label: "小児精神科訪問看護とは" },
-      { href: "/adult", label: "大人の精神科訪問看護" },
+      { href: "/adult", label: "大人・女性の精神科訪問看護" },
       { href: "/for-whom", label: "お子さま・ご家族へ" },
       { href: "/guide", label: "ご相談のヒント" },
       { href: "/flow", label: "利用の流れ" },
