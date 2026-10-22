@@ -27,6 +27,8 @@ const staticPaths = [
   "/community",
   "/events",
   "/futoko",
+  "/hikikomori",
+  "/women",
   "/resources",
   "/clinic",
   "/group-home",
