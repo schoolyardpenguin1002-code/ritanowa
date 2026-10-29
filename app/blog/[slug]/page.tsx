@@ -36,12 +36,11 @@ export default async function BlogDetailPage({ params }: Props) {
         <p className="mb-2 text-base font-medium text-[var(--ritanowa-gold)] sm:text-lg">
           {post.frontmatter.category}
         </p>
-        <p className="mb-8 flex flex-wrap gap-x-3 gap-y-1 text-base text-muted-foreground sm:text-lg">
-          <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
-          {post.frontmatter.author ? (
-            <span>／ {post.frontmatter.author}</span>
-          ) : null}
-        </p>
+        {post.frontmatter.author ? (
+          <p className="mb-8 text-base text-muted-foreground sm:text-lg">
+            {post.frontmatter.author}
+          </p>
+        ) : null}
         <MarkdownBody content={post.content} />
         <p className="mt-12">
           <Link
