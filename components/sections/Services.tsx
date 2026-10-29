@@ -12,6 +12,7 @@ import { RevealRingList } from "@/components/motion/RevealRingList";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { ServiceCard } from "@/components/ServiceCard";
 import { SectionTitle } from "@/components/SectionTitle";
+import { HandDrawnDoodle } from "@/components/decorative/HandDrawnDoodle";
 
 const services = [
   {
@@ -50,12 +51,15 @@ export function Services() {
   return (
     <RevealSection id="services" className="py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
+        <div className="relative mx-auto max-w-4xl">
+          <HandDrawnDoodle kind="house" className="pointer-events-none absolute -top-8 right-0 size-14 rotate-[-9deg] opacity-90 sm:right-6 sm:size-20 md:-top-10" />
         <SectionTitle
           eyebrow="Services"
           title="小児精神科訪問看護でできること"
           lead="医師の指示とケアプランに基づき、お子さまの在宅療養とご家族の暮らしを支えます。"
         />
 
+        </div>
         <RevealRingList className="mt-16 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
           {services.map((s) => (
             <ServiceCard
