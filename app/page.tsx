@@ -1,4 +1,5 @@
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { ChildrenArtGallery } from "@/components/sections/ChildrenArtGallery";
 import { ConcernGateway } from "@/components/sections/ConcernGateway";
 import { DirectorMessage } from "@/components/sections/DirectorMessage";
 import { Hero } from "@/components/sections/Hero";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <SiteLayout>
       <Hero />
+      <ChildrenArtGallery />
       <SpecialtyPillars />
       <ConcernGateway />
       <Services />
