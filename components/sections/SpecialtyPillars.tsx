@@ -1,6 +1,7 @@
 import { RevealRingList } from "@/components/motion/RevealRingList";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionTitle } from "@/components/SectionTitle";
+import { HandDrawnDoodle } from "@/components/decorative/HandDrawnDoodle";
 import { specialtyMission, specialtyPillars } from "@/lib/specialty-pillars";
 import { siteConfig } from "@/lib/site-config";
 
@@ -11,12 +12,15 @@ export function SpecialtyPillars() {
       className="border-b border-border/50 bg-background py-16 md:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
+        <div className="relative mx-auto max-w-4xl">
+          <HandDrawnDoodle kind="rainbow" className="pointer-events-none absolute -top-8 right-0 size-14 rotate-[-9deg] opacity-90 sm:right-6 sm:size-20 md:-top-10" />
         <SectionTitle
           eyebrow="Pediatric × Mental health"
           title={`${siteConfig.specialtyCross}の訪問看護`}
           lead="りたのわは、お子さまのこころと暮らしに焦点を当てた小児精神科の訪問看護ステーションです。発達の特性、不登校、ご家族の負担など、ご家庭の文脈で伴走します。"
         />
 
+        </div>
         <div
           className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-10"
           aria-label="専門領域"
