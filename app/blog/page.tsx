@@ -130,12 +130,9 @@ export default async function BlogPage({ searchParams }: Props) {
                     <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                       {item.frontmatter.excerpt}
                     </p>
-                    <time
-                      dateTime={item.frontmatter.date}
-                      className="mt-auto pt-1 text-xs text-muted-foreground"
-                    >
-                      {item.frontmatter.date}
-                    </time>
+                    <span className="mt-auto pt-2 text-sm font-medium text-[var(--ritanowa-terracotta)]">
+                      記事を読む →
+                    </span>
                   </div>
                 </Link>
               </li>
