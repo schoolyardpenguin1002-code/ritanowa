@@ -49,7 +49,7 @@ export const representativeNurse: RepresentativeNurseProfile = {
 export const nurses: RepresentativeNurseProfile[] = [
   {
     id: "nurse-kano-yuka",
-    name: "狩野 友伽",
+    name: "狩野 友伽（ましちゃん）",
     roleLabel: "看護師",
     intro:
       "看護師の狩野友伽です。家に帰れば、悩んだり笑ったりの、ごく普通の毎日を過ごしています。だからこそ、特別な場所ではなく「暮らしのそば」で支える看護がしたい。めざすのは、頼るのが上手じゃない人こそ頼れる、実家のような訪問看護です。ちょっとおせっかいなくらい気にかけて、些細な変化に気づいて、一緒に喜ぶ——お子さまとご家族の「その人らしさ」が守られる毎日を、そばで支えます。",
