@@ -36,7 +36,7 @@ export const director: DirectorProfile = {
 
 export const representativeNurse: RepresentativeNurseProfile = {
   id: "representative-nurse",
-  name: "上原 実紅",
+  name: "上原 実紅（みくりん）",
   roleLabel: "管理者／保健師・看護師",
   intro:
     "看護師の上原実紅です。私自身も、子育て真っ最中です。かわいくてたまらない反面、大変だなと思う日もたくさんあります。だからこそ、お子さまとご家族が、楽しく自分らしくいられる選択肢を、一緒に見つけられる存在でいたいと思っています。",
