@@ -35,7 +35,11 @@ export function Hero() {
         <CircleRing size={140} strokeWidth={2} />
       </div>
 
-      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-32">
+      <div className="pointer-events-none absolute bottom-4 right-2 z-0 w-40 rotate-[-8deg] opacity-25 sm:bottom-8 sm:right-8 sm:w-64 md:right-[5%] md:w-80" aria-hidden="true">
+        <Image src="/illustrations/child-ritanowa-lettering.svg" alt="" width={1170} height={450} className="h-auto w-full" />
+      </div>
+
+      <div className="mx-auto relative z-10 flex w-full min-w-0 max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:py-20 md:gap-14 md:px-8 md:py-32">
         <div className="max-w-3xl min-w-0 space-y-4 sm:space-y-6">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-[color-mix(in_srgb,var(--ritanowa-terracotta)_88%,#fff)] px-3.5 py-1 text-sm font-bold tracking-wide text-white shadow-sm sm:px-4 sm:text-base">
