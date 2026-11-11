@@ -3,7 +3,7 @@ title: ゲームをやめられない子ども、どう関わればいい？
 date: 2026-11-09
 slug: helping-children-stop-gaming
 excerpt: ゲームをやめられない、取り上げると怒る。そんな子どもの気持ちを理解し、家庭でできる関わり方を考えます。
-category: 発達特性
+category: 家庭での関わり方
 author: りたのわ
 ---
 
