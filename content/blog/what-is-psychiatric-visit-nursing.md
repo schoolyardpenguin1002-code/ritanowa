@@ -3,7 +3,7 @@ title: 精神科訪問看護でできること｜高崎市の在宅療養を支�
 date: 2025-03-18
 slug: what-is-psychiatric-visit-nursing
 excerpt: 精神科領域の訪問看護がどのような支援を行うのか、わかりやすく整理しました。
-category: 訪問看護・支援制度
+category: 訪問看護・連携
 author: りたのわ
 ---
 
