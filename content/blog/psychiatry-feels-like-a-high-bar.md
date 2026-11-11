@@ -3,7 +3,7 @@ title: 精神科が「怖い」「ハードルが高い」と感じるとき
 date: 2025-03-23
 slug: psychiatry-feels-like-a-high-bar
 excerpt: 受診への抵抗感は、あなただけの問題ではありません。生活の中でできる小さな一歩と、専門の役割の違い。
-category: 訪問看護・支援制度
+category: 制度・相談先
 author: りたのわ
 ---
 
