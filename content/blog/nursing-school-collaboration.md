@@ -3,7 +3,7 @@ title: 訪問看護と学校の連携って、何をするの？
 date: 2026-11-11
 slug: nursing-school-collaboration
 excerpt: 家庭と学校で違う子どもの姿。訪問看護が学校とどんな情報を共有し、どう支援につなげるのかを分かりやすく紹介します。
-category: ご家族向け
+category: 訪問看護・支援制度
 author: りたのわ
 ---
 
