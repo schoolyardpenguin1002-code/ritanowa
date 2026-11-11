@@ -3,7 +3,7 @@ title: ICTで生まれる「対話の時間」｜記録と向き合う時間の�
 date: 2025-03-05
 slug: ict-and-dialogue
 excerpt: 事務・記録業務の効率化が、なぜケアの質につながるのかをお伝えします。
-category: 訪問看護とは
+category: 訪問看護・支援制度
 author: りたのわ
 ---
 
