@@ -3,7 +3,7 @@ title: 予定が変わるとパニックになる子どもへの関わり方
 date: 2026-11-09
 slug: coping-with-schedule-changes
 excerpt: 予定が変わると泣いたり怒ったりする子どもたち。その背景にある不安と、家庭でできる関わり方を紹介します。
-category: 発達特性・子育て
+category: 発達特性
 author: りたのわ
 ---
 
