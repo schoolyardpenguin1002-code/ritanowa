@@ -3,7 +3,7 @@ title: 発達の特性やご家族の負担——支援を「一列の線」で�
 date: 2025-03-22
 slug: developmental-diversity-and-family
 excerpt: 特性そのものより、日々の生活の中で何が負担になっているか。医療・教育・福祉の窓口につなぐ視点。
-category: 訪問看護・支援制度
+category: ご家族向け
 author: りたのわ
 ---
 
