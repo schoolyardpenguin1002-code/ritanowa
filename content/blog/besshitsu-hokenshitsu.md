@@ -3,7 +3,7 @@ title: 保健室登校・別室登校という中間地点——使い方と見�
 date: 2026-08-14
 slug: besshitsu-hokenshitsu
 excerpt: 教室には入れないけれど、保健室や別室なら行ける——この「中間地点」をどう使うか。意味のある滞在にするための考え方をまとめました。
-category: 不登校
+category: 不登校・学校生活
 author: りたのわ
 ---
 
