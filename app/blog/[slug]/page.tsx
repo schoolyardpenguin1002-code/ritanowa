@@ -41,7 +41,7 @@ export default async function BlogDetailPage({ params }: Props) {
             {post.frontmatter.author}
           </p>
         ) : null}
-        <MarkdownBody content={post.content} />
+        <MarkdownBody content={post.content} className="blog-article" />
         <p className="mt-12">
           <Link
             href="/blog"
