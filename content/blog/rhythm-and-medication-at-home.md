@@ -3,7 +3,7 @@ title: 在宅で心と体のリズムが乱れたとき｜訪問看護が一緒�
 date: 2026-04-07
 slug: rhythm-and-medication-at-home
 excerpt: 眠れない・食べられない・お薬が続きにくい——在宅療養でよくある変化と、訪問看護がどう関われるかを整理します。
-category: 在宅療養のヒント
+category: 訪問看護・連携
 author: りたのわ
 ---
 

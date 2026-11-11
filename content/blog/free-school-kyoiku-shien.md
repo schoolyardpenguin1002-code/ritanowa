@@ -3,7 +3,7 @@ title: フリースクールと教育支援センター——学校以外の居�
 date: 2026-08-14
 slug: free-school-kyoiku-shien
 excerpt: 学校には行けないけれど、家以外の居場所がほしい——そんなときの選択肢が教育支援センターとフリースクールです。違いと選び方をまとめました。
-category: 不登校
+category: 不登校・学校生活
 author: りたのわ
 ---
 

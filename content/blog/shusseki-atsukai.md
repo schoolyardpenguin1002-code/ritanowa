@@ -3,7 +3,7 @@ title: 出席扱い制度を知っていますか——家で学んで出席に�
 date: 2026-08-14
 slug: shusseki-atsukai
 excerpt: 不登校でも、自宅でのICT学習などが「出席扱い」になる制度があります。文部科学省が定めた要件と、学校への相談のしかたを解説します。
-category: 不登校
+category: 不登校・学校生活
 author: りたのわ
 ---
 

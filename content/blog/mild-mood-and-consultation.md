@@ -3,7 +3,7 @@ title: 症状が軽いと感じるとき——相談のタイミングは人そ�
 date: 2025-03-21
 slug: mild-mood-and-consultation
 excerpt: 「まだ大ごとではない」と思いつつも、眠れない、やる気が出ない——そうしたサインをどう見つめるか。
-category: 相談の入り口
+category: 制度・相談先
 author: りたのわ
 ---
 

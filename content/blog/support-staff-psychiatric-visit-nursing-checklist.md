@@ -3,7 +3,7 @@ title: 地域の支援者・公的機関向け｜精神科領域で訪問看護�
 date: 2026-04-07
 slug: support-staff-psychiatric-visit-nursing-checklist
 excerpt: 自治体・行政・NPO・地域の支援者様向けに、精神・心理の観点で訪問看護を検討する際、面談や会議で整理しやすい観点をチェックリスト形式でまとめました。
-category: 連携・支援のヒント
+category: 訪問看護・連携
 author: りたのわ
 ---
 

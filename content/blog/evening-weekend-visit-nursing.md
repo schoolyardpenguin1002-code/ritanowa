@@ -3,7 +3,7 @@ title: 夕方・夜・週末に来てくれる訪問看護がある、という�
 date: 2026-08-14
 slug: evening-weekend-visit-nursing
 excerpt: 「平日の日中は学校や仕事で無理」——その理由で訪問看護をあきらめていませんか。りたのわが夕方〜夜・週末の訪問を大切にしている理由をお話しします。
-category: 訪問看護とは
+category: 訪問看護・連携
 author: りたのわ
 ---
 

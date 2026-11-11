@@ -3,7 +3,7 @@ title: 放デイと訪問看護、何が違うの？
 date: 2026-11-11
 slug: day-service-vs-home-nursing
 excerpt: 放課後等デイサービスと訪問看護の違い、併用の考え方、家庭と事業所で連携できる支援を保護者向けに解説します。
-category: ご家族向け
+category: 訪問看護・連携
 author: りたのわ
 ---
 
