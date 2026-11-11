@@ -79,7 +79,7 @@ export function MainNav({
   if (variant === "desktop") {
     return (
       <nav
-        className="hidden max-w-[70%] flex-1 flex-wrap items-center justify-end gap-x-0.5 gap-y-1 lg:flex xl:max-w-none xl:gap-x-1"
+        className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-0.5 gap-y-1 xl:flex xl:gap-x-1"
         aria-label="メインナビゲーション"
       >
         {headerNavGroups.map((g) => (
