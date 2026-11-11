@@ -213,3 +213,51 @@
     letter-spacing: 0.015em;
   }
 }
+
+
+/* Blog-only reading hierarchy; other Markdown pages remain unchanged. */
+@layer components {
+  .blog-article {
+    color: var(--ritanowa-ink);
+    line-height: 2.05;
+    letter-spacing: 0.012em;
+  }
+  .blog-article p { margin-bottom: 1.65rem; }
+  .blog-article h2 {
+    margin: 3.25rem 0 1.35rem;
+    padding: 0.3rem 0 0.65rem 1rem;
+    border-left: 4px solid var(--ritanowa-terracotta);
+    border-bottom: 1px solid color-mix(in srgb, var(--ritanowa-terracotta) 22%, transparent);
+    font-size: clamp(1.3rem, 2.7vw, 1.75rem);
+    font-weight: 800;
+    line-height: 1.6;
+    color: var(--ritanowa-ink);
+  }
+  .blog-article h3 {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .blog-article strong {
+    color: var(--ritanowa-ink);
+    font-weight: 750;
+    background: linear-gradient(transparent 62%, color-mix(in srgb, var(--ritanowa-gold) 32%, transparent) 62%);
+    box-decoration-break: clone;
+  }
+  .blog-article blockquote {
+    margin: 1.8rem 0;
+    padding: 1.15rem 1.5rem;
+    border-left: 4px solid var(--ritanowa-gold);
+    border-radius: 0 1rem 1rem 0;
+    background: color-mix(in srgb, var(--ritanowa-sand) 70%, white);
+    color: #5d5148;
+  }
+  .blog-article blockquote p { margin: 0; }
+  .blog-article ul, .blog-article ol { margin: 1.7rem 0 2rem; }
+  .blog-article li { padding-left: 0.3rem; margin-bottom: 0.55rem; }
+  .blog-article a { font-weight: 700; text-underline-offset: 4px; }
+  @media (max-width: 640px) {
+    .blog-article { line-height: 1.95; }
+    .blog-article h2 { margin-top: 2.5rem; }
+  }
+}
