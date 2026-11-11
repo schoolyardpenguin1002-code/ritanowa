@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { MarkdownBody } from "@/components/MarkdownBody";
-import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { getAllBlogPosts, getBlogBySlug } from "@/lib/content";
@@ -32,7 +31,7 @@ export default async function BlogDetailPage({ params }: Props) {
   return (
     <SiteLayout>
       <SubpageHeader title={post.frontmatter.title} />
-      <RevealSection className="mx-auto max-w-3xl px-4 py-10 sm:px-5 md:px-8 md:py-14">
+      <section className="mx-auto max-w-3xl px-4 py-10 sm:px-5 md:px-8 md:py-14">
         <p className="mb-2 text-base font-medium text-[var(--ritanowa-gold)] sm:text-lg">
           {post.frontmatter.category}
         </p>
@@ -50,7 +49,7 @@ export default async function BlogDetailPage({ params }: Props) {
             ← ブログ一覧
           </Link>
         </p>
-      </RevealSection>
+      </section>
     </SiteLayout>
   );
 }
