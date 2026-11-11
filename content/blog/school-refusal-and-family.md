@@ -3,7 +3,7 @@ title: 不登校や学校に行きづらさ——ご家族が一人で抱え込�
 date: 2025-03-20
 slug: school-refusal-and-family
 excerpt: お子さまの様子を、まずは「困りごと」として話せること。診断や受診のタイミングは主治医と相談しながら。
-category: 相談の入り口
+category: ご家族向け
 author: りたのわ
 ---
 
