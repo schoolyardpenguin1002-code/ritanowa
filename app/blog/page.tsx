@@ -50,10 +50,11 @@ export default async function BlogPage({ searchParams }: Props) {
         description="小児精神科訪問看護や、お子さま・ご家族向けの読み物を掲載しています。"
       />
       <RevealSection className="mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div className="mb-6 flex gap-2 overflow-x-auto pb-3 sm:flex-wrap sm:overflow-visible sm:pb-0">
           <Link
             href={buildHref(undefined, sort)}
-            className={`rounded-full px-4 py-2 text-lg font-medium ${
+            aria-current={!category ? "page" : undefined}
+            className={`inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold leading-tight transition-colors sm:text-base ${
               !category
                 ? "bg-primary text-primary-foreground"
                 : "border border-border bg-card hover:bg-secondary"
@@ -65,7 +66,8 @@ export default async function BlogPage({ searchParams }: Props) {
             <Link
               key={c}
               href={buildHref(c, sort)}
-              className={`rounded-full px-4 py-2 text-lg font-medium ${
+              aria-current={category === c ? "page" : undefined}
+              className={`inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold leading-tight transition-colors sm:text-base ${
                 category === c
                   ? "bg-primary text-primary-foreground"
                   : "border border-border bg-card hover:bg-secondary"
