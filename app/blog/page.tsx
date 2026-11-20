@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { RevealSection } from "@/components/motion/RevealSection";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { SubpageHeader } from "@/components/SubpageHeader";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/content";
@@ -49,7 +48,7 @@ export default async function BlogPage({ searchParams }: Props) {
         title="ブログ・コラム"
         description="小児精神科訪問看護や、お子さま・ご家族向けの読み物を掲載しています。"
       />
-      <RevealSection className="mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
+      <section className="mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
         <div className="mb-6 flex flex-wrap gap-2">
           <Link
             href={buildHref(undefined, sort)}
@@ -145,7 +144,7 @@ export default async function BlogPage({ searchParams }: Props) {
             該当する記事がありません。
           </p>
         ) : null}
-      </RevealSection>
+      </section>
     </SiteLayout>
   );
 }
